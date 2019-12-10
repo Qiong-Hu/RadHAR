@@ -1,0 +1,15 @@
+header: 
+  seq: 6264
+  stamp: 
+    secs: 1538888235
+    nsecs: 712113897
+  frame_id: "ti_mmwave"   # Frame ID used for multi-sensor scenarios
+point_id: 17              # Point ID of the detecting frame (Every frame starts with 0)
+x: 8.650390625            # Point x coordinates in m (front from antenna)
+y: 6.92578125             # Point y coordinates in m (left/right from antenna, right positive)
+z: 0.0                    # Point z coordinates in m (up/down from antenna, up positive)
+range: 11.067276001       # Radar measured range in m
+velocity: 0.0             # Radar measured range rate in m/s
+doppler_bin: 8            # Doppler bin location of the point (total bins = num of chirps)
+bearing: 38.6818885803    # Radar measured angle in degrees (right positive)
+intensity: 13.6172780991  # Radar measured intensity in dB

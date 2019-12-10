@@ -1,0 +1,9519 @@
+header: 
+  seq: 92881
+  stamp: 
+    secs: 1560894565
+    nsecs: 846889506
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6557979584
+---
+header: 
+  seq: 92882
+  stamp: 
+    secs: 1560894565
+    nsecs: 847085276
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 92883
+  stamp: 
+    secs: 1560894565
+    nsecs: 847102204
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0774784088
+---
+header: 
+  seq: 92884
+  stamp: 
+    secs: 1560894565
+    nsecs: 847113178
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 92885
+  stamp: 
+    secs: 1560894565
+    nsecs: 847122320
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.494140625
+y: -0.0
+z: 1.16796875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2221927643
+---
+header: 
+  seq: 92886
+  stamp: 
+    secs: 1560894565
+    nsecs: 847132197
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.53125
+y: -0.041015625
+z: 1.1953125
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.41481304169
+intensity: 24.2651119232
+---
+header: 
+  seq: 92887
+  stamp: 
+    secs: 1560894565
+    nsecs: 847141041
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.5546875
+y: -0.0
+z: 1.23046875
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.810333252
+---
+header: 
+  seq: 92888
+  stamp: 
+    secs: 1560894565
+    nsecs: 847149262
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.64453125
+y: -0.0
+z: 0.98828125
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8081359863
+---
+header: 
+  seq: 92889
+  stamp: 
+    secs: 1560894565
+    nsecs: 847160462
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.68359375
+y: -0.0
+z: 1.0
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.2089233398
+---
+header: 
+  seq: 92890
+  stamp: 
+    secs: 1560894565
+    nsecs: 847362403
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.728515625
+y: 0.08984375
+z: 0.990234375
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.88593709469
+intensity: 31.3608608246
+---
+header: 
+  seq: 92891
+  stamp: 
+    secs: 1560894565
+    nsecs: 847387606
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.458984375
+y: -0.0
+z: 1.05078125
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9968070984
+---
+header: 
+  seq: 92892
+  stamp: 
+    secs: 1560894565
+    nsecs: 847400905
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.525390625
+y: -0.0
+z: 0.9453125
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6445808411
+---
+header: 
+  seq: 92893
+  stamp: 
+    secs: 1560894565
+    nsecs: 847413378
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.65625
+y: -0.0
+z: 0.244140625
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4891090393
+---
+header: 
+  seq: 92894
+  stamp: 
+    secs: 1560894565
+    nsecs: 847426388
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.69921875
+y: -0.0
+z: 0.19921875
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.866809845
+---
+header: 
+  seq: 92895
+  stamp: 
+    secs: 1560894565
+    nsecs: 847437971
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.146484375
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.3954963684
+---
+header: 
+  seq: 92896
+  stamp: 
+    secs: 1560894565
+    nsecs: 847448753
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.767578125
+y: -0.150390625
+z: -0.38671875
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80676472187
+intensity: 33.7383117676
+---
+header: 
+  seq: 92897
+  stamp: 
+    secs: 1560894565
+    nsecs: 847461003
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.80859375
+y: -0.150390625
+z: -0.3828125
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79136347771
+intensity: 34.3071975708
+---
+header: 
+  seq: 92898
+  stamp: 
+    secs: 1560894565
+    nsecs: 847475387
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.837890625
+y: -0.0
+z: -0.544921875
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.5259399414
+---
+header: 
+  seq: 92899
+  stamp: 
+    secs: 1560894565
+    nsecs: 847486208
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.833984375
+y: -0.154296875
+z: 1.05078125
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.82821428776
+intensity: 30.9760437012
+---
+header: 
+  seq: 92900
+  stamp: 
+    secs: 1560894565
+    nsecs: 847497738
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 1.857421875
+y: 1.265625
+z: -0.10546875
+range: 2.396733284
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.2700500488
+intensity: 26.8033542633
+---
+header: 
+  seq: 92901
+  stamp: 
+    secs: 1560894565
+    nsecs: 847509254
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 1.939453125
+y: 1.216796875
+z: -0.056640625
+range: 2.44031047821
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.1038208008
+intensity: 28.3442077637
+---
+header: 
+  seq: 92902
+  stamp: 
+    secs: 1560894565
+    nsecs: 847585411
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 1.927734375
+y: 1.3125
+z: 0.05859375
+range: 2.48388743401
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.2490348816
+intensity: 26.812412262
+---
+header: 
+  seq: 92903
+  stamp: 
+    secs: 1560894565
+    nsecs: 847605928
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1157035828
+---
+header: 
+  seq: 92904
+  stamp: 
+    secs: 1560894565
+    nsecs: 847619387
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 92905
+  stamp: 
+    secs: 1560894565
+    nsecs: 848487852
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6595306396
+---
+header: 
+  seq: 92906
+  stamp: 
+    secs: 1560894565
+    nsecs: 848556625
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8469142914
+---
+header: 
+  seq: 92907
+  stamp: 
+    secs: 1560894565
+    nsecs: 848568670
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0774784088
+---
+header: 
+  seq: 92908
+  stamp: 
+    secs: 1560894565
+    nsecs: 848580186
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 92909
+  stamp: 
+    secs: 1560894565
+    nsecs: 848589411
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.48828125
+y: -0.0
+z: 1.169921875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2633590698
+---
+header: 
+  seq: 92910
+  stamp: 
+    secs: 1560894565
+    nsecs: 848597436
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.52734375
+y: -0.041015625
+z: 1.197265625
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.44738483429
+intensity: 24.2975234985
+---
+header: 
+  seq: 92911
+  stamp: 
+    secs: 1560894565
+    nsecs: 848605592
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.552734375
+y: -0.0
+z: 1.232421875
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.8330116272
+---
+header: 
+  seq: 92912
+  stamp: 
+    secs: 1560894565
+    nsecs: 848623703
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.642578125
+y: -0.0
+z: 0.994140625
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8195495605
+---
+header: 
+  seq: 92913
+  stamp: 
+    secs: 1560894565
+    nsecs: 848641311
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.68359375
+y: -0.0
+z: 0.998046875
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1984634399
+---
+header: 
+  seq: 92914
+  stamp: 
+    secs: 1560894565
+    nsecs: 848657318
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.734375
+y: 0.08984375
+z: 0.9765625
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.88189852238
+intensity: 31.3353881836
+---
+header: 
+  seq: 92915
+  stamp: 
+    secs: 1560894565
+    nsecs: 848673811
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.45703125
+y: -0.0
+z: 1.060546875
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9829750061
+---
+header: 
+  seq: 92916
+  stamp: 
+    secs: 1560894565
+    nsecs: 848688920
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.525390625
+y: -0.0
+z: 0.94140625
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6258201599
+---
+header: 
+  seq: 92917
+  stamp: 
+    secs: 1560894565
+    nsecs: 848699013
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.65625
+y: -0.0
+z: 0.2421875
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.47057724
+---
+header: 
+  seq: 92918
+  stamp: 
+    secs: 1560894565
+    nsecs: 848850733
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.2265625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8645629883
+---
+header: 
+  seq: 92919
+  stamp: 
+    secs: 1560894565
+    nsecs: 848869963
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.142578125
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.392993927
+---
+header: 
+  seq: 92920
+  stamp: 
+    secs: 1560894565
+    nsecs: 848878318
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.76953125
+y: -0.150390625
+z: -0.37890625
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80602538586
+intensity: 33.740146637
+---
+header: 
+  seq: 92921
+  stamp: 
+    secs: 1560894565
+    nsecs: 848888879
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.80859375
+y: -0.150390625
+z: -0.384765625
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79136347771
+intensity: 34.2878265381
+---
+header: 
+  seq: 92922
+  stamp: 
+    secs: 1560894565
+    nsecs: 848897412
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.828125
+y: -0.0
+z: -0.625
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3545074463
+---
+header: 
+  seq: 92923
+  stamp: 
+    secs: 1560894565
+    nsecs: 848905258
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.853515625
+y: -0.154296875
+z: 0.95703125
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.82086229324
+intensity: 30.9516925812
+---
+header: 
+  seq: 92924
+  stamp: 
+    secs: 1560894565
+    nsecs: 848913282
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 1.904296875
+y: 1.1953125
+z: -0.060546875
+range: 2.396733284
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.1161727905
+intensity: 25.4777469635
+---
+header: 
+  seq: 92925
+  stamp: 
+    secs: 1560894565
+    nsecs: 848918750
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 1.939453125
+y: 1.216796875
+z: -0.064453125
+range: 2.44031047821
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.1038208008
+intensity: 29.7312793732
+---
+header: 
+  seq: 92926
+  stamp: 
+    secs: 1560894565
+    nsecs: 848923235
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 1.92578125
+y: 1.3125
+z: -0.072265625
+range: 2.48388743401
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.276058197
+intensity: 31.1025295258
+---
+header: 
+  seq: 92927
+  stamp: 
+    secs: 1560894565
+    nsecs: 848946566
+  frame_id: "ti_mmwave"
+point_id: 22
+x: 1.958984375
+y: 1.333984375
+z: -0.103515625
+range: 2.5274643898
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.2531852722
+intensity: 29.7772369385
+---
+header: 
+  seq: 92928
+  stamp: 
+    secs: 1560894565
+    nsecs: 848965087
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 1.93359375
+y: 1.43359375
+z: -0.173828125
+range: 2.5710413456
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 36.5537567139
+intensity: 25.6702632904
+---
+header: 
+  seq: 92929
+  stamp: 
+    secs: 1560894565
+    nsecs: 848983495
+  frame_id: "ti_mmwave"
+point_id: 25
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 92930
+  stamp: 
+    secs: 1560894565
+    nsecs: 848997572
+  frame_id: "ti_mmwave"
+point_id: 26
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 92931
+  stamp: 
+    secs: 1560894565
+    nsecs: 906915018
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6557979584
+---
+header: 
+  seq: 92932
+  stamp: 
+    secs: 1560894565
+    nsecs: 906991191
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8469142914
+---
+header: 
+  seq: 92933
+  stamp: 
+    secs: 1560894565
+    nsecs: 907007379
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0774784088
+---
+header: 
+  seq: 92934
+  stamp: 
+    secs: 1560894565
+    nsecs: 907021608
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 92935
+  stamp: 
+    secs: 1560894565
+    nsecs: 907033999
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.48046875
+y: -0.0
+z: 1.173828125
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2428245544
+---
+header: 
+  seq: 92936
+  stamp: 
+    secs: 1560894565
+    nsecs: 907112296
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.515625
+y: -0.041015625
+z: 1.203125
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.54804229736
+intensity: 24.2488155365
+---
+header: 
+  seq: 92937
+  stamp: 
+    secs: 1560894565
+    nsecs: 907126922
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.521484375
+y: -0.0
+z: 1.244140625
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7646179199
+---
+header: 
+  seq: 92938
+  stamp: 
+    secs: 1560894565
+    nsecs: 907138204
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.642578125
+y: -0.0
+z: 0.9921875
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8081359863
+---
+header: 
+  seq: 92939
+  stamp: 
+    secs: 1560894565
+    nsecs: 907150676
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.68359375
+y: -0.0
+z: 1.0
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1906051636
+---
+header: 
+  seq: 92940
+  stamp: 
+    secs: 1560894565
+    nsecs: 907162384
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.73046875
+y: 0.08984375
+z: 0.984375
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.88458883762
+intensity: 31.3513259888
+---
+header: 
+  seq: 92941
+  stamp: 
+    secs: 1560894565
+    nsecs: 907174055
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.458984375
+y: -0.0
+z: 1.052734375
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.979511261
+---
+header: 
+  seq: 92942
+  stamp: 
+    secs: 1560894565
+    nsecs: 907186056
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.525390625
+y: -0.0
+z: 0.9375
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6258201599
+---
+header: 
+  seq: 92943
+  stamp: 
+    secs: 1560894565
+    nsecs: 907199047
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.65625
+y: -0.0
+z: 0.24609375
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.47057724
+---
+header: 
+  seq: 92944
+  stamp: 
+    secs: 1560894565
+    nsecs: 907212791
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.228515625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8757781982
+---
+header: 
+  seq: 92945
+  stamp: 
+    secs: 1560894565
+    nsecs: 907236529
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.140625
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.4154663086
+---
+header: 
+  seq: 92946
+  stamp: 
+    secs: 1560894565
+    nsecs: 907256417
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.76953125
+y: -0.150390625
+z: -0.376953125
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80602538586
+intensity: 33.7529792786
+---
+header: 
+  seq: 92947
+  stamp: 
+    secs: 1560894565
+    nsecs: 907274564
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.810546875
+y: -0.150390625
+z: -0.357421875
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.7906370163
+intensity: 34.2651138306
+---
+header: 
+  seq: 92948
+  stamp: 
+    secs: 1560894565
+    nsecs: 907343475
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.84765625
+y: -0.0
+z: -0.44140625
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.1058979034
+---
+header: 
+  seq: 92949
+  stamp: 
+    secs: 1560894565
+    nsecs: 907360292
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.6875
+y: -0.0
+z: 1.58984375
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.1126251221
+---
+header: 
+  seq: 92950
+  stamp: 
+    secs: 1560894565
+    nsecs: 907376279
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1072387695
+---
+header: 
+  seq: 92951
+  stamp: 
+    secs: 1560894565
+    nsecs: 907390529
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9927310944
+---
+header: 
+  seq: 92952
+  stamp: 
+    secs: 1560894565
+    nsecs: 907404583
+  frame_id: "ti_mmwave"
+point_id: 22
+x: 0.013671875
+y: -0.056640625
+z: 0.15234375
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.4295654297
+intensity: 25.2244415283
+---
+header: 
+  seq: 92953
+  stamp: 
+    secs: 1560894565
+    nsecs: 908467396
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6557979584
+---
+header: 
+  seq: 92954
+  stamp: 
+    secs: 1560894565
+    nsecs: 908507559
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8469142914
+---
+header: 
+  seq: 92955
+  stamp: 
+    secs: 1560894565
+    nsecs: 908524552
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.081741333
+---
+header: 
+  seq: 92956
+  stamp: 
+    secs: 1560894565
+    nsecs: 908539791
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 92957
+  stamp: 
+    secs: 1560894565
+    nsecs: 908589108
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.484375
+y: -0.0
+z: 1.171875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2428245544
+---
+header: 
+  seq: 92958
+  stamp: 
+    secs: 1560894565
+    nsecs: 908601500
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.5234375
+y: -0.041015625
+z: 1.19921875
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.48043966293
+intensity: 24.2651119232
+---
+header: 
+  seq: 92959
+  stamp: 
+    secs: 1560894565
+    nsecs: 908613030
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.54296875
+y: -0.0
+z: 1.236328125
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.810333252
+---
+header: 
+  seq: 92960
+  stamp: 
+    secs: 1560894565
+    nsecs: 908624447
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.638671875
+y: -0.0
+z: 1.00390625
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8252449036
+---
+header: 
+  seq: 92961
+  stamp: 
+    secs: 1560894565
+    nsecs: 908637397
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.681640625
+y: -0.0
+z: 1.00390625
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.2063102722
+---
+header: 
+  seq: 92962
+  stamp: 
+    secs: 1560894565
+    nsecs: 908651067
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.728515625
+y: 0.08984375
+z: 0.990234375
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.88593709469
+intensity: 31.3703746796
+---
+header: 
+  seq: 92963
+  stamp: 
+    secs: 1560894565
+    nsecs: 908672626
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.458984375
+y: -0.0
+z: 1.052734375
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.979511261
+---
+header: 
+  seq: 92964
+  stamp: 
+    secs: 1560894565
+    nsecs: 908691083
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.52734375
+y: -0.0
+z: 0.935546875
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6333332062
+---
+header: 
+  seq: 92965
+  stamp: 
+    secs: 1560894565
+    nsecs: 908750370
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.658203125
+y: -0.0
+z: 0.23828125
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4736709595
+---
+header: 
+  seq: 92966
+  stamp: 
+    secs: 1560894565
+    nsecs: 908767025
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.220703125
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.871295929
+---
+header: 
+  seq: 92967
+  stamp: 
+    secs: 1560894565
+    nsecs: 908778301
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.1484375
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.4104804993
+---
+header: 
+  seq: 92968
+  stamp: 
+    secs: 1560894565
+    nsecs: 908790786
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.767578125
+y: -0.150390625
+z: -0.380859375
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80676472187
+intensity: 33.7529792786
+---
+header: 
+  seq: 92969
+  stamp: 
+    secs: 1560894565
+    nsecs: 908803218
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.810546875
+y: -0.150390625
+z: -0.361328125
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.7906370163
+intensity: 34.315246582
+---
+header: 
+  seq: 92970
+  stamp: 
+    secs: 1560894565
+    nsecs: 908816346
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.85546875
+y: -0.0
+z: -0.3515625
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4921913147
+---
+header: 
+  seq: 92971
+  stamp: 
+    secs: 1560894565
+    nsecs: 908827996
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.77734375
+y: -0.0
+z: 1.291015625
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.427022934
+---
+header: 
+  seq: 92972
+  stamp: 
+    secs: 1560894565
+    nsecs: 908839839
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 1.974609375
+y: 1.23828125
+z: -0.04296875
+range: 2.48388743401
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.0919036865
+intensity: 28.9376182556
+---
+header: 
+  seq: 92973
+  stamp: 
+    secs: 1560894565
+    nsecs: 908851907
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 1.9609375
+y: 1.333984375
+z: -0.08203125
+range: 2.5274643898
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.2266273499
+intensity: 29.3851966858
+---
+header: 
+  seq: 92974
+  stamp: 
+    secs: 1560894565
+    nsecs: 908865722
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 1.99609375
+y: 1.357421875
+z: -0.0234375
+range: 2.5710413456
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.2172355652
+intensity: 26.5896492004
+---
+header: 
+  seq: 92975
+  stamp: 
+    secs: 1560894565
+    nsecs: 908894661
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 92976
+  stamp: 
+    secs: 1560894565
+    nsecs: 908953279
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 92977
+  stamp: 
+    secs: 1560894565
+    nsecs: 908970983
+  frame_id: "ti_mmwave"
+point_id: 25
+x: 0.009765625
+y: -0.056640625
+z: 0.154296875
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -80.217590332
+intensity: 25.2374649048
+---
+header: 
+  seq: 92978
+  stamp: 
+    secs: 1560894565
+    nsecs: 966862016
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6557979584
+---
+header: 
+  seq: 92979
+  stamp: 
+    secs: 1560894565
+    nsecs: 966934148
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8469142914
+---
+header: 
+  seq: 92980
+  stamp: 
+    secs: 1560894565
+    nsecs: 966951114
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0732097626
+---
+header: 
+  seq: 92981
+  stamp: 
+    secs: 1560894565
+    nsecs: 966966364
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.3907604218
+---
+header: 
+  seq: 92982
+  stamp: 
+    secs: 1560894565
+    nsecs: 966992000
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.4921875
+y: -0.0
+z: 1.169921875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2014636993
+---
+header: 
+  seq: 92983
+  stamp: 
+    secs: 1560894565
+    nsecs: 967010035
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.525390625
+y: -0.041015625
+z: 1.19921875
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.46385145187
+intensity: 24.2324581146
+---
+header: 
+  seq: 92984
+  stamp: 
+    secs: 1560894565
+    nsecs: 967084588
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.529296875
+y: -0.0
+z: 1.2421875
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7875366211
+---
+header: 
+  seq: 92985
+  stamp: 
+    secs: 1560894565
+    nsecs: 967098932
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.642578125
+y: -0.0
+z: 0.994140625
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.7966918945
+---
+header: 
+  seq: 92986
+  stamp: 
+    secs: 1560894565
+    nsecs: 967115969
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.681640625
+y: -0.0
+z: 1.005859375
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1906051636
+---
+header: 
+  seq: 92987
+  stamp: 
+    secs: 1560894565
+    nsecs: 967129148
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.720703125
+y: -0.0
+z: 1.015625
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.389339447
+---
+header: 
+  seq: 92988
+  stamp: 
+    secs: 1560894565
+    nsecs: 967140494
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.4609375
+y: -0.0
+z: 1.044921875
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.00715065
+---
+header: 
+  seq: 92989
+  stamp: 
+    secs: 1560894565
+    nsecs: 967152261
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.52734375
+y: -0.0
+z: 0.935546875
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6370849609
+---
+header: 
+  seq: 92990
+  stamp: 
+    secs: 1560894565
+    nsecs: 967164286
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.65625
+y: -0.0
+z: 0.2421875
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4519634247
+---
+header: 
+  seq: 92991
+  stamp: 
+    secs: 1560894565
+    nsecs: 967175702
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.228515625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8600730896
+---
+header: 
+  seq: 92992
+  stamp: 
+    secs: 1560894565
+    nsecs: 967188786
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.142578125
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.392993927
+---
+header: 
+  seq: 92993
+  stamp: 
+    secs: 1560894565
+    nsecs: 967202827
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.767578125
+y: -0.150390625
+z: -0.3828125
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80676472187
+intensity: 33.7474822998
+---
+header: 
+  seq: 92994
+  stamp: 
+    secs: 1560894565
+    nsecs: 967216338
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.80859375
+y: -0.150390625
+z: -0.40234375
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79136347771
+intensity: 34.3296928406
+---
+header: 
+  seq: 92995
+  stamp: 
+    secs: 1560894565
+    nsecs: 967288803
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.826171875
+y: -0.0
+z: -0.634765625
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.6256446838
+---
+header: 
+  seq: 92996
+  stamp: 
+    secs: 1560894565
+    nsecs: 967306094
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.78515625
+y: -0.0
+z: 1.263671875
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.0991592407
+---
+header: 
+  seq: 92997
+  stamp: 
+    secs: 1560894565
+    nsecs: 967319913
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 1.974609375
+y: 1.23828125
+z: -0.05859375
+range: 2.48388743401
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.0919036865
+intensity: 28.2801513672
+---
+header: 
+  seq: 92998
+  stamp: 
+    secs: 1560894565
+    nsecs: 967334355
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 2.001953125
+y: 1.259765625
+z: -0.173828125
+range: 2.5274643898
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.1809082031
+intensity: 29.7081165314
+---
+header: 
+  seq: 92999
+  stamp: 
+    secs: 1560894565
+    nsecs: 967348411
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.01953125
+y: 1.28125
+z: -0.322265625
+range: 2.5710413456
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.3922424316
+intensity: 27.5663604736
+---
+header: 
+  seq: 93000
+  stamp: 
+    secs: 1560894565
+    nsecs: 967367458
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93001
+  stamp: 
+    secs: 1560894565
+    nsecs: 967384589
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 93002
+  stamp: 
+    secs: 1560894565
+    nsecs: 967404292
+  frame_id: "ti_mmwave"
+point_id: 26
+x: 4.69921875
+y: -0.146484375
+z: 0.17578125
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78544998169
+intensity: 32.848815918
+---
+header: 
+  seq: 93003
+  stamp: 
+    secs: 1560894566
+    nsecs:  26866740
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6520614624
+---
+header: 
+  seq: 93004
+  stamp: 
+    secs: 1560894566
+    nsecs:  26933474
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93005
+  stamp: 
+    secs: 1560894566
+    nsecs:  26968918
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0732097626
+---
+header: 
+  seq: 93006
+  stamp: 
+    secs: 1560894566
+    nsecs:  26983449
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 93007
+  stamp: 
+    secs: 1560894566
+    nsecs:  27007812
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.501953125
+y: -0.0
+z: 1.1640625
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2633590698
+---
+header: 
+  seq: 93008
+  stamp: 
+    secs: 1560894566
+    nsecs:  27026449
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.537109375
+y: -0.041015625
+z: 1.193359375
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.36683940887
+intensity: 24.2651119232
+---
+header: 
+  seq: 93009
+  stamp: 
+    secs: 1560894566
+    nsecs:  27106655
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.55859375
+y: -0.0
+z: 1.228515625
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.810333252
+---
+header: 
+  seq: 93010
+  stamp: 
+    secs: 1560894566
+    nsecs:  27120784
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.640625
+y: -0.0
+z: 1.0
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.7794704437
+---
+header: 
+  seq: 93011
+  stamp: 
+    secs: 1560894566
+    nsecs:  27133757
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.681640625
+y: -0.0
+z: 1.00390625
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1642990112
+---
+header: 
+  seq: 93012
+  stamp: 
+    secs: 1560894566
+    nsecs:  27145298
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.72265625
+y: -0.0
+z: 1.009765625
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3417701721
+---
+header: 
+  seq: 93013
+  stamp: 
+    secs: 1560894566
+    nsecs:  27157528
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.4609375
+y: -0.0
+z: 1.04296875
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.99335289
+---
+header: 
+  seq: 93014
+  stamp: 
+    secs: 1560894566
+    nsecs:  27169225
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.52734375
+y: -0.0
+z: 0.927734375
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6182937622
+---
+header: 
+  seq: 93015
+  stamp: 
+    secs: 1560894566
+    nsecs:  27180802
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.658203125
+y: -0.0
+z: 0.23046875
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4395103455
+---
+header: 
+  seq: 93016
+  stamp: 
+    secs: 1560894566
+    nsecs:  27194078
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.216796875
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8510704041
+---
+header: 
+  seq: 93017
+  stamp: 
+    secs: 1560894566
+    nsecs:  27207262
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.15234375
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.3904914856
+---
+header: 
+  seq: 93018
+  stamp: 
+    secs: 1560894566
+    nsecs:  27227647
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.767578125
+y: -0.150390625
+z: -0.3828125
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80676472187
+intensity: 33.7456512451
+---
+header: 
+  seq: 93019
+  stamp: 
+    secs: 1560894566
+    nsecs:  27245155
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.810546875
+y: -0.150390625
+z: -0.37109375
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.7906370163
+intensity: 34.2618598938
+---
+header: 
+  seq: 93020
+  stamp: 
+    secs: 1560894566
+    nsecs:  27313262
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.84765625
+y: -0.0
+z: -0.447265625
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.2450428009
+---
+header: 
+  seq: 93021
+  stamp: 
+    secs: 1560894566
+    nsecs:  27331196
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.857421875
+y: -0.154296875
+z: 0.939453125
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.81939888
+intensity: 31.1427726746
+---
+header: 
+  seq: 93022
+  stamp: 
+    secs: 1560894566
+    nsecs:  27342886
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 2.01953125
+y: 1.166015625
+z: 0.044921875
+range: 2.48388743401
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 30.0008239746
+intensity: 24.5484485626
+---
+header: 
+  seq: 93023
+  stamp: 
+    secs: 1560894566
+    nsecs:  27355547
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 2.0546875
+y: 1.185546875
+z: 0.0546875
+range: 2.5274643898
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 29.9847831726
+intensity: 27.3639640808
+---
+header: 
+  seq: 93024
+  stamp: 
+    secs: 1560894566
+    nsecs:  27367937
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.04296875
+y: 1.28125
+z: 0.10546875
+range: 2.5710413456
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.0939254761
+intensity: 26.7577838898
+---
+header: 
+  seq: 93025
+  stamp: 
+    secs: 1560894566
+    nsecs:  27385875
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1157035828
+---
+header: 
+  seq: 93026
+  stamp: 
+    secs: 1560894566
+    nsecs:  27400078
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 93027
+  stamp: 
+    secs: 1560894566
+    nsecs:  27416322
+  frame_id: "ti_mmwave"
+point_id: 26
+x: 4.69921875
+y: -0.146484375
+z: 0.166015625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78544998169
+intensity: 32.8443069458
+---
+header: 
+  seq: 93028
+  stamp: 
+    secs: 1560894566
+    nsecs:  28274067
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6483230591
+---
+header: 
+  seq: 93029
+  stamp: 
+    secs: 1560894566
+    nsecs:  28322059
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8469142914
+---
+header: 
+  seq: 93030
+  stamp: 
+    secs: 1560894566
+    nsecs:  28332216
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0732097626
+---
+header: 
+  seq: 93031
+  stamp: 
+    secs: 1560894566
+    nsecs:  28340558
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.3907604218
+---
+header: 
+  seq: 93032
+  stamp: 
+    secs: 1560894566
+    nsecs:  28348942
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.5
+y: -0.0
+z: 1.166015625
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2221927643
+---
+header: 
+  seq: 93033
+  stamp: 
+    secs: 1560894566
+    nsecs:  28357136
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.529296875
+y: -0.041015625
+z: 1.197265625
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.43103933334
+intensity: 24.2488155365
+---
+header: 
+  seq: 93034
+  stamp: 
+    secs: 1560894566
+    nsecs:  28366438
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.541015625
+y: -0.0
+z: 1.236328125
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7646179199
+---
+header: 
+  seq: 93035
+  stamp: 
+    secs: 1560894566
+    nsecs:  28374447
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 1.96875
+y: 1.259765625
+z: -0.40234375
+range: 2.5274643898
+velocity: 0.0
+doppler_bin: 8
+bearing: 32.6144065857
+intensity: 26.7024593353
+---
+header: 
+  seq: 93036
+  stamp: 
+    secs: 1560894566
+    nsecs:  28382921
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 1.96875
+y: 1.357421875
+z: -0.3203125
+range: 2.5710413456
+velocity: 0.0
+doppler_bin: 8
+bearing: 34.585647583
+intensity: 28.7909584045
+---
+header: 
+  seq: 93037
+  stamp: 
+    secs: 1560894566
+    nsecs:  28391769
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.056640625
+y: 1.3046875
+z: -0.306640625
+range: 2.61461830139
+velocity: 0.0
+doppler_bin: 8
+bearing: 32.3901405334
+intensity: 27.6566848755
+---
+header: 
+  seq: 93038
+  stamp: 
+    secs: 1560894566
+    nsecs:  28400083
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 2.6484375
+y: -0.0
+z: 0.9765625
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8024177551
+---
+header: 
+  seq: 93039
+  stamp: 
+    secs: 1560894566
+    nsecs:  28408391
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 2.685546875
+y: -0.0
+z: 0.994140625
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1958465576
+---
+header: 
+  seq: 93040
+  stamp: 
+    secs: 1560894566
+    nsecs:  28416267
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 2.7265625
+y: -0.0
+z: 0.998046875
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.344959259
+---
+header: 
+  seq: 93041
+  stamp: 
+    secs: 1560894566
+    nsecs:  28436778
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.4609375
+y: -0.0
+z: 1.04296875
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9829750061
+---
+header: 
+  seq: 93042
+  stamp: 
+    secs: 1560894566
+    nsecs:  28447548
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.52734375
+y: -0.0
+z: 0.93359375
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6370849609
+---
+header: 
+  seq: 93043
+  stamp: 
+    secs: 1560894566
+    nsecs:  28517085
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.658203125
+y: -0.0
+z: 0.23046875
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4612808228
+---
+header: 
+  seq: 93044
+  stamp: 
+    secs: 1560894566
+    nsecs:  28528036
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.697265625
+y: 0.146484375
+z: 0.2265625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8555717468
+---
+header: 
+  seq: 93045
+  stamp: 
+    secs: 1560894566
+    nsecs:  28537171
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.740234375
+y: -0.1484375
+z: -0.138671875
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.3879852295
+---
+header: 
+  seq: 93046
+  stamp: 
+    secs: 1560894566
+    nsecs:  28546173
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.76953125
+y: -0.150390625
+z: -0.37890625
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80602538586
+intensity: 33.719909668
+---
+header: 
+  seq: 93047
+  stamp: 
+    secs: 1560894566
+    nsecs:  28553696
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 4.80859375
+y: -0.150390625
+z: -0.390625
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79136347771
+intensity: 34.1413726807
+---
+header: 
+  seq: 93048
+  stamp: 
+    secs: 1560894566
+    nsecs:  28563105
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 4.826171875
+y: -0.0
+z: -0.638671875
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.7481651306
+---
+header: 
+  seq: 93049
+  stamp: 
+    secs: 1560894566
+    nsecs:  28570661
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 4.7890625
+y: -0.154296875
+z: 1.2421875
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.84535121918
+intensity: 31.00715065
+---
+header: 
+  seq: 93050
+  stamp: 
+    secs: 1560894566
+    nsecs:  28578745
+  frame_id: "ti_mmwave"
+point_id: 22
+x: 1.990234375
+y: 1.357421875
+z: -0.154296875
+range: 2.5710413456
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.2956008911
+intensity: 28.864906311
+---
+header: 
+  seq: 93051
+  stamp: 
+    secs: 1560894566
+    nsecs:  28586305
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 2.025390625
+y: 1.380859375
+z: -0.123046875
+range: 2.61461830139
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.2851638794
+intensity: 27.7305469513
+---
+header: 
+  seq: 93052
+  stamp: 
+    secs: 1560894566
+    nsecs:  28599207
+  frame_id: "ti_mmwave"
+point_id: 25
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1157035828
+---
+header: 
+  seq: 93053
+  stamp: 
+    secs: 1560894566
+    nsecs:  28608409
+  frame_id: "ti_mmwave"
+point_id: 26
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 93054
+  stamp: 
+    secs: 1560894566
+    nsecs:  86987505
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6483230591
+---
+header: 
+  seq: 93055
+  stamp: 
+    secs: 1560894566
+    nsecs:  87056980
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93056
+  stamp: 
+    secs: 1560894566
+    nsecs:  87072892
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0774784088
+---
+header: 
+  seq: 93057
+  stamp: 
+    secs: 1560894566
+    nsecs:  87089280
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.4157924652
+---
+header: 
+  seq: 93058
+  stamp: 
+    secs: 1560894566
+    nsecs:  87113803
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.47265625
+y: -0.0
+z: 1.17578125
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2428245544
+---
+header: 
+  seq: 93059
+  stamp: 
+    secs: 1560894566
+    nsecs:  87191671
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.515625
+y: -0.041015625
+z: 1.203125
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.54804229736
+intensity: 24.2488155365
+---
+header: 
+  seq: 93060
+  stamp: 
+    secs: 1560894566
+    nsecs:  87206664
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.544921875
+y: -0.0
+z: 1.234375
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7875366211
+---
+header: 
+  seq: 93061
+  stamp: 
+    secs: 1560894566
+    nsecs:  87217841
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.646484375
+y: -0.0
+z: 0.982421875
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.7737140656
+---
+header: 
+  seq: 93062
+  stamp: 
+    secs: 1560894566
+    nsecs:  87228893
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.68359375
+y: -0.0
+z: 1.0
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1774711609
+---
+header: 
+  seq: 93063
+  stamp: 
+    secs: 1560894566
+    nsecs:  87240038
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.720703125
+y: -0.0
+z: 1.017578125
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3545074463
+---
+header: 
+  seq: 93064
+  stamp: 
+    secs: 1560894566
+    nsecs:  87253617
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.455078125
+y: -0.0
+z: 1.064453125
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9760437012
+---
+header: 
+  seq: 93065
+  stamp: 
+    secs: 1560894566
+    nsecs:  87265975
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.521484375
+y: -0.0
+z: 0.95703125
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6182937622
+---
+header: 
+  seq: 93066
+  stamp: 
+    secs: 1560894566
+    nsecs:  87279392
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.65625
+y: -0.0
+z: 0.24609375
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4767627716
+---
+header: 
+  seq: 93067
+  stamp: 
+    secs: 1560894566
+    nsecs:  87289243
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.220703125
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8735389709
+---
+header: 
+  seq: 93068
+  stamp: 
+    secs: 1560894566
+    nsecs:  87351221
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.150390625
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.4029960632
+---
+header: 
+  seq: 93069
+  stamp: 
+    secs: 1560894566
+    nsecs:  87367490
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.767578125
+y: -0.150390625
+z: -0.388671875
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80676472187
+intensity: 33.7657699585
+---
+header: 
+  seq: 93070
+  stamp: 
+    secs: 1560894566
+    nsecs:  87379428
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.810546875
+y: -0.150390625
+z: -0.365234375
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.7906370163
+intensity: 34.4279327393
+---
+header: 
+  seq: 93071
+  stamp: 
+    secs: 1560894566
+    nsecs:  87393834
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.8515625
+y: -0.0
+z: -0.40234375
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.8069915771
+---
+header: 
+  seq: 93072
+  stamp: 
+    secs: 1560894566
+    nsecs:  87407147
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.794921875
+y: -0.0
+z: 1.228515625
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3257980347
+---
+header: 
+  seq: 93073
+  stamp: 
+    secs: 1560894566
+    nsecs:  87424105
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93074
+  stamp: 
+    secs: 1560894566
+    nsecs:  87434762
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 93075
+  stamp: 
+    secs: 1560894566
+    nsecs:  87498000
+  frame_id: "ti_mmwave"
+point_id: 22
+x: 0.009765625
+y: -0.056640625
+z: 0.154296875
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -80.217590332
+intensity: 25.2374649048
+---
+header: 
+  seq: 93076
+  stamp: 
+    secs: 1560894566
+    nsecs:  87513907
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 4.69921875
+y: -0.146484375
+z: 0.169921875
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78544998169
+intensity: 32.8623199463
+---
+header: 
+  seq: 93077
+  stamp: 
+    secs: 1560894566
+    nsecs:  88656472
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6520614624
+---
+header: 
+  seq: 93078
+  stamp: 
+    secs: 1560894566
+    nsecs:  88689272
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93079
+  stamp: 
+    secs: 1560894566
+    nsecs:  88704472
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0774784088
+---
+header: 
+  seq: 93080
+  stamp: 
+    secs: 1560894566
+    nsecs:  88725439
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.4157924652
+---
+header: 
+  seq: 93081
+  stamp: 
+    secs: 1560894566
+    nsecs:  88785392
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.486328125
+y: -0.0
+z: 1.171875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2221927643
+---
+header: 
+  seq: 93082
+  stamp: 
+    secs: 1560894566
+    nsecs:  88800740
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.52734375
+y: -0.041015625
+z: 1.197265625
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.44738483429
+intensity: 24.2324581146
+---
+header: 
+  seq: 93083
+  stamp: 
+    secs: 1560894566
+    nsecs:  88813059
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.529296875
+y: -0.0
+z: 1.2421875
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7646179199
+---
+header: 
+  seq: 93084
+  stamp: 
+    secs: 1560894566
+    nsecs:  88824959
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.060546875
+y: 1.404296875
+z: -0.1171875
+range: 2.65819525719
+velocity: 0.0
+doppler_bin: 8
+bearing: 34.2750778198
+intensity: 27.7959651947
+---
+header: 
+  seq: 93085
+  stamp: 
+    secs: 1560894566
+    nsecs:  88837863
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.6328125
+y: -0.0
+z: 1.017578125
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8081359863
+---
+header: 
+  seq: 93086
+  stamp: 
+    secs: 1560894566
+    nsecs:  88846595
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.67578125
+y: -0.0
+z: 1.01953125
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1722068787
+---
+header: 
+  seq: 93087
+  stamp: 
+    secs: 1560894566
+    nsecs:  88906685
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 2.712890625
+y: -0.0
+z: 1.037109375
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3576850891
+---
+header: 
+  seq: 93088
+  stamp: 
+    secs: 1560894566
+    nsecs:  88923239
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.4609375
+y: -0.0
+z: 1.048828125
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9829750061
+---
+header: 
+  seq: 93089
+  stamp: 
+    secs: 1560894566
+    nsecs:  88934679
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.52734375
+y: -0.0
+z: 0.931640625
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6333332062
+---
+header: 
+  seq: 93090
+  stamp: 
+    secs: 1560894566
+    nsecs:  88948422
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.658203125
+y: -0.0
+z: 0.220703125
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4488544464
+---
+header: 
+  seq: 93091
+  stamp: 
+    secs: 1560894566
+    nsecs:  88960701
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.697265625
+y: 0.146484375
+z: 0.212890625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.848815918
+---
+header: 
+  seq: 93092
+  stamp: 
+    secs: 1560894566
+    nsecs:  88973684
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.740234375
+y: -0.1484375
+z: -0.150390625
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.3854789734
+---
+header: 
+  seq: 93093
+  stamp: 
+    secs: 1560894566
+    nsecs:  88984976
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.76953125
+y: -0.150390625
+z: -0.376953125
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80602538586
+intensity: 33.7493171692
+---
+header: 
+  seq: 93094
+  stamp: 
+    secs: 1560894566
+    nsecs:  88996653
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.8125
+y: -0.150390625
+z: -0.333984375
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.7899106741
+intensity: 34.3344993591
+---
+header: 
+  seq: 93095
+  stamp: 
+    secs: 1560894566
+    nsecs:  89008110
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.861328125
+y: -0.0
+z: -0.26953125
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.5896530151
+---
+header: 
+  seq: 93096
+  stamp: 
+    secs: 1560894566
+    nsecs:  89017201
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 4.822265625
+y: -0.154296875
+z: 1.109375
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.83265411854
+intensity: 31.4019374847
+---
+header: 
+  seq: 93097
+  stamp: 
+    secs: 1560894566
+    nsecs:  89082053
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 1.939453125
+y: 1.333984375
+z: -0.2890625
+range: 2.5274643898
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.5207672119
+intensity: 25.6820163727
+---
+header: 
+  seq: 93098
+  stamp: 
+    secs: 1560894566
+    nsecs:  89097441
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.037109375
+y: 1.28125
+z: -0.181640625
+range: 2.5710413456
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.1680412292
+intensity: 28.4880466461
+---
+header: 
+  seq: 93099
+  stamp: 
+    secs: 1560894566
+    nsecs:  89111755
+  frame_id: "ti_mmwave"
+point_id: 22
+x: 2.029296875
+y: 1.380859375
+z: -0.0546875
+range: 2.61461830139
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.2337989807
+intensity: 29.0525608063
+---
+header: 
+  seq: 93100
+  stamp: 
+    secs: 1560894566
+    nsecs:  89127126
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93101
+  stamp: 
+    secs: 1560894566
+    nsecs:  89139688
+  frame_id: "ti_mmwave"
+point_id: 25
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 93102
+  stamp: 
+    secs: 1560894566
+    nsecs:  89154943
+  frame_id: "ti_mmwave"
+point_id: 27
+x: 4.69921875
+y: -0.146484375
+z: 0.162109375
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78544998169
+intensity: 32.8375320435
+---
+header: 
+  seq: 93103
+  stamp: 
+    secs: 1560894566
+    nsecs: 146830790
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6595306396
+---
+header: 
+  seq: 93104
+  stamp: 
+    secs: 1560894566
+    nsecs: 146927465
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8469142914
+---
+header: 
+  seq: 93105
+  stamp: 
+    secs: 1560894566
+    nsecs: 146945165
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0732097626
+---
+header: 
+  seq: 93106
+  stamp: 
+    secs: 1560894566
+    nsecs: 146959138
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 93107
+  stamp: 
+    secs: 1560894566
+    nsecs: 146972960
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.494140625
+y: -0.0
+z: 1.16796875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2014636993
+---
+header: 
+  seq: 93108
+  stamp: 
+    secs: 1560894566
+    nsecs: 146990536
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.5390625
+y: -0.041015625
+z: 1.19140625
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.35107755661
+intensity: 24.2488155365
+---
+header: 
+  seq: 93109
+  stamp: 
+    secs: 1560894566
+    nsecs: 147059778
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.5625
+y: -0.0
+z: 1.2265625
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7646179199
+---
+header: 
+  seq: 93110
+  stamp: 
+    secs: 1560894566
+    nsecs: 147077184
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.64453125
+y: -0.0
+z: 0.984375
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.7966918945
+---
+header: 
+  seq: 93111
+  stamp: 
+    secs: 1560894566
+    nsecs: 147090427
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.68359375
+y: -0.0
+z: 0.998046875
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1879806519
+---
+header: 
+  seq: 93112
+  stamp: 
+    secs: 1560894566
+    nsecs: 147104892
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.724609375
+y: -0.0
+z: 1.0078125
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3481445312
+---
+header: 
+  seq: 93113
+  stamp: 
+    secs: 1560894566
+    nsecs: 147117532
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.458984375
+y: -0.0
+z: 1.0546875
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.979511261
+---
+header: 
+  seq: 93114
+  stamp: 
+    secs: 1560894566
+    nsecs: 147130375
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.525390625
+y: -0.0
+z: 0.943359375
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6333332062
+---
+header: 
+  seq: 93115
+  stamp: 
+    secs: 1560894566
+    nsecs: 147139712
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.658203125
+y: -0.0
+z: 0.23046875
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4674797058
+---
+header: 
+  seq: 93116
+  stamp: 
+    secs: 1560894566
+    nsecs: 147200077
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.220703125
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8623199463
+---
+header: 
+  seq: 93117
+  stamp: 
+    secs: 1560894566
+    nsecs: 147217164
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.146484375
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.392993927
+---
+header: 
+  seq: 93118
+  stamp: 
+    secs: 1560894566
+    nsecs: 147230786
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.76953125
+y: -0.150390625
+z: -0.376953125
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80602538586
+intensity: 33.7069816589
+---
+header: 
+  seq: 93119
+  stamp: 
+    secs: 1560894566
+    nsecs: 147244261
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.810546875
+y: -0.150390625
+z: -0.369140625
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.7906370163
+intensity: 34.1380233765
+---
+header: 
+  seq: 93120
+  stamp: 
+    secs: 1560894566
+    nsecs: 147258678
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.849609375
+y: -0.0
+z: -0.431640625
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9586639404
+---
+header: 
+  seq: 93121
+  stamp: 
+    secs: 1560894566
+    nsecs: 147270836
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.7890625
+y: -0.154296875
+z: 1.2421875
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.84535121918
+intensity: 31.2287101746
+---
+header: 
+  seq: 93122
+  stamp: 
+    secs: 1560894566
+    nsecs: 147281142
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 2.076171875
+y: 1.3046875
+z: 0.11328125
+range: 2.61461830139
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.1456718445
+intensity: 26.6558094025
+---
+header: 
+  seq: 93123
+  stamp: 
+    secs: 1560894566
+    nsecs: 147342528
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 2.05859375
+y: 1.404296875
+z: 0.142578125
+range: 2.65819525719
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.3003692627
+intensity: 27.3559894562
+---
+header: 
+  seq: 93124
+  stamp: 
+    secs: 1560894566
+    nsecs: 147359760
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.0390625
+y: 1.505859375
+z: 0.08984375
+range: 2.70177221298
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 36.4460792542
+intensity: 25.4777469635
+---
+header: 
+  seq: 93125
+  stamp: 
+    secs: 1560894566
+    nsecs: 147375552
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1072387695
+---
+header: 
+  seq: 93126
+  stamp: 
+    secs: 1560894566
+    nsecs: 147388934
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 93127
+  stamp: 
+    secs: 1560894566
+    nsecs: 148495185
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6520614624
+---
+header: 
+  seq: 93128
+  stamp: 
+    secs: 1560894566
+    nsecs: 148532124
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8469142914
+---
+header: 
+  seq: 93129
+  stamp: 
+    secs: 1560894566
+    nsecs: 148547006
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.081741333
+---
+header: 
+  seq: 93130
+  stamp: 
+    secs: 1560894566
+    nsecs: 148560680
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.4157924652
+---
+header: 
+  seq: 93131
+  stamp: 
+    secs: 1560894566
+    nsecs: 148573200
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.486328125
+y: -0.0
+z: 1.171875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2221927643
+---
+header: 
+  seq: 93132
+  stamp: 
+    secs: 1560894566
+    nsecs: 148634356
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.529296875
+y: -0.041015625
+z: 1.197265625
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.43103933334
+intensity: 24.2651119232
+---
+header: 
+  seq: 93133
+  stamp: 
+    secs: 1560894566
+    nsecs: 148643761
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.546875
+y: -0.0
+z: 1.234375
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.810333252
+---
+header: 
+  seq: 93134
+  stamp: 
+    secs: 1560894566
+    nsecs: 148651739
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.640625
+y: -0.0
+z: 0.998046875
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8422870636
+---
+header: 
+  seq: 93135
+  stamp: 
+    secs: 1560894566
+    nsecs: 148659042
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.681640625
+y: -0.0
+z: 1.00390625
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.2167510986
+---
+header: 
+  seq: 93136
+  stamp: 
+    secs: 1560894566
+    nsecs: 148667295
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.732421875
+y: 0.08984375
+z: 0.982421875
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.88324284554
+intensity: 31.3640346527
+---
+header: 
+  seq: 93137
+  stamp: 
+    secs: 1560894566
+    nsecs: 148675699
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.458984375
+y: -0.0
+z: 1.0546875
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.99335289
+---
+header: 
+  seq: 93138
+  stamp: 
+    secs: 1560894566
+    nsecs: 148683357
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.52734375
+y: -0.0
+z: 0.931640625
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6182937622
+---
+header: 
+  seq: 93139
+  stamp: 
+    secs: 1560894566
+    nsecs: 148691231
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.65625
+y: -0.0
+z: 0.2421875
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4395103455
+---
+header: 
+  seq: 93140
+  stamp: 
+    secs: 1560894566
+    nsecs: 148699261
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.2265625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8510704041
+---
+header: 
+  seq: 93141
+  stamp: 
+    secs: 1560894566
+    nsecs: 148704303
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.138671875
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.377948761
+---
+header: 
+  seq: 93142
+  stamp: 
+    secs: 1560894566
+    nsecs: 148723658
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.767578125
+y: -0.150390625
+z: -0.3828125
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80676472187
+intensity: 33.7309608459
+---
+header: 
+  seq: 93143
+  stamp: 
+    secs: 1560894566
+    nsecs: 148737153
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.810546875
+y: -0.150390625
+z: -0.357421875
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.7906370163
+intensity: 34.31042099
+---
+header: 
+  seq: 93144
+  stamp: 
+    secs: 1560894566
+    nsecs: 148751560
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.85546875
+y: -0.0
+z: -0.35546875
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.5350990295
+---
+header: 
+  seq: 93145
+  stamp: 
+    secs: 1560894566
+    nsecs: 148764784
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.83984375
+y: -0.154296875
+z: 1.02734375
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.82600235939
+intensity: 31.1826477051
+---
+header: 
+  seq: 93146
+  stamp: 
+    secs: 1560894566
+    nsecs: 148778296
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 2.080078125
+y: 1.3046875
+z: -0.0234375
+range: 2.61461830139
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.0971717834
+intensity: 27.1264972687
+---
+header: 
+  seq: 93147
+  stamp: 
+    secs: 1560894566
+    nsecs: 148791482
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 2.0625
+y: 1.404296875
+z: -0.0390625
+range: 2.65819525719
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.2498207092
+intensity: 27.8532981873
+---
+header: 
+  seq: 93148
+  stamp: 
+    secs: 1560894566
+    nsecs: 148807824
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.041015625
+y: 1.505859375
+z: 0.00390625
+range: 2.70177221298
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 36.4198684692
+intensity: 25.7518787384
+---
+header: 
+  seq: 93149
+  stamp: 
+    secs: 1560894566
+    nsecs: 148823246
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93150
+  stamp: 
+    secs: 1560894566
+    nsecs: 148836617
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9927310944
+---
+header: 
+  seq: 93151
+  stamp: 
+    secs: 1560894566
+    nsecs: 148854606
+  frame_id: "ti_mmwave"
+point_id: 26
+x: 4.69921875
+y: -0.146484375
+z: 0.1796875
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78544998169
+intensity: 32.8375320435
+---
+header: 
+  seq: 93152
+  stamp: 
+    secs: 1560894566
+    nsecs: 206898249
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6520614624
+---
+header: 
+  seq: 93153
+  stamp: 
+    secs: 1560894566
+    nsecs: 206986542
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8497524261
+---
+header: 
+  seq: 93154
+  stamp: 
+    secs: 1560894566
+    nsecs: 207005701
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.081741333
+---
+header: 
+  seq: 93155
+  stamp: 
+    secs: 1560894566
+    nsecs: 207019481
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.4157924652
+---
+header: 
+  seq: 93156
+  stamp: 
+    secs: 1560894566
+    nsecs: 207032791
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.482421875
+y: -0.0
+z: 1.171875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2014636993
+---
+header: 
+  seq: 93157
+  stamp: 
+    secs: 1560894566
+    nsecs: 207045259
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.53125
+y: -0.041015625
+z: 1.1953125
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.41481304169
+intensity: 24.2488155365
+---
+header: 
+  seq: 93158
+  stamp: 
+    secs: 1560894566
+    nsecs: 207070417
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.548828125
+y: -0.0
+z: 1.234375
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7646179199
+---
+header: 
+  seq: 93159
+  stamp: 
+    secs: 1560894566
+    nsecs: 207086505
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.646484375
+y: -0.0
+z: 0.98046875
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8024177551
+---
+header: 
+  seq: 93160
+  stamp: 
+    secs: 1560894566
+    nsecs: 207243334
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.6875
+y: -0.0
+z: 0.990234375
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1879806519
+---
+header: 
+  seq: 93161
+  stamp: 
+    secs: 1560894566
+    nsecs: 207273607
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.736328125
+y: 0.08984375
+z: 0.96875
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.8805564642
+intensity: 31.3353881836
+---
+header: 
+  seq: 93162
+  stamp: 
+    secs: 1560894566
+    nsecs: 207283164
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.4609375
+y: -0.0
+z: 1.046875
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9829750061
+---
+header: 
+  seq: 93163
+  stamp: 
+    secs: 1560894566
+    nsecs: 207328106
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.52734375
+y: -0.0
+z: 0.93359375
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6258201599
+---
+header: 
+  seq: 93164
+  stamp: 
+    secs: 1560894566
+    nsecs: 207345284
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.658203125
+y: -0.0
+z: 0.234375
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.455072403
+---
+header: 
+  seq: 93165
+  stamp: 
+    secs: 1560894566
+    nsecs: 207365720
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.22265625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.869052887
+---
+header: 
+  seq: 93166
+  stamp: 
+    secs: 1560894566
+    nsecs: 207389080
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.14453125
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.4104804993
+---
+header: 
+  seq: 93167
+  stamp: 
+    secs: 1560894566
+    nsecs: 207555709
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.76953125
+y: -0.150390625
+z: -0.365234375
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80602538586
+intensity: 33.7621192932
+---
+header: 
+  seq: 93168
+  stamp: 
+    secs: 1560894566
+    nsecs: 207587209
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.814453125
+y: -0.150390625
+z: -0.30078125
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78918504715
+intensity: 34.2813491821
+---
+header: 
+  seq: 93169
+  stamp: 
+    secs: 1560894566
+    nsecs: 207633122
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.865234375
+y: -0.0
+z: -0.1875
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3956432343
+---
+header: 
+  seq: 93170
+  stamp: 
+    secs: 1560894566
+    nsecs: 207647880
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.873046875
+y: -0.154296875
+z: 0.853515625
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.81356906891
+intensity: 31.1826477051
+---
+header: 
+  seq: 93171
+  stamp: 
+    secs: 1560894566
+    nsecs: 207656850
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 2.044921875
+y: 1.28125
+z: -0.00390625
+range: 2.5710413456
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.0692863464
+intensity: 25.7518787384
+---
+header: 
+  seq: 93172
+  stamp: 
+    secs: 1560894566
+    nsecs: 207777762
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 2.078125
+y: 1.3046875
+z: 0.037109375
+range: 2.61461830139
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.1214065552
+intensity: 29.6189556122
+---
+header: 
+  seq: 93173
+  stamp: 
+    secs: 1560894566
+    nsecs: 207798873
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.11328125
+y: 1.326171875
+z: 0.05859375
+range: 2.65819525719
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.1099815369
+intensity: 30.2366390228
+---
+header: 
+  seq: 93174
+  stamp: 
+    secs: 1560894566
+    nsecs: 207814174
+  frame_id: "ti_mmwave"
+point_id: 22
+x: 2.09375
+y: 1.42578125
+z: 0.095703125
+range: 2.70177221298
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 34.253692627
+intensity: 27.9587993622
+---
+header: 
+  seq: 93175
+  stamp: 
+    secs: 1560894566
+    nsecs: 207832512
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1072387695
+---
+header: 
+  seq: 93176
+  stamp: 
+    secs: 1560894566
+    nsecs: 207893742
+  frame_id: "ti_mmwave"
+point_id: 25
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9872512817
+---
+header: 
+  seq: 93177
+  stamp: 
+    secs: 1560894566
+    nsecs: 207909868
+  frame_id: "ti_mmwave"
+point_id: 26
+x: 0.005859375
+y: -0.056640625
+z: 0.154296875
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -84.0938568115
+intensity: 25.2374649048
+---
+header: 
+  seq: 93178
+  stamp: 
+    secs: 1560894566
+    nsecs: 208432705
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6632595062
+---
+header: 
+  seq: 93179
+  stamp: 
+    secs: 1560894566
+    nsecs: 208476338
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93180
+  stamp: 
+    secs: 1560894566
+    nsecs: 208496554
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0732097626
+---
+header: 
+  seq: 93181
+  stamp: 
+    secs: 1560894566
+    nsecs: 208518534
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.3907604218
+---
+header: 
+  seq: 93182
+  stamp: 
+    secs: 1560894566
+    nsecs: 208810171
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.486328125
+y: -0.0
+z: 1.171875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2221927643
+---
+header: 
+  seq: 93183
+  stamp: 
+    secs: 1560894566
+    nsecs: 208849408
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.525390625
+y: -0.041015625
+z: 1.19921875
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.46385145187
+intensity: 24.2324581146
+---
+header: 
+  seq: 93184
+  stamp: 
+    secs: 1560894566
+    nsecs: 208863476
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.544921875
+y: -0.0
+z: 1.234375
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7646179199
+---
+header: 
+  seq: 93185
+  stamp: 
+    secs: 1560894566
+    nsecs: 208885205
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.642578125
+y: -0.0
+z: 0.990234375
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8081359863
+---
+header: 
+  seq: 93186
+  stamp: 
+    secs: 1560894566
+    nsecs: 208900190
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.68359375
+y: -0.0
+z: 1.0
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1958465576
+---
+header: 
+  seq: 93187
+  stamp: 
+    secs: 1560894566
+    nsecs: 208914816
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.72265625
+y: -0.0
+z: 1.013671875
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3672065735
+---
+header: 
+  seq: 93188
+  stamp: 
+    secs: 1560894566
+    nsecs: 208928295
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.458984375
+y: -0.0
+z: 1.0546875
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9864368439
+---
+header: 
+  seq: 93189
+  stamp: 
+    secs: 1560894566
+    nsecs: 208944791
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.52734375
+y: -0.0
+z: 0.935546875
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6295776367
+---
+header: 
+  seq: 93190
+  stamp: 
+    secs: 1560894566
+    nsecs: 208960788
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.65625
+y: -0.0
+z: 0.244140625
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4736709595
+---
+header: 
+  seq: 93191
+  stamp: 
+    secs: 1560894566
+    nsecs: 208974316
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.220703125
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8735389709
+---
+header: 
+  seq: 93192
+  stamp: 
+    secs: 1560894566
+    nsecs: 208989141
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.146484375
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.407989502
+---
+header: 
+  seq: 93193
+  stamp: 
+    secs: 1560894566
+    nsecs: 209005778
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.76953125
+y: -0.150390625
+z: -0.36328125
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80602538586
+intensity: 33.7602920532
+---
+header: 
+  seq: 93194
+  stamp: 
+    secs: 1560894566
+    nsecs: 209020225
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.81640625
+y: -0.150390625
+z: -0.287109375
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78845989704
+intensity: 34.3088111877
+---
+header: 
+  seq: 93195
+  stamp: 
+    secs: 1560894566
+    nsecs: 209034858
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.865234375
+y: -0.0
+z: -0.140625
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3385810852
+---
+header: 
+  seq: 93196
+  stamp: 
+    secs: 1560894566
+    nsecs: 209044975
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.830078125
+y: -0.154296875
+z: 1.068359375
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.82969176769
+intensity: 31.455072403
+---
+header: 
+  seq: 93197
+  stamp: 
+    secs: 1560894566
+    nsecs: 209120363
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93198
+  stamp: 
+    secs: 1560894566
+    nsecs: 209130029
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 93199
+  stamp: 
+    secs: 1560894566
+    nsecs: 266904983
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6520614624
+---
+header: 
+  seq: 93200
+  stamp: 
+    secs: 1560894566
+    nsecs: 266978302
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93201
+  stamp: 
+    secs: 1560894566
+    nsecs: 266990689
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0774784088
+---
+header: 
+  seq: 93202
+  stamp: 
+    secs: 1560894566
+    nsecs: 266999409
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.4157924652
+---
+header: 
+  seq: 93203
+  stamp: 
+    secs: 1560894566
+    nsecs: 267007564
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.484375
+y: -0.0
+z: 1.171875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2428245544
+---
+header: 
+  seq: 93204
+  stamp: 
+    secs: 1560894566
+    nsecs: 267015881
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.525390625
+y: -0.041015625
+z: 1.197265625
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.46385145187
+intensity: 24.2813472748
+---
+header: 
+  seq: 93205
+  stamp: 
+    secs: 1560894566
+    nsecs: 267023648
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.546875
+y: -0.0
+z: 1.234375
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.810333252
+---
+header: 
+  seq: 93206
+  stamp: 
+    secs: 1560894566
+    nsecs: 267032047
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.63671875
+y: -0.0
+z: 1.005859375
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8366146088
+---
+header: 
+  seq: 93207
+  stamp: 
+    secs: 1560894566
+    nsecs: 267040797
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.6796875
+y: -0.0
+z: 1.0078125
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.2219619751
+---
+header: 
+  seq: 93208
+  stamp: 
+    secs: 1560894566
+    nsecs: 267049128
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.72265625
+y: -0.0
+z: 1.009765625
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3956432343
+---
+header: 
+  seq: 93209
+  stamp: 
+    secs: 1560894566
+    nsecs: 267059127
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.4609375
+y: -0.0
+z: 1.041015625
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9898967743
+---
+header: 
+  seq: 93210
+  stamp: 
+    secs: 1560894566
+    nsecs: 267067534
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.529296875
+y: -0.0
+z: 0.91796875
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6408348083
+---
+header: 
+  seq: 93211
+  stamp: 
+    secs: 1560894566
+    nsecs: 267076160
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.658203125
+y: -0.0
+z: 0.21875
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.455072403
+---
+header: 
+  seq: 93212
+  stamp: 
+    secs: 1560894566
+    nsecs: 267084956
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.21484375
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8533210754
+---
+header: 
+  seq: 93213
+  stamp: 
+    secs: 1560894566
+    nsecs: 267095422
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.146484375
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.3954963684
+---
+header: 
+  seq: 93214
+  stamp: 
+    secs: 1560894566
+    nsecs: 267247400
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.771484375
+y: -0.150390625
+z: -0.353515625
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80528640747
+intensity: 33.7602920532
+---
+header: 
+  seq: 93215
+  stamp: 
+    secs: 1560894566
+    nsecs: 267266976
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.81640625
+y: -0.150390625
+z: -0.27734375
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78845989704
+intensity: 34.3136367798
+---
+header: 
+  seq: 93216
+  stamp: 
+    secs: 1560894566
+    nsecs: 267275709
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.861328125
+y: -0.0
+z: -0.23828125
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3924922943
+---
+header: 
+  seq: 93217
+  stamp: 
+    secs: 1560894566
+    nsecs: 267285610
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.8359375
+y: -0.154296875
+z: 1.041015625
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.82747626305
+intensity: 31.2645606995
+---
+header: 
+  seq: 93218
+  stamp: 
+    secs: 1560894566
+    nsecs: 267294030
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 2.16015625
+y: 1.248046875
+z: 0.0078125
+range: 2.65819525719
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 30.0175037384
+intensity: 25.6348114014
+---
+header: 
+  seq: 93219
+  stamp: 
+    secs: 1560894566
+    nsecs: 267305462
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1072387695
+---
+header: 
+  seq: 93220
+  stamp: 
+    secs: 1560894566
+    nsecs: 267316988
+  frame_id: "ti_mmwave"
+point_id: 22
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9927310944
+---
+header: 
+  seq: 93221
+  stamp: 
+    secs: 1560894566
+    nsecs: 326888515
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6520614624
+---
+header: 
+  seq: 93222
+  stamp: 
+    secs: 1560894566
+    nsecs: 326967915
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93223
+  stamp: 
+    secs: 1560894566
+    nsecs: 326979809
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0732097626
+---
+header: 
+  seq: 93224
+  stamp: 
+    secs: 1560894566
+    nsecs: 326988348
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 93225
+  stamp: 
+    secs: 1560894566
+    nsecs: 326997743
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.513671875
+y: -0.0
+z: 1.158203125
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2014636993
+---
+header: 
+  seq: 93226
+  stamp: 
+    secs: 1560894566
+    nsecs: 327006011
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.548828125
+y: -0.041015625
+z: 1.1875
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.27394628525
+intensity: 24.2324581146
+---
+header: 
+  seq: 93227
+  stamp: 
+    secs: 1560894566
+    nsecs: 327015684
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.5625
+y: -0.0
+z: 1.2265625
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7415790558
+---
+header: 
+  seq: 93228
+  stamp: 
+    secs: 1560894566
+    nsecs: 327023591
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.64453125
+y: -0.0
+z: 0.984375
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8024177551
+---
+header: 
+  seq: 93229
+  stamp: 
+    secs: 1560894566
+    nsecs: 327031868
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.6875
+y: -0.0
+z: 0.990234375
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1958465576
+---
+header: 
+  seq: 93230
+  stamp: 
+    secs: 1560894566
+    nsecs: 327040274
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.740234375
+y: 0.08984375
+z: 0.958984375
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.87787723541
+intensity: 31.3353881836
+---
+header: 
+  seq: 93231
+  stamp: 
+    secs: 1560894566
+    nsecs: 327048236
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.45703125
+y: -0.0
+z: 1.060546875
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.99335289
+---
+header: 
+  seq: 93232
+  stamp: 
+    secs: 1560894566
+    nsecs: 327058141
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.529296875
+y: -0.14453125
+z: 0.912109375
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.82770574093
+intensity: 30.6557979584
+---
+header: 
+  seq: 93233
+  stamp: 
+    secs: 1560894566
+    nsecs: 327076370
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.658203125
+y: -0.0
+z: 0.234375
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.47057724
+---
+header: 
+  seq: 93234
+  stamp: 
+    secs: 1560894566
+    nsecs: 327086707
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.2265625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8645629883
+---
+header: 
+  seq: 93235
+  stamp: 
+    secs: 1560894566
+    nsecs: 327095653
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.134765625
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.4054908752
+---
+header: 
+  seq: 93236
+  stamp: 
+    secs: 1560894566
+    nsecs: 327104694
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.771484375
+y: -0.150390625
+z: -0.353515625
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80528640747
+intensity: 33.7309608459
+---
+header: 
+  seq: 93237
+  stamp: 
+    secs: 1560894566
+    nsecs: 327113129
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.814453125
+y: -0.150390625
+z: -0.310546875
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78918504715
+intensity: 34.1995582581
+---
+header: 
+  seq: 93238
+  stamp: 
+    secs: 1560894566
+    nsecs: 327123763
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.857421875
+y: -0.0
+z: -0.33203125
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.222158432
+---
+header: 
+  seq: 93239
+  stamp: 
+    secs: 1560894566
+    nsecs: 327279202
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.83984375
+y: -0.154296875
+z: 1.029296875
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.82600235939
+intensity: 31.209028244
+---
+header: 
+  seq: 93240
+  stamp: 
+    secs: 1560894566
+    nsecs: 327301844
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93241
+  stamp: 
+    secs: 1560894566
+    nsecs: 327312524
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9927310944
+---
+header: 
+  seq: 93242
+  stamp: 
+    secs: 1560894566
+    nsecs: 328639136
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6557979584
+---
+header: 
+  seq: 93243
+  stamp: 
+    secs: 1560894566
+    nsecs: 328713936
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93244
+  stamp: 
+    secs: 1560894566
+    nsecs: 328727646
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0732097626
+---
+header: 
+  seq: 93245
+  stamp: 
+    secs: 1560894566
+    nsecs: 328742278
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 93246
+  stamp: 
+    secs: 1560894566
+    nsecs: 328750864
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.474609375
+y: -0.0
+z: 1.17578125
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2221927643
+---
+header: 
+  seq: 93247
+  stamp: 
+    secs: 1560894566
+    nsecs: 328758987
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.52734375
+y: -0.041015625
+z: 1.197265625
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.44738483429
+intensity: 24.2813472748
+---
+header: 
+  seq: 93248
+  stamp: 
+    secs: 1560894566
+    nsecs: 328766846
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.546875
+y: -0.0
+z: 1.234375
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.810333252
+---
+header: 
+  seq: 93249
+  stamp: 
+    secs: 1560894566
+    nsecs: 328777336
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.642578125
+y: -0.0
+z: 0.990234375
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8081359863
+---
+header: 
+  seq: 93250
+  stamp: 
+    secs: 1560894566
+    nsecs: 328874986
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.68359375
+y: -0.0
+z: 0.998046875
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.2036972046
+---
+header: 
+  seq: 93251
+  stamp: 
+    secs: 1560894566
+    nsecs: 328895149
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.734375
+y: 0.08984375
+z: 0.97265625
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.88189852238
+intensity: 31.344959259
+---
+header: 
+  seq: 93252
+  stamp: 
+    secs: 1560894566
+    nsecs: 328909581
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.45703125
+y: -0.0
+z: 1.056640625
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9968070984
+---
+header: 
+  seq: 93253
+  stamp: 
+    secs: 1560894566
+    nsecs: 328918753
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.525390625
+y: -0.0
+z: 0.9375
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6445808411
+---
+header: 
+  seq: 93254
+  stamp: 
+    secs: 1560894566
+    nsecs: 328926646
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.65625
+y: -0.0
+z: 0.240234375
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4860267639
+---
+header: 
+  seq: 93255
+  stamp: 
+    secs: 1560894566
+    nsecs: 328934767
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.2265625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8869628906
+---
+header: 
+  seq: 93256
+  stamp: 
+    secs: 1560894566
+    nsecs: 328942896
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.1328125
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.4104804993
+---
+header: 
+  seq: 93257
+  stamp: 
+    secs: 1560894566
+    nsecs: 328950504
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.765625
+y: -0.150390625
+z: -0.41015625
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80750477314
+intensity: 33.7254371643
+---
+header: 
+  seq: 93258
+  stamp: 
+    secs: 1560894566
+    nsecs: 328958232
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.798828125
+y: -0.150390625
+z: -0.501953125
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79500675201
+intensity: 34.3136367798
+---
+header: 
+  seq: 93259
+  stamp: 
+    secs: 1560894566
+    nsecs: 328967357
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.802734375
+y: -0.0
+z: -0.7890625
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.5320491791
+---
+header: 
+  seq: 93260
+  stamp: 
+    secs: 1560894566
+    nsecs: 328974707
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.78125
+y: -0.154296875
+z: 1.26953125
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.84836471081
+intensity: 31.2613143921
+---
+header: 
+  seq: 93261
+  stamp: 
+    secs: 1560894566
+    nsecs: 328983618
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 2.158203125
+y: 1.248046875
+z: -0.125
+range: 2.65819525719
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 30.0399608612
+intensity: 27.4272518158
+---
+header: 
+  seq: 93262
+  stamp: 
+    secs: 1560894566
+    nsecs: 328988495
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 2.19140625
+y: 1.267578125
+z: -0.14453125
+range: 2.70177221298
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 30.0464363098
+intensity: 28.5973854065
+---
+header: 
+  seq: 93263
+  stamp: 
+    secs: 1560894566
+    nsecs: 329015712
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.22265625
+y: 1.2890625
+z: -0.193359375
+range: 2.74534916878
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 30.1122283936
+intensity: 26.1066017151
+---
+header: 
+  seq: 93264
+  stamp: 
+    secs: 1560894566
+    nsecs: 329029569
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93265
+  stamp: 
+    secs: 1560894566
+    nsecs: 329144541
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9927310944
+---
+header: 
+  seq: 93266
+  stamp: 
+    secs: 1560894566
+    nsecs: 386867925
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6445808411
+---
+header: 
+  seq: 93267
+  stamp: 
+    secs: 1560894566
+    nsecs: 386957726
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93268
+  stamp: 
+    secs: 1560894566
+    nsecs: 386975130
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0774784088
+---
+header: 
+  seq: 93269
+  stamp: 
+    secs: 1560894566
+    nsecs: 386988880
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.4157924652
+---
+header: 
+  seq: 93270
+  stamp: 
+    secs: 1560894566
+    nsecs: 387000101
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.478515625
+y: -0.0
+z: 1.173828125
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2428245544
+---
+header: 
+  seq: 93271
+  stamp: 
+    secs: 1560894566
+    nsecs: 387013332
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.517578125
+y: -0.041015625
+z: 1.201171875
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.53095149994
+intensity: 24.2813472748
+---
+header: 
+  seq: 93272
+  stamp: 
+    secs: 1560894566
+    nsecs: 387024555
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.5390625
+y: -0.0
+z: 1.23828125
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.810333252
+---
+header: 
+  seq: 93273
+  stamp: 
+    secs: 1560894566
+    nsecs: 387127029
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.642578125
+y: -0.0
+z: 0.9921875
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8195495605
+---
+header: 
+  seq: 93274
+  stamp: 
+    secs: 1560894566
+    nsecs: 387142534
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.681640625
+y: -0.0
+z: 1.001953125
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.2115325928
+---
+header: 
+  seq: 93275
+  stamp: 
+    secs: 1560894566
+    nsecs: 387154838
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.728515625
+y: 0.08984375
+z: 0.990234375
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.88593709469
+intensity: 31.3576850891
+---
+header: 
+  seq: 93276
+  stamp: 
+    secs: 1560894566
+    nsecs: 387165342
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.455078125
+y: -0.0
+z: 1.068359375
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.0002574921
+---
+header: 
+  seq: 93277
+  stamp: 
+    secs: 1560894566
+    nsecs: 387177185
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.529296875
+y: -0.14453125
+z: 0.916015625
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.82770574093
+intensity: 30.6445808411
+---
+header: 
+  seq: 93278
+  stamp: 
+    secs: 1560894566
+    nsecs: 387189014
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.658203125
+y: -0.0
+z: 0.21875
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4643821716
+---
+header: 
+  seq: 93279
+  stamp: 
+    secs: 1560894566
+    nsecs: 387198908
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.701171875
+y: -0.0
+z: 0.181640625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.8623199463
+---
+header: 
+  seq: 93280
+  stamp: 
+    secs: 1560894566
+    nsecs: 387209034
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.158203125
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.3854789734
+---
+header: 
+  seq: 93281
+  stamp: 
+    secs: 1560894566
+    nsecs: 387220075
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.771484375
+y: -0.150390625
+z: -0.353515625
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80528640747
+intensity: 33.7235946655
+---
+header: 
+  seq: 93282
+  stamp: 
+    secs: 1560894566
+    nsecs: 387267129
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.818359375
+y: -0.150390625
+z: -0.26171875
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78773546219
+intensity: 34.2308197021
+---
+header: 
+  seq: 93283
+  stamp: 
+    secs: 1560894566
+    nsecs: 387279852
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.86328125
+y: -0.0
+z: -0.203125
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.306552887
+---
+header: 
+  seq: 93284
+  stamp: 
+    secs: 1560894566
+    nsecs: 387291267
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.87109375
+y: -0.154296875
+z: 0.86328125
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.81429588795
+intensity: 31.0653076172
+---
+header: 
+  seq: 93285
+  stamp: 
+    secs: 1560894566
+    nsecs: 387306321
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 2.158203125
+y: 1.248046875
+z: -0.08984375
+range: 2.65819525719
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 30.0399608612
+intensity: 26.2736587524
+---
+header: 
+  seq: 93286
+  stamp: 
+    secs: 1560894566
+    nsecs: 387317717
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 2.1953125
+y: 1.267578125
+z: -0.044921875
+range: 2.70177221298
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 30.0022277832
+intensity: 29.2376194
+---
+header: 
+  seq: 93287
+  stamp: 
+    secs: 1560894566
+    nsecs: 387328762
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.27734375
+y: 1.208984375
+z: -0.009765625
+range: 2.74534916878
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 27.9627056122
+intensity: 28.325088501
+---
+header: 
+  seq: 93288
+  stamp: 
+    secs: 1560894566
+    nsecs: 387342760
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1072387695
+---
+header: 
+  seq: 93289
+  stamp: 
+    secs: 1560894566
+    nsecs: 387386578
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 93290
+  stamp: 
+    secs: 1560894566
+    nsecs: 388452005
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6483230591
+---
+header: 
+  seq: 93291
+  stamp: 
+    secs: 1560894566
+    nsecs: 388515131
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8469142914
+---
+header: 
+  seq: 93292
+  stamp: 
+    secs: 1560894566
+    nsecs: 388531863
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0774784088
+---
+header: 
+  seq: 93293
+  stamp: 
+    secs: 1560894566
+    nsecs: 388547625
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.4157924652
+---
+header: 
+  seq: 93294
+  stamp: 
+    secs: 1560894566
+    nsecs: 388574542
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.482421875
+y: -0.0
+z: 1.171875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2428245544
+---
+header: 
+  seq: 93295
+  stamp: 
+    secs: 1560894566
+    nsecs: 388647992
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.4765625
+y: -0.0
+z: 1.21875
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 24.2651119232
+---
+header: 
+  seq: 93296
+  stamp: 
+    secs: 1560894566
+    nsecs: 388663685
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.548828125
+y: -0.0
+z: 1.232421875
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7875366211
+---
+header: 
+  seq: 93297
+  stamp: 
+    secs: 1560894566
+    nsecs: 388677155
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.642578125
+y: -0.0
+z: 0.990234375
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.7909584045
+---
+header: 
+  seq: 93298
+  stamp: 
+    secs: 1560894566
+    nsecs: 388692000
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.68359375
+y: -0.0
+z: 1.0
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.2219619751
+---
+header: 
+  seq: 93299
+  stamp: 
+    secs: 1560894566
+    nsecs: 388706534
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.73046875
+y: 0.08984375
+z: 0.98828125
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.88458883762
+intensity: 31.3257980347
+---
+header: 
+  seq: 93300
+  stamp: 
+    secs: 1560894566
+    nsecs: 388719858
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.453125
+y: -0.0
+z: 1.072265625
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.979511261
+---
+header: 
+  seq: 93301
+  stamp: 
+    secs: 1560894566
+    nsecs: 388759686
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.525390625
+y: -0.0
+z: 0.939453125
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6818580627
+---
+header: 
+  seq: 93302
+  stamp: 
+    secs: 1560894566
+    nsecs: 388786200
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.658203125
+y: -0.0
+z: 0.232421875
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.5106334686
+---
+header: 
+  seq: 93303
+  stamp: 
+    secs: 1560894566
+    nsecs: 388812893
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.701171875
+y: -0.0
+z: 0.177734375
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.8757781982
+---
+header: 
+  seq: 93304
+  stamp: 
+    secs: 1560894566
+    nsecs: 388904617
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.166015625
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.4154663086
+---
+header: 
+  seq: 93305
+  stamp: 
+    secs: 1560894566
+    nsecs: 388922297
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.76953125
+y: -0.150390625
+z: -0.37890625
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80602538586
+intensity: 33.8093452454
+---
+header: 
+  seq: 93306
+  stamp: 
+    secs: 1560894566
+    nsecs: 388935817
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.814453125
+y: -0.150390625
+z: -0.30859375
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78918504715
+intensity: 34.4232292175
+---
+header: 
+  seq: 93307
+  stamp: 
+    secs: 1560894566
+    nsecs: 388948767
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.859375
+y: -0.0
+z: -0.291015625
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.5866394043
+---
+header: 
+  seq: 93308
+  stamp: 
+    secs: 1560894566
+    nsecs: 388962150
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.794921875
+y: -0.0
+z: 1.228515625
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.2548122406
+---
+header: 
+  seq: 93309
+  stamp: 
+    secs: 1560894566
+    nsecs: 388976664
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 2.189453125
+y: 1.267578125
+z: -0.166015625
+range: 2.70177221298
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 30.0685825348
+intensity: 28.3378429413
+---
+header: 
+  seq: 93310
+  stamp: 
+    secs: 1560894566
+    nsecs: 388989807
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 2.275390625
+y: 1.208984375
+z: -0.037109375
+range: 2.74534916878
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 27.9830703735
+intensity: 28.8195495605
+---
+header: 
+  seq: 93311
+  stamp: 
+    secs: 1560894566
+    nsecs: 389003618
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.3125
+y: 1.2265625
+z: -0.041015625
+range: 2.78892612457
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 27.9417190552
+intensity: 26.2221393585
+---
+header: 
+  seq: 93312
+  stamp: 
+    secs: 1560894566
+    nsecs: 389022317
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93313
+  stamp: 
+    secs: 1560894566
+    nsecs: 389036368
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 29.0036716461
+---
+header: 
+  seq: 93314
+  stamp: 
+    secs: 1560894566
+    nsecs: 389050434
+  frame_id: "ti_mmwave"
+point_id: 25
+x: 0.0078125
+y: -0.056640625
+z: 0.154296875
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -82.1466827393
+intensity: 25.2504482269
+---
+header: 
+  seq: 93315
+  stamp: 
+    secs: 1560894566
+    nsecs: 389065325
+  frame_id: "ti_mmwave"
+point_id: 26
+x: 0.7265625
+y: 0.24609375
+z: 2.50390625
+range: 2.78892612457
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 18.7117385864
+intensity: 23.6361198425
+---
+header: 
+  seq: 93316
+  stamp: 
+    secs: 1560894566
+    nsecs: 446997103
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6483230591
+---
+header: 
+  seq: 93317
+  stamp: 
+    secs: 1560894566
+    nsecs: 447103468
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8469142914
+---
+header: 
+  seq: 93318
+  stamp: 
+    secs: 1560894566
+    nsecs: 447121327
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.081741333
+---
+header: 
+  seq: 93319
+  stamp: 
+    secs: 1560894566
+    nsecs: 447135757
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 93320
+  stamp: 
+    secs: 1560894566
+    nsecs: 447151081
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.486328125
+y: -0.0
+z: 1.171875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2014636993
+---
+header: 
+  seq: 93321
+  stamp: 
+    secs: 1560894566
+    nsecs: 447165493
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.51171875
+y: -0.041015625
+z: 1.205078125
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.58261299133
+intensity: 24.2324581146
+---
+header: 
+  seq: 93322
+  stamp: 
+    secs: 1560894566
+    nsecs: 447179391
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.5234375
+y: -0.0
+z: 1.244140625
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.810333252
+---
+header: 
+  seq: 93323
+  stamp: 
+    secs: 1560894566
+    nsecs: 447198445
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.63671875
+y: -0.0
+z: 1.005859375
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8422870636
+---
+header: 
+  seq: 93324
+  stamp: 
+    secs: 1560894566
+    nsecs: 447274682
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.6796875
+y: -0.0
+z: 1.009765625
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.229763031
+---
+header: 
+  seq: 93325
+  stamp: 
+    secs: 1560894566
+    nsecs: 447296064
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.7265625
+y: 0.08984375
+z: 0.99609375
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.88728690147
+intensity: 31.3513259888
+---
+header: 
+  seq: 93326
+  stamp: 
+    secs: 1560894566
+    nsecs: 447311774
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.45703125
+y: -0.0
+z: 1.056640625
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.99335289
+---
+header: 
+  seq: 93327
+  stamp: 
+    secs: 1560894566
+    nsecs: 447325415
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.525390625
+y: -0.0
+z: 0.94140625
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6445808411
+---
+header: 
+  seq: 93328
+  stamp: 
+    secs: 1560894566
+    nsecs: 447341202
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.658203125
+y: -0.0
+z: 0.2265625
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4767627716
+---
+header: 
+  seq: 93329
+  stamp: 
+    secs: 1560894566
+    nsecs: 447355818
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.21484375
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.866809845
+---
+header: 
+  seq: 93330
+  stamp: 
+    secs: 1560894566
+    nsecs: 447372921
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.150390625
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.3979988098
+---
+header: 
+  seq: 93331
+  stamp: 
+    secs: 1560894566
+    nsecs: 447427902
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.76953125
+y: -0.150390625
+z: -0.365234375
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80602538586
+intensity: 33.7839775085
+---
+header: 
+  seq: 93332
+  stamp: 
+    secs: 1560894566
+    nsecs: 447447402
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.81640625
+y: -0.150390625
+z: -0.279296875
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78845989704
+intensity: 34.4153785706
+---
+header: 
+  seq: 93333
+  stamp: 
+    secs: 1560894566
+    nsecs: 447467324
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.865234375
+y: -0.0
+z: -0.130859375
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.7143383026
+---
+header: 
+  seq: 93334
+  stamp: 
+    secs: 1560894566
+    nsecs: 447480146
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.8984375
+y: -0.154296875
+z: 0.6953125
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80417478085
+intensity: 31.25806427
+---
+header: 
+  seq: 93335
+  stamp: 
+    secs: 1560894566
+    nsecs: 447538714
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 2.17578125
+y: 1.369140625
+z: 0.1875
+range: 2.74534916878
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.1807250977
+intensity: 28.4941940308
+---
+header: 
+  seq: 93336
+  stamp: 
+    secs: 1560894566
+    nsecs: 447571886
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 2.21484375
+y: 1.390625
+z: 0.12109375
+range: 2.78892612457
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.1233100891
+intensity: 29.3951931
+---
+header: 
+  seq: 93337
+  stamp: 
+    secs: 1560894566
+    nsecs: 447633165
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.251953125
+y: 1.412109375
+z: 0.056640625
+range: 2.83250308037
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.090171814
+intensity: 27.3399925232
+---
+header: 
+  seq: 93338
+  stamp: 
+    secs: 1560894566
+    nsecs: 447901603
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93339
+  stamp: 
+    secs: 1560894566
+    nsecs: 447931728
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 29.0036716461
+---
+header: 
+  seq: 93340
+  stamp: 
+    secs: 1560894566
+    nsecs: 447946167
+  frame_id: "ti_mmwave"
+point_id: 25
+x: 0.001953125
+y: -0.056640625
+z: 0.154296875
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -88.0250701904
+intensity: 25.2504482269
+---
+header: 
+  seq: 93341
+  stamp: 
+    secs: 1560894566
+    nsecs: 448818278
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6520614624
+---
+header: 
+  seq: 93342
+  stamp: 
+    secs: 1560894566
+    nsecs: 448853681
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8469142914
+---
+header: 
+  seq: 93343
+  stamp: 
+    secs: 1560894566
+    nsecs: 448863838
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0774784088
+---
+header: 
+  seq: 93344
+  stamp: 
+    secs: 1560894566
+    nsecs: 448875046
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.4157924652
+---
+header: 
+  seq: 93345
+  stamp: 
+    secs: 1560894566
+    nsecs: 448883702
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.48046875
+y: -0.0
+z: 1.173828125
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2221927643
+---
+header: 
+  seq: 93346
+  stamp: 
+    secs: 1560894566
+    nsecs: 448892244
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.51953125
+y: -0.041015625
+z: 1.201171875
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.51398849487
+intensity: 24.2488155365
+---
+header: 
+  seq: 93347
+  stamp: 
+    secs: 1560894566
+    nsecs: 448955160
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.525390625
+y: -0.0
+z: 1.244140625
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7646179199
+---
+header: 
+  seq: 93348
+  stamp: 
+    secs: 1560894566
+    nsecs: 448969789
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.63671875
+y: -0.0
+z: 1.005859375
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.7966918945
+---
+header: 
+  seq: 93349
+  stamp: 
+    secs: 1560894566
+    nsecs: 448982088
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.681640625
+y: -0.0
+z: 1.005859375
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.156375885
+---
+header: 
+  seq: 93350
+  stamp: 
+    secs: 1560894566
+    nsecs: 448992228
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.72265625
+y: -0.0
+z: 1.01171875
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3703746796
+---
+header: 
+  seq: 93351
+  stamp: 
+    secs: 1560894566
+    nsecs: 449003910
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.4609375
+y: -0.0
+z: 1.04296875
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9864368439
+---
+header: 
+  seq: 93352
+  stamp: 
+    secs: 1560894566
+    nsecs: 449014551
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.52734375
+y: -0.0
+z: 0.93359375
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6069774628
+---
+header: 
+  seq: 93353
+  stamp: 
+    secs: 1560894566
+    nsecs: 449021827
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.658203125
+y: -0.0
+z: 0.23046875
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4457416534
+---
+header: 
+  seq: 93354
+  stamp: 
+    secs: 1560894566
+    nsecs: 449079869
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.21484375
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8465614319
+---
+header: 
+  seq: 93355
+  stamp: 
+    secs: 1560894566
+    nsecs: 449095277
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.16015625
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.3477020264
+---
+header: 
+  seq: 93356
+  stamp: 
+    secs: 1560894566
+    nsecs: 449103660
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.76953125
+y: -0.150390625
+z: -0.35546875
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80602538586
+intensity: 33.6735610962
+---
+header: 
+  seq: 93357
+  stamp: 
+    secs: 1560894566
+    nsecs: 449113128
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.818359375
+y: -0.150390625
+z: -0.259765625
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78773546219
+intensity: 34.1463928223
+---
+header: 
+  seq: 93358
+  stamp: 
+    secs: 1560894566
+    nsecs: 449121706
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.865234375
+y: -0.0
+z: -0.1328125
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.235250473
+---
+header: 
+  seq: 93359
+  stamp: 
+    secs: 1560894566
+    nsecs: 449132706
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.873046875
+y: -0.154296875
+z: 0.853515625
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.81356906891
+intensity: 31.1892566681
+---
+header: 
+  seq: 93360
+  stamp: 
+    secs: 1560894566
+    nsecs: 449145557
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 2.23828125
+y: 1.189453125
+z: -0.09765625
+range: 2.70177221298
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 27.9867858887
+intensity: 25.965970993
+---
+header: 
+  seq: 93361
+  stamp: 
+    secs: 1560894566
+    nsecs: 449270584
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 2.275390625
+y: 1.208984375
+z: -0.052734375
+range: 2.74534916878
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 27.9830703735
+intensity: 28.8024177551
+---
+header: 
+  seq: 93362
+  stamp: 
+    secs: 1560894566
+    nsecs: 449285270
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.3125
+y: 1.2265625
+z: -0.01953125
+range: 2.78892612457
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 27.9417190552
+intensity: 27.7085208893
+---
+header: 
+  seq: 93363
+  stamp: 
+    secs: 1560894566
+    nsecs: 449332584
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1072387695
+---
+header: 
+  seq: 93364
+  stamp: 
+    secs: 1560894566
+    nsecs: 449342594
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9927310944
+---
+header: 
+  seq: 93365
+  stamp: 
+    secs: 1560894566
+    nsecs: 449389148
+  frame_id: "ti_mmwave"
+point_id: 26
+x: 4.69921875
+y: -0.146484375
+z: 0.1640625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78544998169
+intensity: 32.8375320435
+---
+header: 
+  seq: 93366
+  stamp: 
+    secs: 1560894566
+    nsecs: 506898429
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6595306396
+---
+header: 
+  seq: 93367
+  stamp: 
+    secs: 1560894566
+    nsecs: 506990487
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93368
+  stamp: 
+    secs: 1560894566
+    nsecs: 507007621
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0732097626
+---
+header: 
+  seq: 93369
+  stamp: 
+    secs: 1560894566
+    nsecs: 507021121
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 93370
+  stamp: 
+    secs: 1560894566
+    nsecs: 507035883
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.474609375
+y: -0.0
+z: 1.17578125
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2221927643
+---
+header: 
+  seq: 93371
+  stamp: 
+    secs: 1560894566
+    nsecs: 507051213
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.513671875
+y: -0.041015625
+z: 1.203125
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.56526279449
+intensity: 24.2651119232
+---
+header: 
+  seq: 93372
+  stamp: 
+    secs: 1560894566
+    nsecs: 507065124
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.517578125
+y: -0.0
+z: 1.24609375
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7875366211
+---
+header: 
+  seq: 93373
+  stamp: 
+    secs: 1560894566
+    nsecs: 507079006
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.634765625
+y: -0.0
+z: 1.013671875
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.8024177551
+---
+header: 
+  seq: 93374
+  stamp: 
+    secs: 1560894566
+    nsecs: 507092350
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.681640625
+y: -0.0
+z: 1.005859375
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1853561401
+---
+header: 
+  seq: 93375
+  stamp: 
+    secs: 1560894566
+    nsecs: 507187241
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.72265625
+y: -0.0
+z: 1.013671875
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3703746796
+---
+header: 
+  seq: 93376
+  stamp: 
+    secs: 1560894566
+    nsecs: 507202110
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.45703125
+y: -0.0
+z: 1.05859375
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9725723267
+---
+header: 
+  seq: 93377
+  stamp: 
+    secs: 1560894566
+    nsecs: 507214818
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.5234375
+y: -0.0
+z: 0.953125
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6520614624
+---
+header: 
+  seq: 93378
+  stamp: 
+    secs: 1560894566
+    nsecs: 507229199
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.65625
+y: -0.0
+z: 0.24609375
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4983463287
+---
+header: 
+  seq: 93379
+  stamp: 
+    secs: 1560894566
+    nsecs: 507242099
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.69921875
+y: -0.0
+z: 0.197265625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.8623199463
+---
+header: 
+  seq: 93380
+  stamp: 
+    secs: 1560894566
+    nsecs: 507255673
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.15234375
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.3829689026
+---
+header: 
+  seq: 93381
+  stamp: 
+    secs: 1560894566
+    nsecs: 507270951
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.765625
+y: -0.150390625
+z: -0.423828125
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80750477314
+intensity: 33.7309608459
+---
+header: 
+  seq: 93382
+  stamp: 
+    secs: 1560894566
+    nsecs: 507283987
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.798828125
+y: -0.150390625
+z: -0.501953125
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79500675201
+intensity: 34.3552589417
+---
+header: 
+  seq: 93383
+  stamp: 
+    secs: 1560894566
+    nsecs: 507293842
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.8046875
+y: -0.0
+z: -0.779296875
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.6465015411
+---
+header: 
+  seq: 93384
+  stamp: 
+    secs: 1560894566
+    nsecs: 507321371
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.818359375
+y: -0.154296875
+z: 1.119140625
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.83413887024
+intensity: 31.222158432
+---
+header: 
+  seq: 93385
+  stamp: 
+    secs: 1560894566
+    nsecs: 507392458
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93386
+  stamp: 
+    secs: 1560894566
+    nsecs: 507408871
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 93387
+  stamp: 
+    secs: 1560894566
+    nsecs: 507422184
+  frame_id: "ti_mmwave"
+point_id: 22
+x: 0.001953125
+y: -0.056640625
+z: 0.154296875
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -88.0250701904
+intensity: 25.2504482269
+---
+header: 
+  seq: 93388
+  stamp: 
+    secs: 1560894566
+    nsecs: 508392837
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6557979584
+---
+header: 
+  seq: 93389
+  stamp: 
+    secs: 1560894566
+    nsecs: 508445583
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93390
+  stamp: 
+    secs: 1560894566
+    nsecs: 508461171
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0732097626
+---
+header: 
+  seq: 93391
+  stamp: 
+    secs: 1560894566
+    nsecs: 508477583
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 93392
+  stamp: 
+    secs: 1560894566
+    nsecs: 508492016
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.48046875
+y: -0.0
+z: 1.173828125
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2428245544
+---
+header: 
+  seq: 93393
+  stamp: 
+    secs: 1560894566
+    nsecs: 508557017
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.525390625
+y: -0.041015625
+z: 1.19921875
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.46385145187
+intensity: 24.2651119232
+---
+header: 
+  seq: 93394
+  stamp: 
+    secs: 1560894566
+    nsecs: 508572262
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.54296875
+y: -0.0
+z: 1.236328125
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.810333252
+---
+header: 
+  seq: 93395
+  stamp: 
+    secs: 1560894566
+    nsecs: 508585287
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.65625
+y: -0.0
+z: 0.953125
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.7909584045
+---
+header: 
+  seq: 93396
+  stamp: 
+    secs: 1560894566
+    nsecs: 508598416
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.685546875
+y: -0.0
+z: 0.9921875
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.2453308105
+---
+header: 
+  seq: 93397
+  stamp: 
+    secs: 1560894566
+    nsecs: 508612557
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.72265625
+y: -0.0
+z: 1.01171875
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.3417701721
+---
+header: 
+  seq: 93398
+  stamp: 
+    secs: 1560894566
+    nsecs: 508628734
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.458984375
+y: -0.0
+z: 1.0546875
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9725723267
+---
+header: 
+  seq: 93399
+  stamp: 
+    secs: 1560894566
+    nsecs: 508642947
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.525390625
+y: -0.0
+z: 0.947265625
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6220588684
+---
+header: 
+  seq: 93400
+  stamp: 
+    secs: 1560894566
+    nsecs: 508652516
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.65625
+y: -0.0
+z: 0.251953125
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4798526764
+---
+header: 
+  seq: 93401
+  stamp: 
+    secs: 1560894566
+    nsecs: 508680783
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.224609375
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.866809845
+---
+header: 
+  seq: 93402
+  stamp: 
+    secs: 1560894566
+    nsecs: 508747225
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.146484375
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.377948761
+---
+header: 
+  seq: 93403
+  stamp: 
+    secs: 1560894566
+    nsecs: 508763053
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.76953125
+y: -0.150390625
+z: -0.36328125
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80602538586
+intensity: 33.7106781006
+---
+header: 
+  seq: 93404
+  stamp: 
+    secs: 1560894566
+    nsecs: 508778027
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.81640625
+y: -0.150390625
+z: -0.28125
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.78845989704
+intensity: 34.1846694946
+---
+header: 
+  seq: 93405
+  stamp: 
+    secs: 1560894566
+    nsecs: 508795713
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.86328125
+y: -0.0
+z: -0.2109375
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.8849048615
+---
+header: 
+  seq: 93406
+  stamp: 
+    secs: 1560894566
+    nsecs: 508810510
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.72265625
+y: -0.0
+z: 1.482421875
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.5745677948
+---
+header: 
+  seq: 93407
+  stamp: 
+    secs: 1560894566
+    nsecs: 508827399
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93408
+  stamp: 
+    secs: 1560894566
+    nsecs: 508841409
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9927310944
+---
+header: 
+  seq: 93409
+  stamp: 
+    secs: 1560894566
+    nsecs: 567087957
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6520614624
+---
+header: 
+  seq: 93410
+  stamp: 
+    secs: 1560894566
+    nsecs: 567184463
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93411
+  stamp: 
+    secs: 1560894566
+    nsecs: 567205301
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0732097626
+---
+header: 
+  seq: 93412
+  stamp: 
+    secs: 1560894566
+    nsecs: 567219512
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 93413
+  stamp: 
+    secs: 1560894566
+    nsecs: 567235373
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.482421875
+y: -0.0
+z: 1.173828125
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2428245544
+---
+header: 
+  seq: 93414
+  stamp: 
+    secs: 1560894566
+    nsecs: 567248968
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.515625
+y: -0.041015625
+z: 1.203125
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.54804229736
+intensity: 24.2651119232
+---
+header: 
+  seq: 93415
+  stamp: 
+    secs: 1560894566
+    nsecs: 567262203
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.515625
+y: -0.0
+z: 1.248046875
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.810333252
+---
+header: 
+  seq: 93416
+  stamp: 
+    secs: 1560894566
+    nsecs: 567275959
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.640625
+y: -0.0
+z: 0.994140625
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.7737140656
+---
+header: 
+  seq: 93417
+  stamp: 
+    secs: 1560894566
+    nsecs: 567289207
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.681640625
+y: -0.0
+z: 1.001953125
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.2036972046
+---
+header: 
+  seq: 93418
+  stamp: 
+    secs: 1560894566
+    nsecs: 567370838
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.728515625
+y: 0.08984375
+z: 0.990234375
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.88593709469
+intensity: 31.3257980347
+---
+header: 
+  seq: 93419
+  stamp: 
+    secs: 1560894566
+    nsecs: 567387402
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.455078125
+y: -0.0
+z: 1.06640625
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9691009521
+---
+header: 
+  seq: 93420
+  stamp: 
+    secs: 1560894566
+    nsecs: 567400876
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.52734375
+y: -0.0
+z: 0.93359375
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.5956344604
+---
+header: 
+  seq: 93421
+  stamp: 
+    secs: 1560894566
+    nsecs: 567415630
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.65625
+y: -0.0
+z: 0.240234375
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4488544464
+---
+header: 
+  seq: 93422
+  stamp: 
+    secs: 1560894566
+    nsecs: 567428777
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.69921875
+y: -0.0
+z: 0.197265625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.8443069458
+---
+header: 
+  seq: 93423
+  stamp: 
+    secs: 1560894566
+    nsecs: 567441656
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.154296875
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.360332489
+---
+header: 
+  seq: 93424
+  stamp: 
+    secs: 1560894566
+    nsecs: 567454748
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.767578125
+y: -0.150390625
+z: -0.400390625
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80676472187
+intensity: 33.7143745422
+---
+header: 
+  seq: 93425
+  stamp: 
+    secs: 1560894566
+    nsecs: 567472717
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.80859375
+y: -0.150390625
+z: -0.396484375
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79136347771
+intensity: 34.3071975708
+---
+header: 
+  seq: 93426
+  stamp: 
+    secs: 1560894566
+    nsecs: 567521255
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.845703125
+y: -0.0
+z: -0.462890625
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4363918304
+---
+header: 
+  seq: 93427
+  stamp: 
+    secs: 1560894566
+    nsecs: 567540018
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.845703125
+y: -0.154296875
+z: 0.99609375
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.82379603386
+intensity: 31.3289985657
+---
+header: 
+  seq: 93428
+  stamp: 
+    secs: 1560894566
+    nsecs: 567555821
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 2.30078125
+y: 1.2265625
+z: 0.228515625
+range: 2.78892612457
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 28.0623893738
+intensity: 25.15873909
+---
+header: 
+  seq: 93429
+  stamp: 
+    secs: 1560894566
+    nsecs: 567576630
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 2.2890625
+y: 1.330078125
+z: 0.25
+range: 2.83250308037
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 30.159072876
+intensity: 26.0314445496
+---
+header: 
+  seq: 93430
+  stamp: 
+    secs: 1560894566
+    nsecs: 567592995
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.28125
+y: 1.43359375
+z: 0.16796875
+range: 2.87608003616
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 32.1462631226
+intensity: 25.9106464386
+---
+header: 
+  seq: 93431
+  stamp: 
+    secs: 1560894566
+    nsecs: 567613392
+  frame_id: "ti_mmwave"
+point_id: 22
+x: 2.255859375
+y: 1.541015625
+z: 0.212890625
+range: 2.91965699196
+velocity: 1.22933733463
+doppler_bin: 10
+bearing: 34.3376426697
+intensity: 24.683473587
+---
+header: 
+  seq: 93432
+  stamp: 
+    secs: 1560894566
+    nsecs: 567635615
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 2.28125
+y: 1.564453125
+z: 0.291015625
+range: 2.96323394775
+velocity: 1.22933733463
+doppler_bin: 10
+bearing: 34.4418487549
+intensity: 21.9033164978
+---
+header: 
+  seq: 93433
+  stamp: 
+    secs: 1560894566
+    nsecs: 567662979
+  frame_id: "ti_mmwave"
+point_id: 25
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93434
+  stamp: 
+    secs: 1560894566
+    nsecs: 567685917
+  frame_id: "ti_mmwave"
+point_id: 26
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 93435
+  stamp: 
+    secs: 1560894566
+    nsecs: 626840910
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6483230591
+---
+header: 
+  seq: 93436
+  stamp: 
+    secs: 1560894566
+    nsecs: 626936875
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93437
+  stamp: 
+    secs: 1560894566
+    nsecs: 626957020
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.081741333
+---
+header: 
+  seq: 93438
+  stamp: 
+    secs: 1560894566
+    nsecs: 626974158
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.4157924652
+---
+header: 
+  seq: 93439
+  stamp: 
+    secs: 1560894566
+    nsecs: 626988765
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.494140625
+y: -0.0
+z: 1.16796875
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2014636993
+---
+header: 
+  seq: 93440
+  stamp: 
+    secs: 1560894566
+    nsecs: 627002913
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.5234375
+y: -0.041015625
+z: 1.19921875
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.48043966293
+intensity: 24.2324581146
+---
+header: 
+  seq: 93441
+  stamp: 
+    secs: 1560894566
+    nsecs: 627016695
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.55859375
+y: -0.0
+z: 1.228515625
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7875366211
+---
+header: 
+  seq: 93442
+  stamp: 
+    secs: 1560894566
+    nsecs: 627043177
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.646484375
+y: -0.0
+z: 0.982421875
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.7506122589
+---
+header: 
+  seq: 93443
+  stamp: 
+    secs: 1560894566
+    nsecs: 627066844
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.689453125
+y: -0.0
+z: 0.982421875
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.1351776123
+---
+header: 
+  seq: 93444
+  stamp: 
+    secs: 1560894566
+    nsecs: 627087871
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.734375
+y: -0.0
+z: 0.9765625
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.306552887
+---
+header: 
+  seq: 93445
+  stamp: 
+    secs: 1560894566
+    nsecs: 627103886
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.45703125
+y: -0.0
+z: 1.05859375
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.979511261
+---
+header: 
+  seq: 93446
+  stamp: 
+    secs: 1560894566
+    nsecs: 627199495
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.525390625
+y: -0.0
+z: 0.939453125
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6818580627
+---
+header: 
+  seq: 93447
+  stamp: 
+    secs: 1560894566
+    nsecs: 627214886
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.65625
+y: -0.0
+z: 0.24609375
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.5136985779
+---
+header: 
+  seq: 93448
+  stamp: 
+    secs: 1560894566
+    nsecs: 627229127
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.701171875
+y: -0.0
+z: 0.1875
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.871295929
+---
+header: 
+  seq: 93449
+  stamp: 
+    secs: 1560894566
+    nsecs: 627245473
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.16015625
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.377948761
+---
+header: 
+  seq: 93450
+  stamp: 
+    secs: 1560894566
+    nsecs: 627259649
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.767578125
+y: -0.150390625
+z: -0.39453125
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80676472187
+intensity: 33.7474822998
+---
+header: 
+  seq: 93451
+  stamp: 
+    secs: 1560894566
+    nsecs: 627272777
+  frame_id: "ti_mmwave"
+point_id: 16
+x: 4.8125
+y: -0.150390625
+z: -0.3515625
+range: 5.14208269119
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.7899106741
+intensity: 34.3536643982
+---
+header: 
+  seq: 93452
+  stamp: 
+    secs: 1560894566
+    nsecs: 627287361
+  frame_id: "ti_mmwave"
+point_id: 17
+x: 4.859375
+y: -0.0
+z: -0.302734375
+range: 5.18565940857
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.5136985779
+---
+header: 
+  seq: 93453
+  stamp: 
+    secs: 1560894566
+    nsecs: 627302338
+  frame_id: "ti_mmwave"
+point_id: 18
+x: 4.830078125
+y: -0.154296875
+z: 1.06640625
+range: 5.27281332016
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.82969176769
+intensity: 31.455072403
+---
+header: 
+  seq: 93454
+  stamp: 
+    secs: 1560894566
+    nsecs: 627315897
+  frame_id: "ti_mmwave"
+point_id: 19
+x: 2.294921875
+y: 1.330078125
+z: -0.185546875
+range: 2.83250308037
+velocity: 0.614668667316
+doppler_bin: 9
+bearing: 30.0954875946
+intensity: 26.7117290497
+---
+header: 
+  seq: 93455
+  stamp: 
+    secs: 1560894566
+    nsecs: 627329265
+  frame_id: "ti_mmwave"
+point_id: 20
+x: 2.265625
+y: 1.541015625
+z: 0.04296875
+range: 2.91965699196
+velocity: 1.22933733463
+doppler_bin: 10
+bearing: 34.2224578857
+intensity: 24.4090900421
+---
+header: 
+  seq: 93456
+  stamp: 
+    secs: 1560894566
+    nsecs: 627342355
+  frame_id: "ti_mmwave"
+point_id: 21
+x: 2.298828125
+y: 1.564453125
+z: -0.052734375
+range: 2.96323394775
+velocity: 1.22933733463
+doppler_bin: 10
+bearing: 34.2369995117
+intensity: 22.9885311127
+---
+header: 
+  seq: 93457
+  stamp: 
+    secs: 1560894566
+    nsecs: 627358735
+  frame_id: "ti_mmwave"
+point_id: 23
+x: 0.037109375
+y: -0.03515625
+z: 0.064453125
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -43.4518432617
+intensity: 30.1114730835
+---
+header: 
+  seq: 93458
+  stamp: 
+    secs: 1560894566
+    nsecs: 627374252
+  frame_id: "ti_mmwave"
+point_id: 24
+x: 0.046875
+y: -0.046875
+z: 0.103515625
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -45.0
+intensity: 28.9982051849
+---
+header: 
+  seq: 93459
+  stamp: 
+    secs: 1560894566
+    nsecs: 627389196
+  frame_id: "ti_mmwave"
+point_id: 25
+x: 0.001953125
+y: -0.056640625
+z: 0.154296875
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -88.0250701904
+intensity: 25.2374649048
+---
+header: 
+  seq: 93460
+  stamp: 
+    secs: 1560894566
+    nsecs: 628634011
+  frame_id: "ti_mmwave"
+point_id: 0
+x: 0.01171875
+y: -0.0390625
+z: -0.0078125
+range: 0.0435769706964
+velocity: 0.0
+doppler_bin: 8
+bearing: -73.3007583618
+intensity: 30.6483230591
+---
+header: 
+  seq: 93461
+  stamp: 
+    secs: 1560894566
+    nsecs: 628694027
+  frame_id: "ti_mmwave"
+point_id: 1
+x: 0.02734375
+y: -0.076171875
+z: -0.009765625
+range: 0.0871539413929
+velocity: 0.0
+doppler_bin: 8
+bearing: -70.2531661987
+intensity: 31.8440742493
+---
+header: 
+  seq: 93462
+  stamp: 
+    secs: 1560894566
+    nsecs: 628712522
+  frame_id: "ti_mmwave"
+point_id: 2
+x: 0.029296875
+y: -0.119140625
+z: -0.005859375
+range: 0.130730912089
+velocity: 0.0
+doppler_bin: 8
+bearing: -76.1849746704
+intensity: 30.0774784088
+---
+header: 
+  seq: 93463
+  stamp: 
+    secs: 1560894566
+    nsecs: 628722315
+  frame_id: "ti_mmwave"
+point_id: 3
+x: 0.056640625
+y: -0.154296875
+z: 0.0078125
+range: 0.174307882786
+velocity: 0.0
+doppler_bin: 8
+bearing: -69.8423843384
+intensity: 25.403295517
+---
+header: 
+  seq: 93464
+  stamp: 
+    secs: 1560894566
+    nsecs: 628809207
+  frame_id: "ti_mmwave"
+point_id: 4
+x: 0.515625
+y: -0.0
+z: 1.158203125
+range: 1.35088610649
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 23.2221927643
+---
+header: 
+  seq: 93465
+  stamp: 
+    secs: 1560894566
+    nsecs: 628823857
+  frame_id: "ti_mmwave"
+point_id: 5
+x: 0.541015625
+y: -0.041015625
+z: 1.19140625
+range: 1.39446306229
+velocity: 0.0
+doppler_bin: 8
+bearing: -4.33543014526
+intensity: 24.2160396576
+---
+header: 
+  seq: 93466
+  stamp: 
+    secs: 1560894566
+    nsecs: 628837515
+  frame_id: "ti_mmwave"
+point_id: 6
+x: 0.55078125
+y: -0.0
+z: 1.232421875
+range: 1.43804001808
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 22.7415790558
+---
+header: 
+  seq: 93467
+  stamp: 
+    secs: 1560894566
+    nsecs: 628845829
+  frame_id: "ti_mmwave"
+point_id: 7
+x: 2.638671875
+y: -0.0
+z: 1.00390625
+range: 3.00681090355
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 28.7852172852
+---
+header: 
+  seq: 93468
+  stamp: 
+    secs: 1560894566
+    nsecs: 628869111
+  frame_id: "ti_mmwave"
+point_id: 8
+x: 2.677734375
+y: -0.0
+z: 1.01171875
+range: 3.05038785934
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 32.2193565369
+---
+header: 
+  seq: 93469
+  stamp: 
+    secs: 1560894566
+    nsecs: 628929466
+  frame_id: "ti_mmwave"
+point_id: 9
+x: 2.71875
+y: 0.08984375
+z: 1.017578125
+range: 3.09396481514
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.89270627499
+intensity: 31.3956432343
+---
+header: 
+  seq: 93470
+  stamp: 
+    secs: 1560894566
+    nsecs: 628946704
+  frame_id: "ti_mmwave"
+point_id: 10
+x: 4.455078125
+y: -0.0
+z: 1.068359375
+range: 4.88062095642
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.9725723267
+---
+header: 
+  seq: 93471
+  stamp: 
+    secs: 1560894566
+    nsecs: 628957101
+  frame_id: "ti_mmwave"
+point_id: 11
+x: 4.525390625
+y: -0.0
+z: 0.9453125
+range: 4.9241976738
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 30.6032009125
+---
+header: 
+  seq: 93472
+  stamp: 
+    secs: 1560894566
+    nsecs: 629001439
+  frame_id: "ti_mmwave"
+point_id: 12
+x: 4.658203125
+y: -0.0
+z: 0.234375
+range: 4.96777486801
+velocity: 0.0
+doppler_bin: 8
+bearing: -0.0
+intensity: 31.4395103455
+---
+header: 
+  seq: 93473
+  stamp: 
+    secs: 1560894566
+    nsecs: 629017522
+  frame_id: "ti_mmwave"
+point_id: 13
+x: 4.697265625
+y: 0.146484375
+z: 0.212890625
+range: 5.01135158539
+velocity: 0.0
+doppler_bin: 8
+bearing: 1.7861918211
+intensity: 32.8555717468
+---
+header: 
+  seq: 93474
+  stamp: 
+    secs: 1560894566
+    nsecs: 629033053
+  frame_id: "ti_mmwave"
+point_id: 14
+x: 4.740234375
+y: -0.1484375
+z: -0.16015625
+range: 5.0549287796
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.79359567165
+intensity: 32.377948761
+---
+header: 
+  seq: 93475
+  stamp: 
+    secs: 1560894566
+    nsecs: 629045106
+  frame_id: "ti_mmwave"
+point_id: 15
+x: 4.767578125
+y: -0.150390625
+z: -0.3984375
+range: 5.09850549698
+velocity: 0.0
+doppler_bin: 8
+bearing: -1.80676472187
+intensity: 33.7438163757
