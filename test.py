@@ -6,7 +6,7 @@ import scipy.stats as sta
 from scipy.optimize import curve_fit
 
 # Open file
-with open("sample_walk_1_frame1.txt") as f:
+with open("sample_walk_1_part1.txt") as f:
     lines = f.readlines()
 
 frame_num_count = -1
@@ -82,7 +82,7 @@ def Gaussian2(x, *par):
     return par[0]*np.exp(-np.power(x-par[2], 2) / (2 * np.power(par[4], 2))) + par[1]*np.exp(-np.power(x-par[3], 2) / (2 * np.power(par[5], 2)))
 
 
-def sort_data(startFrame, endFrame):
+def sort_data(startFrame, endFrame, clean = True):
     i_prev = 0
     for i in range(len(frame_num)):
         if frame_num[i] == startFrame - 1:
@@ -130,15 +130,17 @@ def sort_data(startFrame, endFrame):
     z_min = min(z[i_prev:i_curr])
     z_max = max(z[i_prev:i_curr])
     z_min = fit[2]-5*fit[4]
-    z_max = (fit[2]+3*fit[4]+fit[3]-3*fit[5])/2  # gap between two Gaussians
+    z_max = (fit[2]+3*fit[4]+fit[3]-3*fit[5])/2  # Gap between two Gaussians
 
     print(x_min, x_max, y_min, y_max, z_min, z_max)
 
     i_list = []
     for i in range(i_prev, i_curr):
-        # if x_min <= x[i] <= x_max and z_min <= z[i] <= z_max:
-        i_list.append(i)    # For debug
-            # i_list.append(i)
+        if clean:
+            if x_min <= x[i] <= x_max and z_min <= z[i] <= z_max:
+                i_list.append(i)
+        else:
+            i_list.append(i)
 
     # print("i_list = " + str(i_list))
 
@@ -153,20 +155,19 @@ def sort_data(startFrame, endFrame):
     # intensity_min = min(final[i_list, 5])
     # intensity_max = max(final[i_list, 5])
 
-    # Frame number of the point with the max velocity (and not on the walls or ceiling)
-    i_max = i_list[np.argmax(final[i_list, 4])]
-
-    return i_list, i_max
+    return i_list
     
 
-def plot_data(ax, i_list, i_max, color = 'k'):
+def plot_data(ax, i_list):
     intensity_min = min(final[i_list, 5])
     intensity_max = max(final[i_list, 5])
 
     for i in i_list:
-        ax.scatter(x[i], y[i], z[i], color = color, alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min))
+        ax.scatter(x[i], y[i], z[i], color = 'k', alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min))
         # ax.scatter(x[i] - x[i_max], y[i] - y[i_max], z[i] - z[i_max], color = color, alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min))
 
+    # Frame number of the point with the max velocity (and not on the walls or ceiling)
+    i_max = i_list[np.argmax(final[i_list, 4])]
     i = i_max
     ax.scatter(x[i], y[i], z[i], color = 'r', alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min))
     print(i_max, x[i], y[i], z[i], (intensity[i] - intensity_min)/(intensity_max - intensity_min))
@@ -180,7 +181,6 @@ def plot_data(ax, i_list, i_max, color = 'k'):
     # plt.show()
 
 
-
 get_data()
 print(frame_num_count)
 
@@ -188,7 +188,7 @@ data, final = organized_data()
 
 fig = plt.figure()
 ax = fig.gca(projection = '3d')
+i_list = sort_data(0, 60)
+plot_data(ax, i_list)
 
-i_list, i_max = sort_data(0, 60)
-plot_data(ax, i_list, i_max)
 plt.show()
