@@ -2,9 +2,11 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 import math
+import scipy.stats as sta
+from scipy.optimize import curve_fit
 
 # Open file
-with open("C:\Users\qiong\Downloads\sample_walk_1_part1.txt") as f:
+with open("sample_walk_1_frame1.txt") as f:
     lines = f.readlines()
 
 frame_num_count = -1
@@ -76,7 +78,11 @@ def organized_data():
     return data, final
 
 
-def sort_data(startFrame, endFrame, threshold = [0.3, 0.5, 0.1]):
+def Gaussian2(x, *par):
+    return par[0]*np.exp(-np.power(x-par[2], 2) / (2 * np.power(par[4], 2))) + par[1]*np.exp(-np.power(x-par[3], 2) / (2 * np.power(par[5], 2)))
+
+
+def sort_data(startFrame, endFrame):
     i_prev = 0
     for i in range(len(frame_num)):
         if frame_num[i] == startFrame - 1:
@@ -89,38 +95,77 @@ def sort_data(startFrame, endFrame, threshold = [0.3, 0.5, 0.1]):
     # print("i_prev = " + str(i_prev))
     # print("i_curr = " + str(i_curr))
 
-    x_min = min(final[i_prev: i_curr, 1])
-    x_max = max(final[i_prev: i_curr, 1])
-    y_min = min(final[i_prev: i_curr, 2])
-    y_max = max(final[i_prev: i_curr, 2])
-    z_min = min(final[i_prev: i_curr, 3])
-    z_max = max(final[i_prev: i_curr, 3])
+    # Gaussian fit, similar to the method of voxels
+    pillar = 32
+    # For x_min, x_max
+    ver, hor = np.histogram(x[i_prev:i_curr], bins = pillar, density = True)
+    mean = np.mean(x[i_prev:i_curr])
+    fit = sta.norm.pdf(hor, mean, np.std(x[i_prev:i_curr]))
+    fwhm = (max(fit)+min(fit))/2
+    x_min = min(x[i_prev:i_curr])
+    x_max = max(x[i_prev:i_curr])
+    for i in range(len(fit)-1):
+        if fit[i] < fwhm <= fit[i+1]:
+            x_min = hor[i+1]
+        elif fit[i] >= fwhm > fit[i+1]:
+            x_max = hor[i]
+
+    # For y_min, y_max
+    ver, hor = np.histogram(y[i_prev:i_curr], bins = pillar, density = True)
+    mean = np.mean(y[i_prev:i_curr])
+    fit = sta.norm.pdf(hor, mean, np.std(y[i_prev:i_curr]))
+    fwhm = (max(fit)+min(fit))/2
+    y_min = min(y[i_prev:i_curr])
+    y_max = max(y[i_prev:i_curr])
+    for i in range(len(fit)-1):
+        if fit[i] < fwhm <= fit[i+1]:
+            y_min = hor[i+1]
+        elif fit[i] >= fwhm > fit[i+1]:
+            y_max = hor[i]
+
+    # For z_min, z_max
+    ver, hor = np.histogram(z[i_prev:i_curr], bins = pillar, density = True)
+    fit, cov = curve_fit(Gaussian2, hor[:-1], ver, p0=[1,1,0,1,0.5,0.5])
+    # plt.plot(hor, Gaussian2(hor, *fit))
+    z_min = min(z[i_prev:i_curr])
+    z_max = max(z[i_prev:i_curr])
+    z_min = fit[2]-5*fit[4]
+    z_max = (fit[2]+3*fit[4]+fit[3]-3*fit[5])/2  # gap between two Gaussians
+
+    print(x_min, x_max, y_min, y_max, z_min, z_max)
 
     i_list = []
     for i in range(i_prev, i_curr):
-        if x_min + threshold[0] <= x[i] <= x_max - threshold[0] and y_min + threshold[1] <= y[i] and z_min + threshold[2] <= z[i] <= z_max - threshold[2]:
-            i_list.append(i)
+        # if x_min <= x[i] <= x_max and z_min <= z[i] <= z_max:
+        i_list.append(i)    # For debug
+            # i_list.append(i)
 
     # print("i_list = " + str(i_list))
 
-    velocity_min = min(final[i_list, 4])
-    velocity_max = max(final[i_list, 4])
-    intensity_min = min(final[i_list, 5])
-    intensity_max = max(final[i_list, 5])
+    # x_min = min(final[i_list, 1])
+    # x_max = max(final[i_list, 1])
+    # y_min = min(final[i_list, 2])
+    # y_max = max(final[i_list, 2])
+    # z_min = min(final[i_list, 3])
+    # z_max = max(final[i_list, 3])
+    # velocity_min = min(final[i_list, 4])
+    # velocity_max = max(final[i_list, 4])
+    # intensity_min = min(final[i_list, 5])
+    # intensity_max = max(final[i_list, 5])
 
-    # Frame number of the point with the max intensity or velocity (and not on the walls or ceiling)
+    # Frame number of the point with the max velocity (and not on the walls or ceiling)
     i_max = i_list[np.argmax(final[i_list, 4])]
-    # i_max = i_list[np.argmax(final[i_list, 5])]
 
     return i_list, i_max
     
 
-def plot_data(ax, i_list, i_max):
+def plot_data(ax, i_list, i_max, color = 'k'):
     intensity_min = min(final[i_list, 5])
     intensity_max = max(final[i_list, 5])
 
     for i in i_list:
-        ax.scatter(x[i], y[i], z[i], color = 'k', alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min))
+        ax.scatter(x[i], y[i], z[i], color = color, alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min))
+        # ax.scatter(x[i] - x[i_max], y[i] - y[i_max], z[i] - z[i_max], color = color, alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min))
 
     i = i_max
     ax.scatter(x[i], y[i], z[i], color = 'r', alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min))
@@ -129,7 +174,10 @@ def plot_data(ax, i_list, i_max):
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
-    plt.show()
+    ax.set_xlim(-1, 5)
+    ax.set_ylim(-1, 2)
+    ax.set_zlim(-1.5, 1.5)
+    # plt.show()
 
 
 
@@ -137,11 +185,10 @@ get_data()
 print(frame_num_count)
 
 data, final = organized_data()
-i_list, i_max = sort_data(0, 60)
 
 fig = plt.figure()
 ax = fig.gca(projection = '3d')
 
+i_list, i_max = sort_data(0, 60)
 plot_data(ax, i_list, i_max)
-
-
+plt.show()
