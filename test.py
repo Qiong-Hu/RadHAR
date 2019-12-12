@@ -66,7 +66,7 @@ def organized_data():
         if int(frame_num[i]) in data:
             data[frame_num[i]].append([x[i], y[i], z[i], velocity[i], intensity[i]])
         else:
-            data[frame_num[i]]=[]
+            data[frame_num[i]] = []
             data[frame_num[i]].append([x[i], y[i], z[i], velocity[i], intensity[i]])
 
         final[i, 0] = int(frame_num[i])
@@ -83,6 +83,82 @@ def Gaussian2(x, *par):
     return par[0]*np.exp(-np.power(x-par[2], 2) / (2 * np.power(par[4], 2))) + par[1]*np.exp(-np.power(x-par[3], 2) / (2 * np.power(par[5], 2)))
 
 
+# To find x_min, x_max
+def find_x_bounds(x_data, pillar = 32, debug = False):
+    if debug:
+        ver, hor, patch = plt.hist(x_data, bins = pillar, density = True)
+    else:
+        ver, hor = np.histogram(x_data, bins = pillar, density = True)
+    mean = np.mean(x_data)
+    std = np.std(x_data)
+    fit = sta.norm.pdf(hor, mean, std)
+    fwhm1 = (max(fit)+fit[0])/2
+    fwhm2 = (max(fit)+fit[-1])/2
+
+    x_min = min(x_data)
+    x_max = max(x_data)
+    for i in range(len(fit)-1):
+        if fit[i] < fwhm1 <= fit[i+1]:
+            x_min = hor[i+1]
+        elif fit[i] >= fwhm2 > fit[i+1]:
+            x_max = hor[i]
+
+    if debug:
+        plt.plot(hor, fit)
+        plt.axvline(x=x_min)
+        plt.axvline(x=x_max)
+        print("x_min=" + str(x_min) + "\tx_max=" + str(x_max))
+
+    return x_min, x_max
+
+
+# To find y_min, y_max
+def find_y_bounds(y_data, pillar = 32, debug = False):
+    if debug:
+        ver, hor, patch = plt.hist(y_data, bins = pillar, density = True)
+    else:
+        ver, hor = np.histogram(y_data, bins = pillar, density = True)
+    mean = np.mean(y_data)
+    std = np.std(y_data)
+
+    y_min = min(y_data)
+    y_max = max(y_data)
+    y_min = max(y_min, mean-5*std)
+    y_max = min(y_max, mean+5*std)
+
+    if debug:
+        fit = sta.norm.pdf(hor, mean, std)
+        plt.plot(hor, fit)
+        plt.axvline(x=y_min)
+        plt.axvline(x=y_max)
+        print("y_min=" + str(y_min) + "\ty_max=" + str(y_max))
+
+    return y_min, y_max
+
+
+# To find z_min, z_max
+def find_z_bounds(z_data, pillar = 32, debug = False):
+    if debug:
+        ver, hor, patch = plt.hist(z_data, bins = pillar, density = True)
+    else:
+        ver, hor = np.histogram(z_data, bins = pillar, density = True)
+    fit, cov = curve_fit(Gaussian2, hor[:-1], ver, p0=[1,1,0,1,0.5,0.5])
+
+    z_min = min(z_data)
+    z_max = max(z_data)
+    z_min = max(z_min, fit[2]-4*fit[4])
+    z_max = min(z_max, fit[2]+4*fit[4])  # Gap between two Gaussians
+
+    if debug:
+        plt.plot(hor, Gaussian2(hor, *fit))
+        plt.axvline(x=z_min)
+        plt.axvline(x=z_max)
+        print("z_min=" + str(z_min) + "\tz_max=" + str(z_max))
+        print(fit[2], fit[4])
+
+    return z_min, z_max
+
+
 def sort_data(startFrame, endFrame, clean = True):
     i_prev = 0
     for i in range(len(frame_num)):
@@ -93,44 +169,15 @@ def sort_data(startFrame, endFrame, clean = True):
             i_curr = i
             break
 
-    print("i_prev=" + str(i_prev) + "\ti_curr=" + str(i_curr))
+    print("startFrame="+str(startFrame)+"\tendFrame="+str(endFrame)+"\ti_prev="+str(i_prev)+"\ti_curr="+str(i_curr))
 
     # Gaussian fit, similar to the method of voxels
     pillar = 32
-    # For x_min, x_max
-    ver, hor = np.histogram(x[i_prev:i_curr], bins = pillar, density = True)
-    mean = np.mean(x[i_prev:i_curr])
-    fit = sta.norm.pdf(hor, mean, np.std(x[i_prev:i_curr]))
-    fwhm1 = (max(fit)+fit[0])/2
-    fwhm2 = (max(fit)+fit[-1])/2
-    x_min = min(x[i_prev:i_curr])
-    x_max = max(x[i_prev:i_curr])
-    for i in range(len(fit)-1):
-        if fit[i] < fwhm1 <= fit[i+1]:
-            x_min = hor[i+1]
-        elif fit[i] >= fwhm2 > fit[i+1]:
-            x_max = hor[i]
+    x_min, x_max = find_x_bounds(x[i_prev:i_curr], pillar)
+    y_min, y_max = find_y_bounds(y[i_prev:i_curr], pillar)
+    z_min, z_max = find_z_bounds(z[i_prev:i_curr], pillar)
 
-    # For y_min, y_max
-    ver, hor = np.histogram(y[i_prev:i_curr], bins = pillar, density = True)
-    mean = np.mean(y[i_prev:i_curr])
-    std = np.std(y[i_prev:i_curr])
-    y_min = min(y[i_prev:i_curr])
-    y_max = max(y[i_prev:i_curr])
-    # print(y_min, y_max)
-    y_min = max([y_min, mean-5*std])
-    y_max = min([y_max, mean+5*std])
-
-    # For z_min, z_max
-    ver, hor = np.histogram(z[i_prev:i_curr], bins = pillar, density = True)
-    fit, cov = curve_fit(Gaussian2, hor[:-1], ver, p0=[1,1,0,1,0.5,0.5])
-    # plt.plot(hor, Gaussian2(hor, *fit))
-    z_min = min(z[i_prev:i_curr])
-    z_max = max(z[i_prev:i_curr])
-    z_min = fit[2]-5*fit[4]
-    z_max = (fit[2]+3*fit[4]+fit[3]-3*fit[5])/2  # Gap between two Gaussians
-
-    print(x_min, x_max, y_min, y_max, z_min, z_max)
+    # print(x_min, x_max, y_min, y_max, z_min, z_max)
 
     i_list = []
     for i in range(i_prev, i_curr):
@@ -156,53 +203,30 @@ def sort_data2(startFrame, endFrame, clean = True):
             i_curr = i
             break
 
-    print("i_prev=" + str(i_prev) + "\ti_curr=" + str(i_curr))
+    print("startFrame="+str(startFrame)+"\tendFrame="+str(endFrame)+"\ti_prev="+str(i_prev)+"\ti_curr="+str(i_curr))
 
     # Gaussian fit, similar to the method of voxels
     pillar = 32
 
     # For z_min, z_max
-    ver, hor = np.histogram(z[i_prev:i_curr], bins = pillar, density = True)
-    fit, cov = curve_fit(Gaussian2, hor[:-1], ver, p0=[1,1,0,1,0.5,0.5])
-    # plt.plot(hor, Gaussian2(hor, *fit))
-    z_min = min(z[i_prev:i_curr])
-    z_max = max(z[i_prev:i_curr])
-    z_min = fit[2]-5*fit[4]
-    z_max = (fit[2]+3*fit[4]+fit[3]-3*fit[5])/2  # Gap between two Gaussians
+    z_min, z_max = find_z_bounds(z[i_prev:i_curr], pillar)
+    print
 
     # For x_min, x_max
     i_list_x = []
     for i in range(i_prev, i_curr):
         if z_min <= z[i] <= z_max:
             i_list_x.append(i)
-    ver, hor = np.histogram(x[i_list_x], bins = pillar, density = True)
-    mean = np.mean(x[i_list_x])
-    fit = sta.norm.pdf(hor, mean, np.std(x[i_list_x]))
-    fwhm1 = (max(fit)+fit[0])/2
-    fwhm2 = (max(fit)+fit[-1])/2
-    x_min = min(x[i_list_x])
-    x_max = max(x[i_list_x])
-    for i in range(len(fit)-1):
-        if fit[i] < fwhm1 <= fit[i+1]:
-            x_min = hor[i+1]
-        elif fit[i] >= fwhm2 > fit[i+1]:
-            x_max = hor[i]
+    x_min, x_max = find_x_bounds(x[i_list_x], pillar)
 
     # For y_min, y_max
     i_list_y = []
     for i in range(i_prev, i_curr):
         if x_min <= x[i] <= x_max:
             i_list_y.append(i)
-    ver, hor = np.histogram(y[i_list_y], bins = pillar, density = True)
-    mean = np.mean(y[i_list_y])
-    std = np.std(y[i_list_y])
-    y_min = min(y[i_list_y])
-    y_max = max(y[i_list_y])
-    # print(y_min, y_max)
-    y_min = max([y_min, mean-5*std])
-    y_max = min([y_max, mean+5*std])
+    y_min, y_max = find_y_bounds(y[i_list_y], pillar)
 
-    print(x_min, x_max, y_min, y_max, z_min, z_max)
+    # print(x_min, x_max, y_min, y_max, z_min, z_max)
 
     i_list = []
     for i in range(i_prev, i_curr):
@@ -212,23 +236,25 @@ def sort_data2(startFrame, endFrame, clean = True):
         else:
             i_list.append(i)
 
+    intensity_min = min(intensity[i_list])
+    intensity_max = max(intensity[i_list])
+    if clean:
+        for i in i_list:
+            alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min)
+            if alpha < 0.25:    # Value may need adjust
+                i_list.remove(i)
+
     # print("i_list = " + str(i_list))
     return i_list
 
 
-def plot_data(ax, i_list, color = 'k'):
-    intensity_min = min(final[i_list, 5])
-    intensity_max = max(final[i_list, 5])
+def plot_data(ax, i_list, datalist, color = 'k'):
+    intensity_min = min(intensity[i_list])
+    intensity_max = max(intensity[i_list])
 
     for i in i_list:
-        ax.scatter(x[i], y[i], z[i], color = color, alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min), marker = '.')
-        # ax.scatter(x[i] - x[i_max], y[i] - y[i_max], z[i] - z[i_max], color = color, alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min))
-
-    # Frame number of the point with the max velocity (and not on the walls or ceiling)
-    i_max = i_list[np.argmax(final[i_list, 4])]
-    i = i_max
-    # ax.scatter(x[i], y[i], z[i], color = 'r', alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min))
-    # print(i_max, x[i], y[i], z[i], (intensity[i] - intensity_min)/(intensity_max - intensity_min))
+        alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min)
+        ax.scatter(datalist[i, 1], datalist[i, 2], datalist[i, 3], color = color, alpha = alpha, marker = '.')
 
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
@@ -236,64 +262,122 @@ def plot_data(ax, i_list, color = 'k'):
     ax.set_xlim(-1, 5)
     ax.set_ylim(-1, 2)
     ax.set_zlim(-1.5, 1.5)
-    # plt.show()
 
 
 # Shift and add
-# Problem: if sorted data not clean enough, max velocity point may fall in noises, making the shifted data a mess
-def plot_data2(ax, i_list, color = 'k'):
-    intensity_min = min(final[i_list, 5])
-    intensity_max = max(final[i_list, 5])
+# Problem: if sorted data not clean enough, max velocity point may fall in noises, making the shifted data a mess -> Solution: use sort_data2 func, a lot cleaner
+# Problem: data too sparse for 1 frame, may or may not have large distance change in 60 frames -> Solution: shift and add every 10 frame (?)
+def shift_data(i_list):
+    center = expect(i_list)
 
-    # Frame number of the point with the max velocity (and not on the walls or ceiling)
-    i_max = i_list[np.argmax(final[i_list, 4])]
+    final2 = np.zeros([len(frame_num), 6])
 
-    switch = np.zeros(len(i_list))
-    data_new = dict()
+    # data2: To store frame_index with same frame_number in a dict
+    data2 = dict()
     for i in i_list:
-        if int(frame_num[i]) in data_new:
-            data_new[frame_num[i]].append(i)
+        if int(frame_num[i]) in data2:
+            data2[frame_num[i]].append(i)
         else:
-            data_new[frame_num[i]]=[]
-            data_new[frame_num[i]].append(i)
+            data2[frame_num[i]] = []
+            data2[frame_num[i]].append(i)
 
-    for each_frame in data_new:
-        vel_max_frame_index = data_new[each_frame][np.argmax(velocity[data_new[each_frame]])]
-        for i in data_new[each_frame]:
-            ax.scatter(x[i]-(x[vel_max_frame_index]-x[i_max]), y[i]-(y[vel_max_frame_index]-y[i_max]), z[i]-(z[vel_max_frame_index]-z[i_max]), color = color, alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min))
-    # i = i_max
-    # ax.scatter(x[i], y[i], z[i], color = 'r', alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min))
-    # print(i_max, x[i], y[i], z[i], (intensity[i] - intensity_min)/(intensity_max - intensity_min))
+    # Shift each frame so that all velocity_max points for each frame in the same position as center of every 60 frames
+    for each_frame in data2:
+        vel_max_frame_index = data2[each_frame][np.argmax(velocity[data2[each_frame]])]
+        for i in data2[each_frame]:
+            final2[i, 0] = int(frame_num[i])
+            final2[i, 1] = x[i] - (x[vel_max_frame_index] - center[0])
+            final2[i, 2] = y[i] - (y[vel_max_frame_index] - center[1])
+            final2[i, 3] = z[i] - (z[vel_max_frame_index] - center[2])
+            final2[i, 4] = velocity[i]
+            final2[i, 5] = intensity[i]
 
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
-    ax.set_zlabel('Z')
-    ax.set_xlim(-1, 5)
-    ax.set_ylim(-1, 2)
-    ax.set_zlim(-1.5, 1.5)
-    # plt.show()
+    return final2
 
 
+# Velocity-based expected position of the figure
 def expect(i_list):
-    x = np.dot(final[i_list, 1], final[i_list, 4])/np.sum(final[i_list, 4])
-    y = np.dot(final[i_list, 2], final[i_list, 4])/np.sum(final[i_list, 4])
-    z = np.dot(final[i_list, 3], final[i_list, 4])/np.sum(final[i_list, 4])
+    weight = np.abs(final[i_list, 4])
+    if np.sum(weight) != 0:
+        x = np.dot(final[i_list, 1], weight)/np.sum(weight)
+        y = np.dot(final[i_list, 2], weight)/np.sum(weight)
+        z = np.dot(final[i_list, 3], weight)/np.sum(weight)
+    else:
+        x = np.average(final[i_list, 1])
+        y = np.average(final[i_list, 2])
+        z = np.average(final[i_list, 3])
     return [x, y, z]
 
 
-def find_verts(i_list):
-    x_min = min(final[i_list, 1])
-    x_max = max(final[i_list, 1])
-    y_min = min(final[i_list, 2])
-    y_max = max(final[i_list, 2])
-    z_min = min(final[i_list, 3])
-    z_max = max(final[i_list, 3])
-    velocity_min = min(final[i_list, 4])
-    velocity_max = max(final[i_list, 4])
-    intensity_min = min(final[i_list, 5])
-    intensity_max = max(final[i_list, 5])
+def find_verts(i_list, datalist):
+    x_min = min(datalist[i_list, 1])
+    x_max = max(datalist[i_list, 1])
+    y_min = min(datalist[i_list, 2])
+    y_max = max(datalist[i_list, 2])
+    z_min = min(datalist[i_list, 3])
+    z_max = max(datalist[i_list, 3])
+    velocity_min = min(datalist[i_list, 4])
+    velocity_max = max(datalist[i_list, 4])
+    intensity_min = min(datalist[i_list, 5])
+    intensity_max = max(datalist[i_list, 5])
 
     center = expect(i_list)
+
+    verts = [x_min, x_max, y_min, y_max, z_min, z_max, center]
+
+    return verts
+
+
+# Velocity-based weighted lower and upper bounds estimation
+# Results: not good
+def find_verts2(i_list, datalist):
+    center = expect(i_list)
+
+    # Initialize
+    x_min = 0
+    x_max = 0
+    y_min = 0
+    y_max = 0
+    z_min = 0
+    z_max = 0
+    velocity_min = 0    # To calculate total weight for lower bound
+    velocity_max = 0    # To calculate total weight for upper bound
+    intensity_min = 0
+    intensity_max = 0
+
+    for i in i_list:
+        if datalist[i, 1] <= center[0]:
+            x_min += datalist[i, 1] * datalist[i, 4]
+            velocity_min += datalist[i, 4]
+        else:
+            x_max += datalist[i, 1] * datalist[i, 4]
+            velocity_max += datalist[i, 4]
+    x_min = x_min/velocity_min
+    x_max = x_max/velocity_max
+
+    velocity_min = 0
+    velocity_max = 0
+    for i in i_list:
+        if datalist[i, 2] <= center[1]:
+            y_min += datalist[i, 2] * datalist[i, 4]
+            velocity_min += datalist[i, 4]
+        else:
+            y_max += datalist[i, 2] * datalist[i, 4]
+            velocity_max += datalist[i, 4]
+    y_min = y_min/velocity_min
+    y_max = y_max/velocity_max
+
+    velocity_min = 0
+    velocity_max = 0
+    for i in i_list:
+        if datalist[i, 3] <= center[2]:
+            z_min += datalist[i, 3] * datalist[i, 4]
+            velocity_min += datalist[i, 4]
+        else:
+            z_max += datalist[i, 3] * datalist[i, 4]
+            velocity_max += datalist[i, 4]
+    z_min = z_min/velocity_min
+    z_max = z_max/velocity_max
 
     verts = [x_min, x_max, y_min, y_max, z_min, z_max, center]
 
@@ -329,6 +413,10 @@ def plot_cube(ax, verts, alpha = 1, color = 'r'):
     # plt.show()
 
 
+def find_figure_frame(i_list, datalist):
+    pass
+
+
 get_data()
 print(frame_num_count)
 
@@ -336,14 +424,69 @@ data, final = organized_data()
 
 fig = plt.figure()
 ax = fig.gca(projection = '3d')
-i_list = sort_data2(120, 130)
-plot_data(ax, i_list)
-verts = find_verts(i_list)
-plot_cube(ax, verts)
 
+# z_min_ave=0
+# z_max_ave=0
+# count=0
+# for i in range(0, int(frame_num_count/60)-1):
+#     i_list = sort_data(i*60,i*60+60)
+#     if i_list != []:
+#         final2 = shift_data(i_list)
+#         verts = find_verts(i_list, final2)
+#         z_min_ave+=verts[4]
+#         z_max_ave+=verts[5]
+#         count+=1
+#     del i_list
+# print(z_min_ave, z_max_ave, count)
+# print((z_max_ave-z_min_ave)/count)
+
+
+traj = np.zeros([10,3])
+for i in range(0, 10):
+    i_list = sort_data2(i*60,i*60+60)
+    if i_list != []:
+        final2 = shift_data(i_list)
+        # plot_data(ax, i_list, final2)
+        verts = find_verts(i_list, final2)
+        # print(verts)
+        plot_cube(ax, verts,(i+1)/10)
+        traj[i, :]=expect(i_list)
+        del i_list
+ax.plot3D(traj[:,0],traj[:,1],traj[:,2])
+# print(traj)
 
 # fig = plt.figure()
 # ax = fig.gca(projection = '3d')
-# i_list = sort_data2(180, 240, False)
-# plot_data(ax, i_list)
+# i_list = sort_data2(480,540)
+# final2 = shift_data(i_list)
+# plot_data(ax, i_list, final2)
+# verts = find_verts(i_list, final2)
+# print(expect(i_list))
+# plot_cube(ax, verts)
+
+# fig = plt.figure()
+# ax = fig.gca(projection = '3d')
+# i_list = sort_data2(300,360)
+# # final2 = shift_data(i_list)
+# plot_data(ax, i_list, final)
+# verts = find_verts(i_list, final)
+# plot_cube(ax, verts)
+
+# fig = plt.figure()
+# ax = fig.gca(projection = '3d')
+# i_list = sort_data2(300,360, False)
+# plot_data(ax, i_list, final)
+
 plt.show()
+
+
+# For debug
+# pillar = 32
+# i_prev=11196
+# i_curr=12508
+# find_x_bounds(x[i_prev:i_curr], pillar, True)
+# plt.figure()
+# find_y_bounds(y[i_prev:i_curr], pillar, True)
+# plt.figure()
+# find_z_bounds(z[i_prev:i_curr], pillar, True)
+# plt.show()
