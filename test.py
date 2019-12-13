@@ -7,7 +7,7 @@ import scipy.stats as sta
 from scipy.optimize import curve_fit
 
 # Open file
-with open("sample_walk_1_part1.txt") as f:
+with open("sample_walk_1_frame1.txt") as f:
     lines = f.readlines()
 
 frame_num_count = -1
@@ -146,8 +146,8 @@ def find_z_bounds(z_data, pillar = 32, debug = False):
 
     z_min = min(z_data)
     z_max = max(z_data)
-    z_min = max(z_min, fit[2]-4*fit[4])
-    z_max = min(z_max, fit[2]+4*fit[4])  # Gap between two Gaussians
+    z_min = max(z_min, fit[2]-5*fit[4])
+    z_max = min(z_max, fit[2]+3*fit[4])  # Gap between two Gaussians
 
     if debug:
         plt.plot(hor, Gaussian2(hor, *fit))
@@ -210,39 +210,38 @@ def sort_data2(startFrame, endFrame, clean = True):
 
     # For z_min, z_max
     z_min, z_max = find_z_bounds(z[i_prev:i_curr], pillar)
-    print
 
     # For x_min, x_max
     i_list_x = []
     for i in range(i_prev, i_curr):
         if z_min <= z[i] <= z_max:
             i_list_x.append(i)
-    x_min, x_max = find_x_bounds(x[i_list_x], pillar)
+    if i_list_x == []:
+        return []
+    else:
+        x_min, x_max = find_x_bounds(x[i_list_x], pillar)
 
     # For y_min, y_max
     i_list_y = []
-    for i in range(i_prev, i_curr):
+    for i in i_list_x:
         if x_min <= x[i] <= x_max:
             i_list_y.append(i)
-    y_min, y_max = find_y_bounds(y[i_list_y], pillar)
+    if i_list_y == []:
+        return []
+    else:
+        y_min, y_max = find_y_bounds(y[i_list_y], pillar)
 
     # print(x_min, x_max, y_min, y_max, z_min, z_max)
 
     i_list = []
-    for i in range(i_prev, i_curr):
-        if clean:
-            if x_min <= x[i] <= x_max and y_min <= y[i] <= y_max and z_min <= z[i] <= z_max:
-                i_list.append(i)
-        else:
-            i_list.append(i)
-
-    intensity_min = min(intensity[i_list])
-    intensity_max = max(intensity[i_list])
+    
     if clean:
-        for i in i_list:
-            alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min)
-            if alpha < 0.25:    # Value may need adjust
-                i_list.remove(i)
+        for i in i_list_y:
+            if y_min <= y[i] <= y_max:
+                i_list.append(i)
+    else:
+        for i in range(i_prev, i_curr):
+            i_list.append(i)
 
     # print("i_list = " + str(i_list))
     return i_list
@@ -295,9 +294,12 @@ def shift_data(i_list):
     return final2
 
 
-# Velocity-based expected position of the figure
-def expect(i_list):
-    weight = np.abs(final[i_list, 4])
+# Velocity(/intensity)-weighted expected center position of the figure
+def expect(i_list, ref = 'intensity'):
+    if ref == 'velocity':
+        weight = np.abs(final[i_list, 4])
+    elif ref == 'intensity':
+        weight = np.abs(final[i_list, 5])
     if np.sum(weight) != 0:
         x = np.dot(final[i_list, 1], weight)/np.sum(weight)
         y = np.dot(final[i_list, 2], weight)/np.sum(weight)
@@ -328,7 +330,7 @@ def find_verts(i_list, datalist):
     return verts
 
 
-# Velocity-based weighted lower and upper bounds estimation
+# Velocity(/intensity)-based weighted lower and upper bounds estimation
 # Results: not good
 def find_verts2(i_list, datalist):
     center = expect(i_list)
@@ -422,47 +424,60 @@ print(frame_num_count)
 
 data, final = organized_data()
 
-fig = plt.figure()
-ax = fig.gca(projection = '3d')
+# fig = plt.figure()
+# ax = fig.gca(projection = '3d')
 
-# z_min_ave=0
-# z_max_ave=0
+# Average height from all frames
+# min_ave=0
+# max_ave=0
+# max_abs=0
+# min_abs=0
 # count=0
 # for i in range(0, int(frame_num_count/60)-1):
 #     i_list = sort_data(i*60,i*60+60)
 #     if i_list != []:
 #         final2 = shift_data(i_list)
 #         verts = find_verts(i_list, final2)
-#         z_min_ave+=verts[4]
-#         z_max_ave+=verts[5]
+#         min_ave+=verts[0]
+#         max_ave+=verts[1]
 #         count+=1
+#         min_abs=min(min_abs, verts[0])
+#         max_abs=max(max_abs, verts[1])
 #     del i_list
-# print(z_min_ave, z_max_ave, count)
-# print((z_max_ave-z_min_ave)/count)
+# print(min_ave/count, max_ave/count, (max_ave-min_ave)/count)
+# print(min_abs, max_abs, max_abs-min_abs)
 
 
-traj = np.zeros([10,3])
-for i in range(0, 10):
-    i_list = sort_data2(i*60,i*60+60)
-    if i_list != []:
-        final2 = shift_data(i_list)
-        # plot_data(ax, i_list, final2)
-        verts = find_verts(i_list, final2)
-        # print(verts)
-        plot_cube(ax, verts,(i+1)/10)
-        traj[i, :]=expect(i_list)
-        del i_list
-ax.plot3D(traj[:,0],traj[:,1],traj[:,2])
+# Plot trajectory
+# traj = np.zeros([int(frame_num_count/60)-1,3])
+# for i in range(0, int(frame_num_count/60)-1):
+#     i_list = sort_data2(i*60,i*60+60)
+#     if i_list != []:
+#         final2 = shift_data(i_list)
+#         plot_data(ax, i_list, final2)
+#         verts = find_verts(i_list, final2)
+#         print(verts)
+#         plot_cube(ax, verts,(i+1)/10)
+#         traj[i, :]=expect(i_list)
+#         del i_list
+# ax.plot3D(traj[:,0],traj[:,1],traj[:,2])
+# ax.set_xlabel('X')
+# ax.set_ylabel('Y')
+# ax.set_zlabel('Z')
+# ax.set_xlim(-1, 5)
+# ax.set_ylim(-1, 2)
+# ax.set_zlim(-1.5, 1.5)
 # print(traj)
 
-# fig = plt.figure()
-# ax = fig.gca(projection = '3d')
-# i_list = sort_data2(480,540)
+# # For debug
+fig = plt.figure()
+ax = fig.gca(projection = '3d')
+i_list = sort_data2(0,60)
 # final2 = shift_data(i_list)
-# plot_data(ax, i_list, final2)
-# verts = find_verts(i_list, final2)
+plot_data(ax, i_list, final)
+verts = find_verts(i_list, final)
 # print(expect(i_list))
-# plot_cube(ax, verts)
+plot_cube(ax, verts)
 
 # fig = plt.figure()
 # ax = fig.gca(projection = '3d')
@@ -472,18 +487,18 @@ ax.plot3D(traj[:,0],traj[:,1],traj[:,2])
 # verts = find_verts(i_list, final)
 # plot_cube(ax, verts)
 
-# fig = plt.figure()
-# ax = fig.gca(projection = '3d')
-# i_list = sort_data2(300,360, False)
-# plot_data(ax, i_list, final)
+fig = plt.figure()
+ax = fig.gca(projection = '3d')
+i_list = sort_data2(0,60, False)
+plot_data(ax, i_list, final)
 
 plt.show()
 
 
 # For debug
 # pillar = 32
-# i_prev=11196
-# i_curr=12508
+# i_prev = 0
+# i_curr = 1382
 # find_x_bounds(x[i_prev:i_curr], pillar, True)
 # plt.figure()
 # find_y_bounds(y[i_prev:i_curr], pillar, True)
