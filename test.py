@@ -10,7 +10,13 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 W = 60    # Time frame window: 60 frames (= 2 seconds)
 
 # Open file
-with open("sample_walk_1_part1.txt") as f:
+# with open("./data/sample_walk_1.txt") as f:
+# with open("./data/Train/jump/__jump_122s.txt") as f:
+# with open("./data/Train/walk/___walk_191s.txt") as f:
+# with open("./data/Train/squats/___squats_186s.txt") as f:
+# with open("./data/Train/jump/___jump_180s.txt") as f:
+# with open("./data/Train/jack/jacks_179s.txt") as f:
+with open("./data/Train/boxing/boxing_191s.txt") as f:
     lines = f.readlines()
 
 frame_num_count = -1
@@ -88,8 +94,10 @@ def Gaussian2(x, *par):
 
 # To find x_min, x_max
 def find_x_bounds(x_data, pillar = 32, debug = False):
+    kwargs = {'color': 'b'}
     if debug:
-        ver, hor, patch = plt.hist(x_data, bins = pillar, density = True)
+        plt.figure()
+        ver, hor, patch = plt.hist(x_data, bins = pillar, density = True, **kwargs)
     else:
         ver, hor = np.histogram(x_data, bins = pillar, density = True)
     mean = np.mean(x_data)
@@ -107,10 +115,11 @@ def find_x_bounds(x_data, pillar = 32, debug = False):
             x_max = hor[i]
 
     if debug:
-        plt.plot(hor, fit)
+        kwargs = {'color': 'orange'}
+        plt.plot(hor, fit, **kwargs)
         plt.xlabel("X")
-        plt.axvline(x=x_min)
-        plt.axvline(x=x_max)
+        plt.axvline(x=x_min, **kwargs)
+        plt.axvline(x=x_max, **kwargs)
         print("x_min=" + str(x_min) + "\tx_max=" + str(x_max))
 
     return x_min, x_max
@@ -118,8 +127,10 @@ def find_x_bounds(x_data, pillar = 32, debug = False):
 
 # To find y_min, y_max
 def find_y_bounds(y_data, pillar = 32, debug = False):
+    kwargs = {'color': 'b'}
     if debug:
-        ver, hor, patch = plt.hist(y_data, bins = pillar, density = True)
+        plt.figure()
+        ver, hor, patch = plt.hist(y_data, bins = pillar, density = True, **kwargs)
     else:
         ver, hor = np.histogram(y_data, bins = pillar, density = True)
     mean = np.mean(y_data)
@@ -131,11 +142,12 @@ def find_y_bounds(y_data, pillar = 32, debug = False):
     y_max = min(y_max, mean+3*std)
 
     if debug:
+        kwargs = {'color': 'orange'}
         fit = sta.norm.pdf(hor, mean, std)
-        plt.plot(hor, fit)
+        plt.plot(hor, fit, **kwargs)
         plt.xlabel("Y")
-        plt.axvline(x=y_min)
-        plt.axvline(x=y_max)
+        plt.axvline(x=y_min, **kwargs)
+        plt.axvline(x=y_max, **kwargs)
         print("y_min=" + str(y_min) + "\ty_max=" + str(y_max))
 
     return y_min, y_max
@@ -143,8 +155,10 @@ def find_y_bounds(y_data, pillar = 32, debug = False):
 
 # To find z_min, z_max
 def find_z_bounds(z_data, pillar = 32, debug = False, cov0 = 0.3):
+    kwargs = {'color': 'b'}
     if debug:
-        ver, hor, patch = plt.hist(z_data, bins = pillar, density = True)
+        plt.figure()
+        ver, hor, patch = plt.hist(z_data, bins = pillar, density = True, **kwargs)
     else:
         ver, hor = np.histogram(z_data, bins = pillar, density = True)
     fit, cov = curve_fit(Gaussian2, hor[:-1], ver, p0=[1,1,0,1,cov0,cov0])
@@ -155,10 +169,11 @@ def find_z_bounds(z_data, pillar = 32, debug = False, cov0 = 0.3):
     z_max = min(z_max, fit[2]+3*fit[4])  # Gap between two Gaussians
 
     if debug:
-        plt.plot(hor, Gaussian2(hor, *fit))
+        kwargs = {'color': 'orange'}
+        plt.plot(hor, Gaussian2(hor, *fit), **kwargs)
         plt.xlabel("Z")
-        plt.axvline(x=z_min)
-        plt.axvline(x=z_max)
+        plt.axvline(x=z_min, **kwargs)
+        plt.axvline(x=z_max, **kwargs)
         print("z_min=" + str(z_min) + "\tz_max=" + str(z_max))
         print(fit[2], fit[4])
 
@@ -187,13 +202,17 @@ def sort_data(startFrame, endFrame, clean = True):
             i_curr = i
             break
 
-    print("startFrame="+str(startFrame)+"\tendFrame="+str(endFrame)+"\ti_prev="+str(i_prev)+"\ti_curr="+str(i_curr))
+    print("time="+str(startFrame/30)+"s\tstartFrame="+str(startFrame)+"\tendFrame="+str(endFrame)+"\ti_prev="+str(i_prev)+"\ti_curr="+str(i_curr))
 
     # Gaussian fit, similar to the method of voxels
     pillar = 32
     x_min, x_max = find_x_bounds(x[i_prev:i_curr], pillar)
     y_min, y_max = find_y_bounds(y[i_prev:i_curr], pillar)
-    z_min, z_max = find_z_bounds(z[i_prev:i_curr], pillar)
+    # z: curve_fit may not converge -> use iterative train_z_cov
+    try:
+        z_min, z_max = find_z_bounds(z[i_prev:i_curr], pillar)
+    except:
+        z_min, z_max = find_x_bounds(z[i_prev:i_curr], pillar)
 
     # print(x_min, x_max, y_min, y_max, z_min, z_max)
 
@@ -227,7 +246,11 @@ def sort_data2(startFrame, endFrame, clean = True):
     pillar = 32
 
     # For z_min, z_max
-    z_min, z_max = find_z_bounds(z[i_prev:i_curr], pillar)
+    # z: curve_fit may not converge -> use iterative train_z_cov
+    try:
+        z_min, z_max = find_z_bounds(z[i_prev:i_curr], pillar)
+    except:
+        z_min, z_max = find_x_bounds(z[i_prev:i_curr], pillar)
 
     # For x_min, x_max
     i_list_x = []
@@ -367,10 +390,10 @@ def plot_cube(ax, verts, alpha = 1, color = 'r'):
     ax.plot3D([x_max, x_max], [y_max, y_max], [z_min, z_max], **kwargs)
 
     # Plot the center point of the figure
-    ax.scatter(center[0], center[1], center[2], color = 'r')
+    # ax.scatter(center[0], center[1], center[2], color = 'r')
 
 
-def plot_traj(ax, count = int(frame_num_count/W)):
+def plot_traj(ax, count):
     traj = []
     for i in range(0, count):
         i_list = sort_data2(i*W, (i+1)*W)
@@ -379,11 +402,12 @@ def plot_traj(ax, count = int(frame_num_count/W)):
             # plot_data(ax, i_list, final2)
             # verts = find_verts(i_list, final2)
             # plot_cube(ax, verts)
-            traj.append(np.array(expect(i_list)))
+            traj.append(expect(i_list))
             del i_list
 
     traj = np.array(traj)
-    ax.plot3D(traj[:, 0], traj[:, 1], traj[:, 2], 'b')
+    ax.plot3D(traj[:, 0], traj[:, 1], traj[:, 2], color = 'b')
+    print("effective rate", len(traj), count, len(traj)/count)
     # print(traj)
 
     # Plot range of the traj
@@ -395,7 +419,7 @@ def plot_traj(ax, count = int(frame_num_count/W)):
     z_max = max(traj[:, 2])
     verts = [x_min, x_max, y_min, y_max, z_min, z_max, 0]
     print(verts[:-1])
-    # plot_cube(ax, verts, 0.5)
+    plot_cube(ax, verts, 0.5)
 
 
 # Statistic figure size among all frames
@@ -415,6 +439,7 @@ def figure_size():
             dis_z.append(verts[5]-verts[4])
             del i_list
 
+    # TODO: why for jump (/etc) data, x(/y/z)_min=0
     print("x_min=" + str(min(dis_x)) + "m\tx_max=" + str(max(dis_x)) + "m\tx_ave=" + str(np.average(dis_x)) + "m")
     print("y_min=" + str(min(dis_y)) + "m\ty_max=" + str(max(dis_y)) + "m\ty_ave=" + str(np.average(dis_y)) + "m")
     print("z_min=" + str(min(dis_z)) + "m\tz_max=" + str(max(dis_z)) + "m\tz_ave=" + str(np.average(dis_z)) + "m")
@@ -639,7 +664,7 @@ fig = plt.figure()
 ax = fig.gca(projection = '3d')
 ax_settings(ax)
 
-# plot_traj(ax)
+plot_traj(ax, int(frame_num_count/W))
 # figure_size()
 
 # For debug
@@ -648,15 +673,18 @@ ax_settings(ax)
 # plot_data(ax, i_list, final2)
 # verts = find_verts(i_list, final2)
 # plot_cube(ax, verts)
+
 # plot_skeleton(ax, i_list, final2)
 
-# for i in range(0,7):
+# Plot figure in multi-frame
+# for i in range(0,10):
 #     i_list = sort_data2(60*i, 60*i+60)
 #     final2 = shift_data(i_list)
 #     # plot_data(ax, i_list, final2)
 #     verts = find_verts(i_list, final2)
 #     plot_cube(ax, verts, 0.5)
-#     plot_skeleton(ax, i_list, final2)
+
+    # plot_skeleton(ax, i_list, final2)
 
 # fig = plt.figure()
 # ax = fig.gca(projection = '3d')
@@ -669,20 +697,19 @@ ax_settings(ax)
 # fig = plt.figure()
 # ax = fig.gca(projection = '3d')
 # ax_settings(ax)
-# i_list = sort_data2(2100,2160, False)
+# i_list = sort_data(0,60, False)
 # plot_data(ax, i_list, final)
 
-plt.show()
+# plt.show()
 # fig.savefig("./img-" + time.strftime("%H%M%S", time.localtime()) + ".jpg", dpi = 300)
+# fig.savefig("./traj-_.jpg", dpi = 300)
 
 
 # For debug
 # pillar = 32
-# i_prev = 112162
-# i_curr = 113534
+# i_prev = 0
+# i_curr = 1382
 # find_x_bounds(x[i_prev:i_curr], pillar, True)
-# plt.figure()
 # find_y_bounds(y[i_prev:i_curr], pillar, True)
-# plt.figure()
 # find_z_bounds(z[i_prev:i_curr], pillar, True)
 # plt.show()
