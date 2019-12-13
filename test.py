@@ -7,7 +7,7 @@ import scipy.stats as sta
 from scipy.optimize import curve_fit
 
 # Open file
-with open("sample_walk_1_frame1.txt") as f:
+with open("sample_walk_1_part1.txt") as f:
     lines = f.readlines()
 
 frame_num_count = -1
@@ -123,8 +123,8 @@ def find_y_bounds(y_data, pillar = 32, debug = False):
 
     y_min = min(y_data)
     y_max = max(y_data)
-    y_min = max(y_min, mean-5*std)
-    y_max = min(y_max, mean+5*std)
+    y_min = max(y_min, mean-3*std)
+    y_max = min(y_max, mean+3*std)
 
     if debug:
         fit = sta.norm.pdf(hor, mean, std)
@@ -146,7 +146,7 @@ def find_z_bounds(z_data, pillar = 32, debug = False):
 
     z_min = min(z_data)
     z_max = max(z_data)
-    z_min = max(z_min, fit[2]-5*fit[4])
+    z_min = max(z_min, fit[2]-3*fit[4])
     z_max = min(z_max, fit[2]+3*fit[4])  # Gap between two Gaussians
 
     if debug:
@@ -203,7 +203,7 @@ def sort_data2(startFrame, endFrame, clean = True):
             i_curr = i
             break
 
-    print("startFrame="+str(startFrame)+"\tendFrame="+str(endFrame)+"\ti_prev="+str(i_prev)+"\ti_curr="+str(i_curr))
+    print("time="+str(startFrame/30)+"s\tstartFrame="+str(startFrame)+"\tendFrame="+str(endFrame)+"\ti_prev="+str(i_prev)+"\ti_curr="+str(i_curr))
 
     # Gaussian fit, similar to the method of voxels
     pillar = 32
@@ -247,22 +247,6 @@ def sort_data2(startFrame, endFrame, clean = True):
     return i_list
 
 
-def plot_data(ax, i_list, datalist, color = 'k'):
-    intensity_min = min(intensity[i_list])
-    intensity_max = max(intensity[i_list])
-
-    for i in i_list:
-        alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min)
-        ax.scatter(datalist[i, 1], datalist[i, 2], datalist[i, 3], color = color, alpha = alpha, marker = '.')
-
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
-    ax.set_zlabel('Z')
-    ax.set_xlim(-1, 5)
-    ax.set_ylim(-1, 2)
-    ax.set_zlim(-1.5, 1.5)
-
-
 # Shift and add
 # Problem: if sorted data not clean enough, max velocity point may fall in noises, making the shifted data a mess -> Solution: use sort_data2 func, a lot cleaner
 # Problem: data too sparse for 1 frame, may or may not have large distance change in 60 frames -> Solution: shift and add every 10 frame (?)
@@ -294,12 +278,21 @@ def shift_data(i_list):
     return final2
 
 
-# Velocity(/intensity)-weighted expected center position of the figure
-def expect(i_list, ref = 'intensity'):
+# Estimate the center position of the figure
+def expect(i_list, ref = 'both'):
+    # Use the point with max intensity as the estimated center
+    # i_max = i_list[np.argmax(final[i_list, 5])]
+    # x = x[i_max]
+    # y = y[i_max]
+    # z = z[i_max]
+
+    # Use the velocity(/intensity)-weighted expected position as the estimated center
     if ref == 'velocity':
         weight = np.abs(final[i_list, 4])
     elif ref == 'intensity':
         weight = np.abs(final[i_list, 5])
+    elif ref == 'both':
+        weight = (np.abs(final[i_list, 4])+np.abs(final[i_list, 5]))/2
     if np.sum(weight) != 0:
         x = np.dot(final[i_list, 1], weight)/np.sum(weight)
         y = np.dot(final[i_list, 2], weight)/np.sum(weight)
@@ -386,6 +379,24 @@ def find_verts2(i_list, datalist):
     return verts
 
 
+def ax_settings(ax):
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_zlabel('Z')
+    ax.set_xlim(-1, 5)
+    ax.set_ylim(-1, 2)
+    ax.set_zlim(-1.5, 1.5)
+
+
+def plot_data(ax, i_list, datalist, color = 'k'):
+    intensity_min = min(intensity[i_list])
+    intensity_max = max(intensity[i_list])
+
+    for i in i_list:
+        alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min)
+        ax.scatter(datalist[i, 1], datalist[i, 2], datalist[i, 3], color = color, alpha = alpha, marker = '.')
+
+
 def plot_cube(ax, verts, alpha = 1, color = 'r'):
     x_min, x_max, y_min, y_max, z_min, z_max, center = verts
 
@@ -399,33 +410,42 @@ def plot_cube(ax, verts, alpha = 1, color = 'r'):
     ax.plot3D([x_max, x_max], [y_min, y_min], [z_min, z_max], **kwargs)
     ax.plot3D([x_max, x_max], [y_max, y_max], [z_min, z_max], **kwargs)
 
-    # Estimate the center point of the figure
-    # Use the point with max velocity as the estimated center
-    # i_max = i_list[np.argmax(final[i_list, 4])]     
-    # ax.scatter(x[i_max], y[i_max], z[i_max], color = 'r')
-    # Use the velocity-weighted expected position as the estimated center
+    # Plot the center point of the figure
     ax.scatter(center[0], center[1], center[2], color = 'r')
 
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
-    ax.set_zlabel('Z')
-    ax.set_xlim(-1, 5)
-    ax.set_ylim(-1, 2)
-    ax.set_zlim(-1.5, 1.5)
-    # plt.show()
+
+def plot_traj(ax):
+    traj = []
+    for i in range(0, int(frame_num_count/60)):
+        i_list = sort_data2(i*60, i*60+60)
+        if i_list != []:
+            # final2 = shift_data(i_list)
+            # plot_data(ax, i_list, final2)
+            # verts = find_verts(i_list, final2)
+            # print(verts)
+            # plot_cube(ax, verts)
+            traj.append(np.array(expect(i_list)))
+            del i_list
+
+    traj = np.array(traj)
+    ax.plot3D(traj[:, 0], traj[:, 1], traj[:, 2])
+    print(traj)
 
 
 def find_figure_frame(i_list, datalist):
     pass
 
 
+# For experience
 get_data()
 print(frame_num_count)
-
 data, final = organized_data()
 
-# fig = plt.figure()
-# ax = fig.gca(projection = '3d')
+fig = plt.figure()
+ax = fig.gca(projection = '3d')
+ax_settings(ax)
+
+# plot_traj(ax)
 
 # Average height from all frames
 # min_ave=0
@@ -448,34 +468,11 @@ data, final = organized_data()
 # print(min_abs, max_abs, max_abs-min_abs)
 
 
-# Plot trajectory
-# traj = np.zeros([int(frame_num_count/60)-1,3])
-# for i in range(0, int(frame_num_count/60)-1):
-#     i_list = sort_data2(i*60,i*60+60)
-#     if i_list != []:
-#         final2 = shift_data(i_list)
-#         plot_data(ax, i_list, final2)
-#         verts = find_verts(i_list, final2)
-#         print(verts)
-#         plot_cube(ax, verts,(i+1)/10)
-#         traj[i, :]=expect(i_list)
-#         del i_list
-# ax.plot3D(traj[:,0],traj[:,1],traj[:,2])
-# ax.set_xlabel('X')
-# ax.set_ylabel('Y')
-# ax.set_zlabel('Z')
-# ax.set_xlim(-1, 5)
-# ax.set_ylim(-1, 2)
-# ax.set_zlim(-1.5, 1.5)
-# print(traj)
-
 # # For debug
-fig = plt.figure()
-ax = fig.gca(projection = '3d')
-i_list = sort_data2(0,60)
-# final2 = shift_data(i_list)
-plot_data(ax, i_list, final)
-verts = find_verts(i_list, final)
+i_list = sort_data2(2160,2220)
+final2 = shift_data(i_list)
+plot_data(ax, i_list, final2)
+verts = find_verts(i_list, final2)
 # print(expect(i_list))
 plot_cube(ax, verts)
 
@@ -487,18 +484,18 @@ plot_cube(ax, verts)
 # verts = find_verts(i_list, final)
 # plot_cube(ax, verts)
 
-fig = plt.figure()
-ax = fig.gca(projection = '3d')
-i_list = sort_data2(0,60, False)
-plot_data(ax, i_list, final)
+# fig = plt.figure()
+# ax = fig.gca(projection = '3d')
+# i_list = sort_data2(0,60, False)
+# plot_data(ax, i_list, final)
 
 plt.show()
 
 
 # For debug
 # pillar = 32
-# i_prev = 0
-# i_curr = 1382
+# i_prev = 49096
+# i_curr = 50626
 # find_x_bounds(x[i_prev:i_curr], pillar, True)
 # plt.figure()
 # find_y_bounds(y[i_prev:i_curr], pillar, True)
