@@ -105,6 +105,7 @@ def find_x_bounds(x_data, pillar = 32, debug = False):
 
     if debug:
         plt.plot(hor, fit)
+        plt.xlabel("X")
         plt.axvline(x=x_min)
         plt.axvline(x=x_max)
         print("x_min=" + str(x_min) + "\tx_max=" + str(x_max))
@@ -129,6 +130,7 @@ def find_y_bounds(y_data, pillar = 32, debug = False):
     if debug:
         fit = sta.norm.pdf(hor, mean, std)
         plt.plot(hor, fit)
+        plt.xlabel("Y")
         plt.axvline(x=y_min)
         plt.axvline(x=y_max)
         print("y_min=" + str(y_min) + "\ty_max=" + str(y_max))
@@ -137,12 +139,12 @@ def find_y_bounds(y_data, pillar = 32, debug = False):
 
 
 # To find z_min, z_max
-def find_z_bounds(z_data, pillar = 32, debug = False):
+def find_z_bounds(z_data, pillar = 32, debug = False, cov0 = 0.3):
     if debug:
         ver, hor, patch = plt.hist(z_data, bins = pillar, density = True)
     else:
         ver, hor = np.histogram(z_data, bins = pillar, density = True)
-    fit, cov = curve_fit(Gaussian2, hor[:-1], ver, p0=[1,1,0,1,0.5,0.5])
+    fit, cov = curve_fit(Gaussian2, hor[:-1], ver, p0=[1,1,0,1,cov0,cov0])
 
     z_min = min(z_data)
     z_max = max(z_data)
@@ -151,11 +153,24 @@ def find_z_bounds(z_data, pillar = 32, debug = False):
 
     if debug:
         plt.plot(hor, Gaussian2(hor, *fit))
+        plt.xlabel("Z")
         plt.axvline(x=z_min)
         plt.axvline(x=z_max)
         print("z_min=" + str(z_min) + "\tz_max=" + str(z_max))
         print(fit[2], fit[4])
 
+    return z_min, z_max
+
+
+def train_z_cov(z_data, pillar = 32, cov0 = 0.3, step = 0.02):
+    z_min = 0
+    z_max = 0
+    cov = cov0
+    while z_min == 0 and z_max == 0:
+        try:
+            z_min, z_max = find_z_bounds(z_data, pillar = pillar, cov0 = cov)
+        except:
+            cov += step
     return z_min, z_max
 
 
@@ -278,8 +293,12 @@ def shift_data(i_list):
     return final2
 
 
+def normalize(x, x_min, x_max):
+    return (x-x_min)/(x_max-x_min)
+
+
 # Estimate the center position of the figure
-def expect(i_list, ref = 'both'):
+def expect(i_list, ref = 'intensity'):
     # Use the point with max intensity as the estimated center
     # i_max = i_list[np.argmax(final[i_list, 5])]
     # x = x[i_max]
@@ -292,7 +311,14 @@ def expect(i_list, ref = 'both'):
     elif ref == 'intensity':
         weight = np.abs(final[i_list, 5])
     elif ref == 'both':
-        weight = (np.abs(final[i_list, 4])+np.abs(final[i_list, 5]))/2
+        # Consider the velocity and intensity together
+        # Normalize both before addition
+        velocity_abs_min = min(np.abs(final[i_list, 4]))
+        velocity_abs_max = max(np.abs(final[i_list, 4]))
+        intensity_abs_min = min(np.abs(final[i_list, 5]))
+        intensity_abs_max = max(np.abs(final[i_list, 5]))
+        weight = (normalize(np.abs(final[i_list, 4]), velocity_abs_min, velocity_abs_max)+normalize(np.abs(final[i_list, 5]), intensity_abs_min, intensity_abs_max))/2
+
     if np.sum(weight) != 0:
         x = np.dot(final[i_list, 1], weight)/np.sum(weight)
         y = np.dot(final[i_list, 2], weight)/np.sum(weight)
@@ -386,6 +412,7 @@ def ax_settings(ax):
     ax.set_xlim(-1, 5)
     ax.set_ylim(-1, 2)
     ax.set_zlim(-1.5, 1.5)
+    # ax.set_aspect('equal')
 
 
 def plot_data(ax, i_list, datalist, color = 'k'):
@@ -416,20 +443,31 @@ def plot_cube(ax, verts, alpha = 1, color = 'r'):
 
 def plot_traj(ax):
     traj = []
-    for i in range(0, int(frame_num_count/60)):
-        i_list = sort_data2(i*60, i*60+60)
+    window = 60    # Time frame window
+    for i in range(0, int(frame_num_count/window)):
+        i_list = sort_data2(i*window, i*window+window)
         if i_list != []:
             # final2 = shift_data(i_list)
             # plot_data(ax, i_list, final2)
             # verts = find_verts(i_list, final2)
-            # print(verts)
             # plot_cube(ax, verts)
             traj.append(np.array(expect(i_list)))
             del i_list
 
     traj = np.array(traj)
-    ax.plot3D(traj[:, 0], traj[:, 1], traj[:, 2])
-    print(traj)
+    ax.plot3D(traj[:, 0], traj[:, 1], traj[:, 2], 'b')
+    # print(traj)
+
+    # Plot range of the traj
+    x_min = min(traj[:, 0])
+    x_max = max(traj[:, 0])
+    y_min = min(traj[:, 1])
+    y_max = max(traj[:, 1])
+    z_min = min(traj[:, 2])
+    z_max = max(traj[:, 2])
+    verts = [x_min, x_max, y_min, y_max, z_min, z_max, 0]
+    print(verts[:-1])
+    # plot_cube(ax, verts, 0.5)
 
 
 def find_figure_frame(i_list, datalist):
@@ -445,7 +483,7 @@ fig = plt.figure()
 ax = fig.gca(projection = '3d')
 ax_settings(ax)
 
-# plot_traj(ax)
+plot_traj(ax)
 
 # Average height from all frames
 # min_ave=0
@@ -469,12 +507,11 @@ ax_settings(ax)
 
 
 # # For debug
-i_list = sort_data2(2160,2220)
-final2 = shift_data(i_list)
-plot_data(ax, i_list, final2)
-verts = find_verts(i_list, final2)
-# print(expect(i_list))
-plot_cube(ax, verts)
+# i_list = sort_data2(4920,4980)
+# final2 = shift_data(i_list)
+# plot_data(ax, i_list, final)
+# verts = find_verts(i_list, final)
+# plot_cube(ax, verts)
 
 # fig = plt.figure()
 # ax = fig.gca(projection = '3d')
@@ -486,16 +523,18 @@ plot_cube(ax, verts)
 
 # fig = plt.figure()
 # ax = fig.gca(projection = '3d')
-# i_list = sort_data2(0,60, False)
+# ax_settings(ax)
+# i_list = sort_data2(2100,2160, False)
 # plot_data(ax, i_list, final)
 
 plt.show()
 
-
+# 68: 4080-4140,93098-94109
+# 82: 4920-4980,112162-113534
 # For debug
 # pillar = 32
-# i_prev = 49096
-# i_curr = 50626
+# i_prev = 112162
+# i_curr = 113534
 # find_x_bounds(x[i_prev:i_curr], pillar, True)
 # plt.figure()
 # find_y_bounds(y[i_prev:i_curr], pillar, True)
