@@ -1,15 +1,16 @@
+import numpy as np
+import math
+import time
+import scipy.stats as sta
+from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
-import numpy as np
-import math
-import scipy.stats as sta
-from scipy.optimize import curve_fit
 
 W = 60    # Time frame window: 60 frames (= 2 seconds)
 
 # Open file
-with open("sample_walk_1.txt") as f:
+with open("sample_walk_1_part1.txt") as f:
     lines = f.readlines()
 
 frame_num_count = -1
@@ -300,26 +301,17 @@ def normalize(x, x_min, x_max):
 
 
 # Estimate the center position of the figure
-def expect(i_list, ref = 'intensity'):
-    # Use the point with max intensity as the estimated center
+def expect(i_list, index = 5):
+    # index = 4: use "velocity" as weight; = 5: use "intensity" as weight
+
+    # Use the point with max intensity as the estimated center (Obsolete)
     # i_max = i_list[np.argmax(final[i_list, 5])]
     # x = x[i_max]
     # y = y[i_max]
     # z = z[i_max]
 
     # Use the velocity(/intensity)-weighted expected position as the estimated center
-    if ref == 'velocity':
-        weight = np.abs(final[i_list, 4])
-    elif ref == 'intensity':
-        weight = np.abs(final[i_list, 5])
-    elif ref == 'both':
-        # Consider the velocity and intensity together
-        # Normalize both before addition
-        velocity_abs_min = min(np.abs(final[i_list, 4]))
-        velocity_abs_max = max(np.abs(final[i_list, 4]))
-        intensity_abs_min = min(np.abs(final[i_list, 5]))
-        intensity_abs_max = max(np.abs(final[i_list, 5]))
-        weight = (normalize(np.abs(final[i_list, 4]), velocity_abs_min, velocity_abs_max)+normalize(np.abs(final[i_list, 5]), intensity_abs_min, intensity_abs_max))/2
+    weight = np.abs(final[i_list, index])    
 
     if np.sum(weight) != 0:
         x = np.dot(final[i_list, 1], weight)/np.sum(weight)
@@ -351,78 +343,13 @@ def find_verts(i_list, datalist):
     return verts
 
 
-# Velocity(/intensity)-based weighted lower and upper bounds estimation
-# Results: not good
-def find_verts2(i_list, datalist):
-    center = expect(i_list)
-
-    # Initialize
-    x_min = 0
-    x_max = 0
-    y_min = 0
-    y_max = 0
-    z_min = 0
-    z_max = 0
-    velocity_min = 0    # To calculate total weight for lower bound
-    velocity_max = 0    # To calculate total weight for upper bound
-    intensity_min = 0
-    intensity_max = 0
+def plot_data(ax, i_list, datalist, color = 'k', index = 5):
+    # index = 4: use "velocity" as weight; = 5: use "intensity" as weight
+    weight_min = min(np.abs(datalist[i_list, index]))
+    weight_max = max(np.abs(datalist[i_list, index]))
 
     for i in i_list:
-        if datalist[i, 1] <= center[0]:
-            x_min += datalist[i, 1] * datalist[i, 4]
-            velocity_min += datalist[i, 4]
-        else:
-            x_max += datalist[i, 1] * datalist[i, 4]
-            velocity_max += datalist[i, 4]
-    x_min = x_min/velocity_min
-    x_max = x_max/velocity_max
-
-    velocity_min = 0
-    velocity_max = 0
-    for i in i_list:
-        if datalist[i, 2] <= center[1]:
-            y_min += datalist[i, 2] * datalist[i, 4]
-            velocity_min += datalist[i, 4]
-        else:
-            y_max += datalist[i, 2] * datalist[i, 4]
-            velocity_max += datalist[i, 4]
-    y_min = y_min/velocity_min
-    y_max = y_max/velocity_max
-
-    velocity_min = 0
-    velocity_max = 0
-    for i in i_list:
-        if datalist[i, 3] <= center[2]:
-            z_min += datalist[i, 3] * datalist[i, 4]
-            velocity_min += datalist[i, 4]
-        else:
-            z_max += datalist[i, 3] * datalist[i, 4]
-            velocity_max += datalist[i, 4]
-    z_min = z_min/velocity_min
-    z_max = z_max/velocity_max
-
-    verts = [x_min, x_max, y_min, y_max, z_min, z_max, center]
-
-    return verts
-
-
-def ax_settings(ax):
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
-    ax.set_zlabel('Z')
-    ax.set_xlim(-1, 5)
-    ax.set_ylim(-1, 2)
-    ax.set_zlim(-1.5, 1.5)
-    # ax.set_aspect('equal')
-
-
-def plot_data(ax, i_list, datalist, color = 'k'):
-    intensity_min = min(intensity[i_list])
-    intensity_max = max(intensity[i_list])
-
-    for i in i_list:
-        alpha = (intensity[i] - intensity_min)/(intensity_max - intensity_min)
+        alpha = normalize(abs(datalist[i, index]), weight_min, weight_max)
         ax.scatter(datalist[i, 1], datalist[i, 2], datalist[i, 3], color = color, alpha = alpha, marker = '.')
 
 
@@ -443,9 +370,9 @@ def plot_cube(ax, verts, alpha = 1, color = 'r'):
     ax.scatter(center[0], center[1], center[2], color = 'r')
 
 
-def plot_traj(ax):
+def plot_traj(ax, count = int(frame_num_count/W)):
     traj = []
-    for i in range(0, int(frame_num_count/W)):
+    for i in range(0, count):
         i_list = sort_data2(i*W, (i+1)*W)
         if i_list != []:
             # final2 = shift_data(i_list)
@@ -493,11 +420,217 @@ def figure_size():
     print("z_min=" + str(min(dis_z)) + "m\tz_max=" + str(max(dis_z)) + "m\tz_ave=" + str(np.average(dis_z)) + "m")
 
 
-def plot_skeleton(i_list, datalist):
-    pass
+# Simply use the figure height and perfect/average human body model
+def plot_skeleton(ax, i_list, datalist, color = 'm'):
+    x_min, x_max, y_min, y_max, z_min, z_max, center = verts
+    x0, y0, z0 = center[:]
+
+    body = []
+
+    # TODO: 
+    # if y_max - y_min >= x_max - x_min:
+    #     # Posture in y-orientation
+    # else:
+    #     # Posture in x-orientation
+    # (default in y-orientation for now)
+
+    h = z_max - z_min
+    body.append([x0, y0, h/2])                          # 0: spine base
+    body.append([x0, y0, h*(7/8-1/24)])                 # 1: spine shoulder
+    body.append([x0, y0, h*7/8])                        # 2: neck
+    body.append([x0, y0, h-h/16])                       # 3: head
+    body.append([x0, y0-h/8, body[1][2]])               # 4: left shoulder
+    body.append([x0, body[4][1], body[1][2]-1.7*h/8])   # 5: left elbow
+    body.append([x0, body[4][1], body[5][2]-1.8*h/8])   # 6: left hand
+    body.append([x0, 2*y0-body[4][1], body[4][2]])      # 7: right shoulder
+    body.append([x0, body[7][1], body[5][2]])           # 8: right elbow
+    body.append([x0, body[7][1], body[6][2]])           # 9: right hand
+    body.append([x0, y0-0.1*h, h/2])                    # 10: left hip
+    body.append([x0, body[10][1], h/4])                 # 11: left knee
+    body.append([x0, body[10][1], 0])                   # 12: left foot
+    body.append([x0, 2*y0-body[10][1], body[10][2]])    # 13: right hip
+    body.append([x0, body[13][1], body[11][2]])         # 14: right knee
+    body.append([x0, body[13][1], body[12][2]])         # 15: right foot
+
+    body = np.array(body)
+    body = body + np.array([0, 0, z_min])
+
+    # For plot reference
+    # ax.plot3D([x1, x2], [y1, y2], [z1, z2], 'b')
+    kwargs = {'color': color, 'marker': '.'}
+    ax.plot3D(body[0:4,0], body[0:4,1], body[0:4,2], **kwargs)
+    connects = []
+    connects.append([1, 4, 5, 6])
+    connects.append([1, 7, 8, 9])
+    connects.append([0, 10, 11, 12])
+    connects.append([0, 13, 14, 15])
+    for connect in connects:
+        ax.plot3D(body[connect,0], body[connect,1], body[connect,2], **kwargs)
+    tips = [3, 6, 9, 12, 15]
+    ax.scatter(body[tips,0], body[tips,1], body[tips,2], color = color, marker = 'o')
+    plt.axis("square")
 
 
-# For experience
+
+# To estimate torso body part
+# Intensity-based weighted lower and upper bounds estimation
+def find_torso(i_list, datalist):
+    center = expect(i_list)
+
+    # Initialize
+    x_min = 0
+    x_max = 0
+    y_min = 0
+    y_max = 0
+    z_min = 0
+    z_max = 0
+
+    weight_min = 0
+    weight_max = 0
+    index = 5       # index = 4: use "velocity" as weight; = 5: use "intensity" as weight
+
+    for i in i_list:
+        if datalist[i, 1] <= center[0]:
+            x_min += datalist[i, 1] * abs(datalist[i, index])
+            weight_min += abs(datalist[i, index])
+        else:
+            x_max += datalist[i, 1] * abs(datalist[i, index])
+            weight_max += abs(datalist[i, index])
+    x_min = x_min/weight_min
+    x_max = x_max/weight_max
+
+    weight_min = 0
+    weight_max = 0
+    for i in i_list:
+        if datalist[i, 2] <= center[1]:
+            y_min += datalist[i, 2] * abs(datalist[i, index])
+            weight_min += abs(datalist[i, index])
+        else:
+            y_max += datalist[i, 2] * abs(datalist[i, index])
+            weight_max += abs(datalist[i, index])
+    y_min = y_min/weight_min
+    y_max = y_max/weight_max
+
+    weight_min = 0
+    weight_max = 0
+    for i in i_list:
+        if datalist[i, 3] <= center[2]:
+            z_min += datalist[i, 3] * abs(datalist[i, index])
+            weight_min += abs(datalist[i, index])
+        else:
+            z_max += datalist[i, 3] * abs(datalist[i, index])
+            weight_max += abs(datalist[i, index])
+    z_min = z_min/weight_min
+    z_max = z_max/weight_max
+
+    verts = [x_min, x_max, y_min, y_max, z_min, z_max, center]
+
+    return verts
+
+
+# Use velocity for limbs estimation
+def find_limbs(i_list, datalist, torso_verts):
+    limbs = []
+
+    argsort = np.argsort(datalist[i_list,:], axis = 0)
+    z_min1 = argsort[0][3]  # foot 1
+    z_min2 = argsort[1][3]  # foot 2
+    z_max = argsort[-1][3]  # head
+    y_min = argsort[0][2]   # hand 1
+    y_max = argsort[-1][2]  # hand 2
+
+    # Find tips
+    limbs.append(i_list[z_max])         # 0: head
+    if datalist[i_list[z_min1],2] <= datalist[i_list[z_min2],2]: # smaller y = left
+        limbs.append(i_list[z_min1])    # 1: left foot
+        limbs.append(i_list[z_min2])    # 2: right foot
+    else:
+        limbs.append(i_list[z_min2])    # 1: left foot
+        limbs.append(i_list[z_min1])    # 2: right foot
+    limbs.append(i_list[y_min])         # 3: left hand
+    limbs.append(i_list[y_max])         # 4: right hand
+
+    # Find joints
+    y_small = []    # point_y <= center_y
+    y_big = []      # point_y > center_y
+    z_small = []    # point_z <= center_z
+    for i in i_list:
+        if datalist[i][2] <= torso_verts[2]:
+            y_small.append(i)
+        elif datalist[i][2] >= torso_verts[3]:
+            y_big.append(i)
+        if datalist[i][3] <= torso_verts[4]:
+            z_small.append(i)
+    # TODO: deal with situation when y_small, y_big, z_small == []
+
+    argsort = np.argsort(datalist[y_small,:], axis = 0)
+    y_elbow1 = argsort[int(len(y_small)/2)][2]
+    argsort = np.argsort(datalist[y_big,:], axis = 0)
+    y_elbow2 = argsort[int(len(y_big)/2)][2]
+    argsort = np.argsort(datalist[z_small,:], axis = 0)
+    z_knee1 = argsort[int(len(z_small)/2)][3]
+    z_knee2 = argsort[int(len(z_small)/2)+1][3]
+
+    if datalist[z_small[z_knee1],2] <= datalist[z_small[z_knee2],2]: # smaller y = left
+        limbs.append(z_small[z_knee1])  # 5: left knee
+        limbs.append(z_small[z_knee2])  # 6: right knee
+    else:
+        limbs.append(z_small[z_knee2])  # 5: left knee
+        limbs.append(z_small[z_knee1])  # 6: right knee
+    limbs.append(y_small[y_elbow1])     # 7: left elbow
+    limbs.append(y_big[y_elbow2])       # 8: right elbow
+
+    return limbs
+
+
+# Plot torso and limbs
+# Result: not good, easily affected by remainder noise
+def plot_skeleton2(ax, i_list, datalist, color = 'm'):
+    kwargs = {'color': color, 'marker': '.'}
+
+    torso_verts = find_torso(i_list, datalist)
+    x_min, x_max, y_min, y_max, z_min, z_max, center = torso_verts
+    plot_cube(ax, torso_verts, color = color)
+    
+    limbs = find_limbs(i_list, datalist, torso_verts)
+
+    body = []
+    body = datalist[limbs,1:4]
+    body = list(body)
+    body.append([(x_min+x_max)/2, (y_min+y_max)/2, z_max])  # 9: spine shoulder
+    body.append([(x_min+x_max)/2, y_min, z_max])    # 10: left shoulder
+    body.append([(x_min+x_max)/2, y_max, z_max]) # 11: right shoulder
+    body.append([(x_min+x_max)/2, y_min, z_min]) # 12: left hip
+    body.append([(x_min+x_max)/2, y_max, z_min]) # 13: right hip
+    body = np.array(body)
+    # ax.scatter(body[:,0], body[:,1], body[:,2],color='b',alpha=1)
+
+    connects = []
+    connects.append([0,9])
+    connects.append([3,7,10])
+    connects.append([4,8,11])
+    connects.append([1,5,12])
+    connects.append([2,6,13])
+
+    for connect in connects:
+        ax.plot3D(body[connect,0], body[connect,1], body[connect,2], **kwargs)
+    ax.scatter(body[:5,0], body[:5,1], body[:5,2], color = color, marker = 'o')
+    # for limb in limbs:
+        # ax.scatter(datalist[limb,1],datalist[limb,2],datalist[limb,3], color='b')
+        # ax.plot3D([center[0],datalist[limb,1]],[center[1],datalist[limb,2]],[center[2],datalist[limb,3]], color='b')
+    plt.axis("square")
+
+
+def ax_settings(ax):
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_zlabel('Z')
+    ax.set_xlim(-1, 5)
+    ax.set_ylim(-1, 2)
+    ax.set_zlim(-1.5, 1.5)
+
+
+# For experiment
 get_data()
 print(frame_num_count)
 data, final = organized_data()
@@ -512,9 +645,18 @@ ax_settings(ax)
 # For debug
 # i_list = sort_data2(0, 60)
 # final2 = shift_data(i_list)
-# plot_data(ax, i_list, final)
-# verts = find_verts(i_list, final)
+# plot_data(ax, i_list, final2)
+# verts = find_verts(i_list, final2)
 # plot_cube(ax, verts)
+# plot_skeleton(ax, i_list, final2)
+
+# for i in range(0,7):
+#     i_list = sort_data2(60*i, 60*i+60)
+#     final2 = shift_data(i_list)
+#     # plot_data(ax, i_list, final2)
+#     verts = find_verts(i_list, final2)
+#     plot_cube(ax, verts, 0.5)
+#     plot_skeleton(ax, i_list, final2)
 
 # fig = plt.figure()
 # ax = fig.gca(projection = '3d')
@@ -531,6 +673,8 @@ ax_settings(ax)
 # plot_data(ax, i_list, final)
 
 plt.show()
+# fig.savefig("./img-" + time.strftime("%H%M%S", time.localtime()) + ".jpg", dpi = 300)
+
 
 # For debug
 # pillar = 32
