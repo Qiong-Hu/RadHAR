@@ -6,8 +6,10 @@ import math
 import scipy.stats as sta
 from scipy.optimize import curve_fit
 
+W = 60    # Time frame window: 60 frames (= 2 seconds)
+
 # Open file
-with open("sample_walk_1_part1.txt") as f:
+with open("sample_walk_1.txt") as f:
     lines = f.readlines()
 
 frame_num_count = -1
@@ -443,9 +445,8 @@ def plot_cube(ax, verts, alpha = 1, color = 'r'):
 
 def plot_traj(ax):
     traj = []
-    window = 60    # Time frame window
-    for i in range(0, int(frame_num_count/window)):
-        i_list = sort_data2(i*window, i*window+window)
+    for i in range(0, int(frame_num_count/W)):
+        i_list = sort_data2(i*W, (i+1)*W)
         if i_list != []:
             # final2 = shift_data(i_list)
             # plot_data(ax, i_list, final2)
@@ -470,7 +471,29 @@ def plot_traj(ax):
     # plot_cube(ax, verts, 0.5)
 
 
-def find_figure_frame(i_list, datalist):
+# Statistic figure size among all frames
+def figure_size():
+    dis_x = []
+    dis_y = []
+    dis_z = []
+
+    for i in range(0, int(frame_num_count/W)):
+        i_list = sort_data2(i*W, (i+1)*W)
+        if len(i_list) > 1:
+            final2 = shift_data(i_list)
+            verts = find_verts(i_list, final2)
+            # x_min, x_max, y_min, y_max, z_min, z_max, center = verts
+            dis_x.append(verts[1]-verts[0])
+            dis_y.append(verts[3]-verts[2])
+            dis_z.append(verts[5]-verts[4])
+            del i_list
+
+    print("x_min=" + str(min(dis_x)) + "m\tx_max=" + str(max(dis_x)) + "m\tx_ave=" + str(np.average(dis_x)) + "m")
+    print("y_min=" + str(min(dis_y)) + "m\ty_max=" + str(max(dis_y)) + "m\ty_ave=" + str(np.average(dis_y)) + "m")
+    print("z_min=" + str(min(dis_z)) + "m\tz_max=" + str(max(dis_z)) + "m\tz_ave=" + str(np.average(dis_z)) + "m")
+
+
+def plot_skeleton(i_list, datalist):
     pass
 
 
@@ -483,31 +506,11 @@ fig = plt.figure()
 ax = fig.gca(projection = '3d')
 ax_settings(ax)
 
-plot_traj(ax)
+# plot_traj(ax)
+# figure_size()
 
-# Average height from all frames
-# min_ave=0
-# max_ave=0
-# max_abs=0
-# min_abs=0
-# count=0
-# for i in range(0, int(frame_num_count/60)-1):
-#     i_list = sort_data(i*60,i*60+60)
-#     if i_list != []:
-#         final2 = shift_data(i_list)
-#         verts = find_verts(i_list, final2)
-#         min_ave+=verts[0]
-#         max_ave+=verts[1]
-#         count+=1
-#         min_abs=min(min_abs, verts[0])
-#         max_abs=max(max_abs, verts[1])
-#     del i_list
-# print(min_ave/count, max_ave/count, (max_ave-min_ave)/count)
-# print(min_abs, max_abs, max_abs-min_abs)
-
-
-# # For debug
-# i_list = sort_data2(4920,4980)
+# For debug
+# i_list = sort_data2(0, 60)
 # final2 = shift_data(i_list)
 # plot_data(ax, i_list, final)
 # verts = find_verts(i_list, final)
@@ -529,8 +532,6 @@ plot_traj(ax)
 
 plt.show()
 
-# 68: 4080-4140,93098-94109
-# 82: 4920-4980,112162-113534
 # For debug
 # pillar = 32
 # i_prev = 112162
