@@ -1,9 +1,9 @@
 # RadHAR
 Human Activity Recognition from Point Clouds Generated through a Millimeter-wave Radar
 
-An extension work of https://github.com/nesl/RadHAR, the previous published work can be found on https://doi.org/10.1145/3349624.3356768
+An extension work of https://github.com/nesl/RadHAR, the previous published work can be found in https://doi.org/10.1145/3349624.3356768.
 
-This extended work is mainly contributed by Qiong Hu, supported by Akash Deep Singh and Ziqi Wang.
+This extended work is mainly contributed by Qiong Hu, supported by Akash Deep Singh and Ziqi Wang. The report of this work can be found in the [cover letter](https://github.com/Qiong-Hu/RadHAR/blob/master/cover%20letter.pdf).
 
 - Objective:
 	- Filter out noise signals from Radar point clouds
