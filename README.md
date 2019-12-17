@@ -20,7 +20,7 @@ This extended work is mainly contributed by Qiong Hu, supported by Akash Deep Si
 	- Using the center points from all the datas can generate human motion trajectory
 	- Using the cuboid representation can estimate human figure size and skeleton representation
 	- The filtering algorithm is generated from one single dataset from one walking experiment, and is applicable for other walking experiments and more motions without having pre-knowledge or changing parameters
-	- Resulting images can be found in [img](https://github.com/Qiong-Hu/RadHAR/tree/master/img)
+	- Resulting images can be found in [img/](https://github.com/Qiong-Hu/RadHAR/tree/master/img)
 	- Resulting datas of trajectory estimation and figure size estimation can be found in [results.yaml](https://github.com/Qiong-Hu/RadHAR/blob/master/results.yaml)
 - Future work:
 	- About Methods:
