@@ -1,0 +1,35 @@
+traj_range:
+    x_min: 0.8337427998348592
+    x_max: 2.8464340650320854
+    x_dis: 2.012691265197226
+    y_min: -0.33661492846264174
+    y_max: 1.2912380598917481
+    y_dis: 1.6278529883543897
+    z_min: -0.22956881541414173
+    z_max: 0.02433496842159959
+    z_dis: 0.2539037838357413
+    time(sec): 178.0
+    frame_num: 5340
+    data_src: sample_walk_1.txt
+
+figure_size_range:
+    x_min: 0.03515625
+    x_max: 4.88671875
+    x_ave: 0.628469669117647
+    y_min: 0.0078125
+    y_max: 2.318359375
+    y_ave: 0.6732536764705882
+    z_min: 0.046875
+    z_max: 2.228515625
+    z_ave: 0.9668198529411764
+    time(sec): 178.0
+    frame_num: 5340
+    data_src: sample_walk_1.txt
+
+effective_traj_rate:
+    original_walk: [84, 89, 0.944]
+    new_walk_191s: [91, 95, 0.958]
+    squats_186s: [93, 93, 1.0]
+    jump_122s: [90, 90, 1.0]
+    jacks_179s: [89, 89, 1.0]
+    boxing_191s: [90, 90, 1.0]
