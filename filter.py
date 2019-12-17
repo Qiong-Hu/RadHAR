@@ -10,13 +10,13 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 W = 60    # Time frame window: 60 frames (= 2 seconds)
 
 # Open file
-# with open("./data/sample_walk_1.txt") as f:
+with open("./data/sample_walk_1_part1.txt") as f:
 # with open("./data/Train/jump/__jump_122s.txt") as f:
 # with open("./data/Train/walk/___walk_191s.txt") as f:
 # with open("./data/Train/squats/___squats_186s.txt") as f:
 # with open("./data/Train/jump/___jump_180s.txt") as f:
 # with open("./data/Train/jack/jacks_179s.txt") as f:
-with open("./data/Train/boxing/boxing_191s.txt") as f:
+# with open("./data/Train/boxing/boxing_191s.txt") as f:
     lines = f.readlines()
 
 frame_num_count = -1
@@ -28,6 +28,7 @@ velocity = []
 intensity = []
 
 
+# Retrieve data from the gien file to separate lists
 def get_data():
     global frame_num_count, frame_num
     global x, y, z, velocity, intensity
@@ -67,6 +68,7 @@ def get_data():
     frame_num = frame_num.astype(np.int)
 
 
+# Organize data in multiple lists to a list "final"
 def organized_data():
     data = dict()
     final = np.zeros([len(frame_num), 6])
@@ -88,6 +90,7 @@ def organized_data():
     return data, final
 
 
+# Define the function to fit distribution in Z dimension
 def Gaussian2(x, *par):
     return par[0]*np.exp(-np.power(x-par[2], 2) / (2 * np.power(par[4], 2))) + par[1]*np.exp(-np.power(x-par[3], 2) / (2 * np.power(par[5], 2)))
 
@@ -180,6 +183,7 @@ def find_z_bounds(z_data, pillar = 32, debug = False, cov0 = 0.3):
     return z_min, z_max
 
 
+# TODO: Not tested yet, for future work
 def train_z_cov(z_data, pillar = 32, cov0 = 0.3, step = 0.02):
     z_min = 0
     z_max = 0
@@ -192,6 +196,7 @@ def train_z_cov(z_data, pillar = 32, cov0 = 0.3, step = 0.02):
     return z_min, z_max
 
 
+# To filter out noises
 def sort_data(startFrame, endFrame, clean = True):
     i_prev = 0
     for i in range(len(frame_num)):
@@ -219,7 +224,7 @@ def sort_data(startFrame, endFrame, clean = True):
     i_list = []
     for i in range(i_prev, i_curr):
         if clean:
-            if x_min <= x[i] <= x_max and y_min <= y[i] <= y_max and z_min <= z[i] <= z_max:
+            if x_min <= x[i] <= x_max and z_min <= z[i] <= z_max:
                 i_list.append(i)
         else:
             i_list.append(i)
@@ -229,7 +234,7 @@ def sort_data(startFrame, endFrame, clean = True):
     
 
 # Sorting order matters, x based on sorted z, y based on sorted x and z (z -> x -> y, because z most effective according to the preprocess, x being the next, y the least)
-# Drawbacks: two more loops, calculation heavy (probably)
+# Drawbacks: two more loops, calculation heavier (0.2s more)
 def sort_data2(startFrame, endFrame, clean = True):
     i_prev = 0
     for i in range(len(frame_num)):
@@ -305,6 +310,7 @@ def shift_data(i_list):
             data2[frame_num[i]] = []
             data2[frame_num[i]].append(i)
 
+    # TODO: use the expected point as a reference, instead of the max_velocity point
     # Shift each frame so that all velocity_max points for each frame in the same position as center of every 60 frames
     for each_frame in data2:
         vel_max_frame_index = data2[each_frame][np.argmax(velocity[data2[each_frame]])]
@@ -422,7 +428,7 @@ def plot_traj(ax, count):
     plot_cube(ax, verts, 0.5)
 
 
-# Statistic figure size among all frames
+# average figure size among all frames
 def figure_size():
     dis_x = []
     dis_y = []
@@ -439,13 +445,14 @@ def figure_size():
             dis_z.append(verts[5]-verts[4])
             del i_list
 
-    # TODO: why for jump (/etc) data, x(/y/z)_min=0
+    # TODO (need debug): why for jump (/etc) data, x(/y/z)_min=0
     print("x_min=" + str(min(dis_x)) + "m\tx_max=" + str(max(dis_x)) + "m\tx_ave=" + str(np.average(dis_x)) + "m")
     print("y_min=" + str(min(dis_y)) + "m\ty_max=" + str(max(dis_y)) + "m\ty_ave=" + str(np.average(dis_y)) + "m")
     print("z_min=" + str(min(dis_z)) + "m\tz_max=" + str(max(dis_z)) + "m\tz_ave=" + str(np.average(dis_z)) + "m")
 
 
 # Simply use the figure height and perfect/average human body model
+# Reference: http://humanproportions.com/
 def plot_skeleton(ax, i_list, datalist, color = 'm'):
     x_min, x_max, y_min, y_max, z_min, z_max, center = verts
     x0, y0, z0 = center[:]
@@ -496,7 +503,7 @@ def plot_skeleton(ax, i_list, datalist, color = 'm'):
     plt.axis("square")
 
 
-
+# TODO: Below are the second method to estimate figure posture/skeleton, need improvement
 # To estimate torso body part
 # Intensity-based weighted lower and upper bounds estimation
 def find_torso(i_list, datalist):
@@ -646,6 +653,7 @@ def plot_skeleton2(ax, i_list, datalist, color = 'm'):
     plt.axis("square")
 
 
+# Plot settings, same for all plots
 def ax_settings(ax):
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
@@ -664,16 +672,21 @@ fig = plt.figure()
 ax = fig.gca(projection = '3d')
 ax_settings(ax)
 
-plot_traj(ax, int(frame_num_count/W))
-# figure_size()
+# plot_traj(ax, int(frame_num_count/W))
+figure_size()
+
+plt.show()
+fig.savefig("1.jpg", dpi = 300)
 
 # For debug
-# i_list = sort_data2(0, 60)
-# final2 = shift_data(i_list)
-# plot_data(ax, i_list, final2)
-# verts = find_verts(i_list, final2)
+# start=120
+# end=180
+# i_list = sort_data2(start,end,False)
+# plot_data(ax, i_list, final)
+# i_list = sort_data2(start,end)
+# verts = find_verts(i_list, final)
 # plot_cube(ax, verts)
-
+# # final2 = shift_data(i_list)
 # plot_skeleton(ax, i_list, final2)
 
 # Plot figure in multi-frame
@@ -701,8 +714,7 @@ plot_traj(ax, int(frame_num_count/W))
 # plot_data(ax, i_list, final)
 
 # plt.show()
-# fig.savefig("./img-" + time.strftime("%H%M%S", time.localtime()) + ".jpg", dpi = 300)
-# fig.savefig("./traj-_.jpg", dpi = 300)
+# fig.savefig("1.jpg", dpi = 300)
 
 
 # For debug
