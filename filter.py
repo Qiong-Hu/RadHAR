@@ -19,7 +19,8 @@ with open("./data/sample_walk_1_part1.txt") as f:
 # with open("./data/Train/boxing/boxing_191s.txt") as f:
     lines = f.readlines()
 
-frame_num_count = -1
+# Global variables
+frame_num_count = 0
 frame_num = []
 x = []
 y = []
@@ -28,7 +29,7 @@ velocity = []
 intensity = []
 
 
-# Retrieve data from the gien file to separate lists
+# Retrieve data from the given file to separate lists
 def get_data():
     global frame_num_count, frame_num
     global x, y, z, velocity, intensity
@@ -213,6 +214,7 @@ def sort_data(startFrame, endFrame, clean = True):
     pillar = 32
     x_min, x_max = find_x_bounds(x[i_prev:i_curr], pillar)
     y_min, y_max = find_y_bounds(y[i_prev:i_curr], pillar)
+
     # z: curve_fit may not converge -> use iterative train_z_cov
     try:
         z_min, z_max = find_z_bounds(z[i_prev:i_curr], pillar)
@@ -330,17 +332,43 @@ def normalize(x, x_min, x_max):
 
 
 # Estimate the center position of the figure
-def expect(i_list, index = 5):
-    # index = 4: use "velocity" as weight; = 5: use "intensity" as weight
+# "index" choices:
+# = 1: max velocity
+# = 2: max intensity
+# = 3: combined max velocity and intensity
+# = 4: velocity-weighted
+# = 5: intensity-weighted
+# = 6: combined velocity & intensity-weighted
+# = 7: average of all position
+def expect(i_list, index = 5, vel_weight = 0.5):
 
-    # Use the point with max intensity as the estimated center (Obsolete)
-    # i_max = i_list[np.argmax(final[i_list, 5])]
-    # x = x[i_max]
-    # y = y[i_max]
-    # z = z[i_max]
+    # Use the point with max velocity/intensity as the estimated center
+    if index in [1, 2]:
+        i_max = i_list[np.argmax(np.abs(final[i_list, index + 3]))]
+        x = x[i_max]
+        y = y[i_max]
+        z = z[i_max]
+        return [x, y, z]
+
+    # Use max combined velocity/intensity
+    if index == 3:
+        i_max = i_list[np.argmax(np.abs(final[i_list, 4]) * vel_weight + np.abs(final[i_list, 5]) * (1 - vel_weight))]
+        x = x[i_max]
+        y = y[i_max]
+        z = z[i_max]
+        return [x, y, z]
+
+    if index == 7:
+        x = np.average(final[i_list, 1])
+        y = np.average(final[i_list, 2])
+        z = np.average(final[i_list, 3])
+        return [x, y, z]
 
     # Use the velocity(/intensity)-weighted expected position as the estimated center
-    weight = np.abs(final[i_list, index])    
+    if index in [4, 5]:
+        weight = np.abs(final[i_list, index])
+    elif index == 6:
+        weight = np.abs(final[i_list, 4]) * vel_weight + np.abs(final[i_list, 5]) * (1 - vel_weight)
 
     if np.sum(weight) != 0:
         x = np.dot(final[i_list, 1], weight)/np.sum(weight)
@@ -360,10 +388,10 @@ def find_verts(i_list, datalist):
     y_max = max(datalist[i_list, 2])
     z_min = min(datalist[i_list, 3])
     z_max = max(datalist[i_list, 3])
-    velocity_min = min(datalist[i_list, 4])
-    velocity_max = max(datalist[i_list, 4])
-    intensity_min = min(datalist[i_list, 5])
-    intensity_max = max(datalist[i_list, 5])
+    # velocity_min = min(datalist[i_list, 4])
+    # velocity_max = max(datalist[i_list, 4])
+    # intensity_min = min(datalist[i_list, 5])
+    # intensity_max = max(datalist[i_list, 5])
 
     center = expect(i_list)
 
@@ -373,12 +401,15 @@ def find_verts(i_list, datalist):
 
 
 def plot_data(ax, i_list, datalist, color = 'k', index = 5):
-    # index = 4: use "velocity" as weight; = 5: use "intensity" as weight
+    # index = 4: use "velocity" for alpha; = 5: use "intensity" for alpha
     weight_min = min(np.abs(datalist[i_list, index]))
     weight_max = max(np.abs(datalist[i_list, index]))
 
     for i in i_list:
-        alpha = normalize(abs(datalist[i, index]), weight_min, weight_max)
+        if index in [4, 5]:
+            alpha = normalize(abs(datalist[i, index]), weight_min, weight_max)
+        else:
+            alpha = 1
         ax.scatter(datalist[i, 1], datalist[i, 2], datalist[i, 3], color = color, alpha = alpha, marker = '.')
 
 
@@ -396,7 +427,7 @@ def plot_cube(ax, verts, alpha = 1, color = 'r'):
     ax.plot3D([x_max, x_max], [y_max, y_max], [z_min, z_max], **kwargs)
 
     # Plot the center point of the figure
-    # ax.scatter(center[0], center[1], center[2], color = 'r')
+    ax.scatter(center[0], center[1], center[2], color = 'r')
 
 
 def plot_traj(ax, count):
@@ -428,7 +459,7 @@ def plot_traj(ax, count):
     plot_cube(ax, verts, 0.5)
 
 
-# average figure size among all frames
+# Average figure size among all frames
 def figure_size():
     dis_x = []
     dis_y = []
@@ -658,9 +689,9 @@ def ax_settings(ax):
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
-    ax.set_xlim(-1, 5)
-    ax.set_ylim(-1, 2)
-    ax.set_zlim(-1.5, 1.5)
+    # ax.set_xlim(-1, 5)
+    # ax.set_ylim(-1, 2)
+    # ax.set_zlim(-1.5, 1.5)
 
 
 # For experiment
@@ -672,11 +703,11 @@ fig = plt.figure()
 ax = fig.gca(projection = '3d')
 ax_settings(ax)
 
-# plot_traj(ax, int(frame_num_count/W))
+plot_traj(ax, int(frame_num_count/W))
 figure_size()
 
 plt.show()
-fig.savefig("1.jpg", dpi = 300)
+# fig.savefig("1.jpg", dpi = 300)
 
 # For debug
 # start=120
@@ -696,8 +727,7 @@ fig.savefig("1.jpg", dpi = 300)
 #     # plot_data(ax, i_list, final2)
 #     verts = find_verts(i_list, final2)
 #     plot_cube(ax, verts, 0.5)
-
-    # plot_skeleton(ax, i_list, final2)
+#     plot_skeleton(ax, i_list, final2)
 
 # fig = plt.figure()
 # ax = fig.gca(projection = '3d')

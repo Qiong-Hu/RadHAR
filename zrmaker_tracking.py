@@ -9,7 +9,7 @@ from sklearn.cluster import DBSCAN
 
 
 # Open File
-with open('sample_walk_1.txt') as f:
+with open('data/sample_walk_1.txt') as f:
     lines = f.readlines()
 
 frame_num_count = -1
