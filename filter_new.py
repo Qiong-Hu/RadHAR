@@ -273,6 +273,14 @@ plt.show()
 from sklearn.cluster import DBSCAN
 
 
+# In[557]:
+
+
+# Define global variables
+DBSCAN_EPS = 0.4
+DBSCAN_SAMPLES = 10
+
+
 # In[20]:
 
 
@@ -303,7 +311,7 @@ def ModelCluster(datalist, model, sample_weight=True, show_plot=True, return_clu
 
 # Clustering frame_num = 0~4
 startFrame = 0
-dbscan = DBSCAN(eps=0.4, min_samples=10)
+dbscan = DBSCAN(eps=DBSCAN_EPS, min_samples=DBSCAN_SAMPLES)
 datalist = data[(data.frame_num>=startFrame)&(data.frame_num<startFrame+WINDOW)]
 
 ModelCluster(datalist, dbscan, sample_weight=False)
@@ -789,25 +797,24 @@ def KF_R(position, observation_cov):
 # 
 # $P(k+1) = P(k+1) - P(k+1) * H^T * K(k)^{-1} * H * P(k+1)$
 
-# In[223]:
+# In[495]:
 
 
 # Kalman filter updating
-def KF_Update(frame_num, observation_states, estimate_states):
+def KF_Update(frame_num, observation_states, estimate_states, track_states):
     if frame_num == 0:
         estimate_states = InitEstimateState(observation_states, frame_num)
     else:
-        for track_num in np.unique(observation_states.track_num[(observation_states.frame_num==frame_num)&(observation_states.cluster_num!=-1)]):
-            # s_k (of track_num) not exist: initialize the new track
-            if len(estimate_states[(estimate_states.frame_num<frame_num)&(estimate_states.frame_num>=frame_num-DA_TRACKGAP)&(estimate_states.track_num==track_num)]) == 0:
-                estimate_states = estimate_states.append(InitEstimateState(observation_states[observation_states.track_num==track_num], frame_num), ignore_index=True)
-            
+        for track_num in track_states[track_states.frame_num==frame_num].track_num:
+            # s_k (of track_num) not exist: initialize new track
+            if track_num not in list(np.unique(estimate_states.track_num)):
+                estimate_states = estimate_states.append(InitEstimateState(observation_states[(observation_states.frame_num==frame_num)&(observation_states.track_num==track_num)], frame_num), ignore_index=True)
             # s_k (of track_num) exist
             else:
                 z_state = np.array(observation_states[(observation_states.frame_num==frame_num)&(observation_states.track_num==track_num)].iloc[0][['x','y','z','l','w','h']])
                 z_cov = observation_states[(observation_states.frame_num==frame_num)&(observation_states.track_num==track_num)]['cov'].to_numpy()[0]
 
-                estimate_track_idx = np.max(estimate_states.index[(estimate_states.frame_num<frame_num)&(estimate_states.frame_num>=frame_num-DA_TRACKGAP)&(estimate_states.track_num==track_num)])
+                estimate_track_idx = np.max(estimate_states.index[(estimate_states.frame_num<frame_num)&(estimate_states.track_num==track_num)])
                 s_state = np.array(estimate_states.loc[estimate_track_idx][['x','y','z','vx','vy','vz','l','w','h']])
                 s_cov = estimate_states.loc[estimate_track_idx]['cov']
 
@@ -817,8 +824,9 @@ def KF_Update(frame_num, observation_states, estimate_states):
 
                 # Measurement update (correct)
                 KF_K = KF_H.dot(s_cov).dot(KF_H.T) + KF_R(z_state[:3], z_cov)
-                s_state = s_state + s_cov.dot(KF_H.T).dot(np.linalg.inv(KF_K)).dot(z_state-KF_H.dot(s_state))
-                s_cov = s_cov - s_cov.dot(KF_H.T).dot(np.linalg.inv(KF_K)).dot(KF_H).dot(s_cov)
+                DA_confidence = list(track_states.quality[track_states.track_num==track_num])[0]  # Include DA confidence (new!)
+                s_state = s_state + s_cov.dot(KF_H.T).dot(np.linalg.inv(KF_K)).dot(z_state-KF_H.dot(s_state)) * DA_confidence
+                s_cov = s_cov - s_cov.dot(KF_H.T).dot(np.linalg.inv(KF_K)).dot(KF_H).dot(s_cov) * DA_confidence
 
                 estimate_state = InitEstimateDataFrame()
                 estimate_state.at[0,'frame_num'] = frame_num
@@ -893,12 +901,12 @@ def ClusterTrackMapping(frame_num, observation_states, estimate_states):
     return observation_states # with updated track_num
 
 
-# In[259]:
+# In[419]:
 
 
 # Generate (z_state, z_cov) from observation_states
 def GenerateZstates(frame_num, observation_states):
-    z_state = observation_states[(observation_states.frame_num==frame_num)&(observation_states.cluster_num!=-1)][['cluster_num','track_num','x','y','z','l','w','h']]
+    z_state = observation_states[(observation_states.frame_num==frame_num)&(observation_states.cluster_num!=-1)][['cluster_num','x','y','z','l','w','h']]
     z_cov = observation_states[(observation_states.frame_num==frame_num)&(observation_states.cluster_num!=-1)][['cluster_num','cov']]
 
     if frame_num == 0:
@@ -908,19 +916,13 @@ def GenerateZstates(frame_num, observation_states):
     return z_state, z_cov
 
 # Generate (s_state, s_cov) from estimate_states
-def GenerateSstates(frame_num, estimate_states):
-    s_state = estimate_states[(estimate_states.frame_num<frame_num)&(estimate_states.frame_num>=frame_num-DA_TRACKGAP)][['frame_num','track_num','x','y','z','vx','vy','vz','l','w','h']]
-    s_cov = estimate_states[(estimate_states.frame_num<frame_num)&(estimate_states.frame_num>=frame_num-DA_TRACKGAP)][['track_num','cov']]
-    
-    # Find last s_state of each existing track
-    if frame_num != 0:
-        for track_idx in np.unique(s_state.track_num):
-            track_maxframe = np.max(s_state.frame_num[s_state.track_num==track_idx])
-            remove_idx = list(s_state.index[(s_state.frame_num<track_maxframe)&(s_state.track_num==track_idx)])
-            s_state = s_state.drop(remove_idx, axis=0)
-            s_cov = s_cov.drop(remove_idx, axis=0)
-    s_state = s_state.drop(['frame_num'], axis=1)
-    
+def GenerateSstates(frame_num, estimate_states, track_states):
+    s_state = pd.DataFrame(columns=['track_num','x','y','z','vx','vy','vz','l','w','h'])
+    s_cov = pd.DataFrame(columns=['track_num', 'cov'])
+    for i in range(len(track_states)):
+        s_state = s_state.append(estimate_states[(estimate_states.track_num==track_states.iloc[i].track_num)&(estimate_states.frame_num==track_states.iloc[i].frame_num)][['track_num','x','y','z','vx','vy','vz','l','w','h']])
+        s_cov = s_cov.append(estimate_states[(estimate_states.track_num==track_states.iloc[i].track_num)&(estimate_states.frame_num==track_states.iloc[i].frame_num)][['track_num','cov']])
+
     return s_state, s_cov
 
 
@@ -987,14 +989,12 @@ def CalcScoreMatrix(G):
 
 
 def GenerateEstimateStates(data, startFrame, endFrame, orientation=True):
-    # Step 1:
-    observation_states = GenerateObservationStates(data, startFrame, startFrame, orientation=orientation)
+    # Step 1 & 4:
+    observation_states = GenerateObservationStates(data, startFrame, endFrame, orientation=orientation)
     # Step 2:
     estimate_states = InitEstimateState(observation_states, startFrame)
     
     for frame_num in range(startFrame+1, endFrame+1):
-        # Step 4:
-        observation_states = GenerateObservationStates(data, frame_num, frame_num, orientation=orientation)
         # Step 5:
         observation_states = ClusterTrackMapping(frame_num, observation_states, estimate_states)
         # Step 6:
@@ -1261,13 +1261,20 @@ print("H=", np.mean(estimate_states[estimate_states.track_num==150].h))
 
 endFrame = 100
 observation_states = GenerateObservationStates(data, 0, endFrame, orientation=True)
-estimate_states = InitEstimateState(observation_states, 0)
 
 
 # In[315]:
 
 
 observation_states
+
+
+# In[461]:
+
+
+frame_num = 0
+estimate_states = InitEstimateState(observation_states, 0)
+estimate_states
 
 
 # In[344]:
@@ -1299,11 +1306,38 @@ def InitTrackStates(observation_states, frame_num):
     return track_states
 
 
-# In[346]:
+# In[460]:
 
 
 track_states = InitTrackStates(observation_states, 0)
 track_states
+
+
+# In[914]:
+
+
+def CalcMultiplicity(track_index, G):
+    N = 0
+    G_tsum = np.sum(G, axis=1)
+    n_count = G.shape[0]
+    
+    for n in range(n_count):
+        if G[n, track_index] != 0:
+            N += G[n, track_index]/G_tsum[n]
+    return N
+
+
+# In[546]:
+
+
+# Low-pass filter on score_matrix
+def ScoreMatrixFilter(score_matrix):
+    n_count, t_count = score_matrix.shape
+    for n in range(n_count):
+        for t in range(t_count):
+            if score_matrix[n, t] < DA_THRESHOLD:
+                score_matrix[n, t] = 0
+    return score_matrix
 
 
 # In[ ]:
@@ -1326,66 +1360,269 @@ track_states
 
 # ### Step-by-step data association testing
 
-# In[351]:
+# In[1147]:
 
 
 frame_num += 1
 print(frame_num)
 
 
-# In[352]:
+# In[1148]:
 
 
 z_state, z_cov = GenerateZstates(frame_num, observation_states)
-s_state, s_cov = GenerateSstates(frame_num, estimate_states)
+s_state, s_cov = GenerateSstates(frame_num, estimate_states, track_states)
 n_count = list(np.unique(z_state.cluster_num)) # Existing cluster number at current frame_num
 t_count = list(np.unique(s_state.track_num)) # Existing track number
 
-g_matrix = ClusterTrackLikelihood(z_state, z_cov, s_state, s_cov)
-score_matrix = ClusterTrackScoreMatrix(g_matrix)
+g_matrix = CalcGLikelihood(z_state, z_cov, s_state, s_cov)
+score_matrix = CalcScoreMatrix(g_matrix)
+
 print(score_matrix)
 
 
-# In[327]:
+# In[1164]:
 
 
-# Low-pass filter on score_matrix
-for n in range(len(n_count)):
-    for t in range(len(t_count)):
-        if score_matrix[n, t] < DA_THRESHOLD:
-            score_matrix[n, t] = 0
+z_state
+
+
+# In[1165]:
+
+
+s_state
+
+
+# In[1166]:
+
+
+t_count
+
+
+# In[1149]:
+
+
+score_matrix = ScoreMatrixFilter(score_matrix)
 print(score_matrix)
 
 
-# In[305]:
+# In[1150]:
 
 
-track_max = np.max(estimate_states[estimate_states.frame_num<frame_num].track_num)
+track_max = np.max(track_states.track_num)
 mapping_track_idx = linear_sum_assignment(score_matrix, maximize=True)[1] # Hungarian Algorithm, column index
 
 for i in range(len(n_count)):
-    print('Cluster=', i, '\tTrack=', mapping_track_idx[i], '\tScore=', score_matrix[i, mapping_track_idx[i]])
+    print('Cluster ', i, '\tTrack ', mapping_track_idx[i], '\tScore=', score_matrix[i, mapping_track_idx[i]])
 
 
-# In[306]:
+# In[1151]:
 
 
+track_states_old = track_states.copy()
+track_states_old
+
+
+# In[1171]:
+
+
+track_states = track_states_old.copy()
+
+
+# In[1172]:
+
+
+# Update DA to track_states (TODO)
 for i in range(len(n_count)):
+    # Update existing track (judging condition TODO)
     if score_matrix[i, mapping_track_idx[i]] >= DA_THRESHOLD:
-        # i-th cluster in n_count ↔ mapping_idx[i]-th track in t_count
-        z_state.at[z_state[z_state.cluster_num==n_count[i]].index[0], 'track_num'] = t_count[mapping_track_idx[i]]
+        track_num = t_count[mapping_track_idx[i]]
+        track_states_idx = track_states[track_states.track_num==track_num].index[0]
+        track_states.at[track_states_idx, 'frame_num'] = frame_num
+        track_states.at[track_states_idx, 'cluster_num'] = n_count[i]
+        track_states.at[track_states_idx, 'history'] = track_states.iloc[track_states_idx]['history'] + [frame_num]
+        track_states.at[track_states_idx, 'multiplicity'] = CalcMultiplicity(mapping_track_idx[i], score_matrix)
+        track_states.at[track_states_idx, 'quality'] = score_matrix[i, mapping_track_idx[i]]
+
+    # Initialize new track
     else:
-        # i-th cluster in n_count ↔ new (++track_max) track
-        track_max += 1
-        z_state.at[z_state[z_state.cluster_num==n_count[i]].index[0], 'track_num'] = track_max
+        track_num = np.max(track_states.track_num) + 1
+        s_state_new = pd.DataFrame(columns=['track_num','x','y','z','vx','vy','vz','l','w','h'])
+        s_state_new.at[0, 'track_num'] = track_num
+        s_state_new.at[0, ['x','y','z']] = z_state[z_state.cluster_num==n_count[i]][['x','y','z']].to_numpy()[0]
+        s_state_new.at[0, ['vx','vy','vz']] = [0, 0, 0]
+        s_state_new.at[0, ['l','w','h']] = z_state[z_state.cluster_num==n_count[i]][['l','w','h']].to_numpy()[0]
+        s_state = s_state.append(s_state_new, ignore_index=True)
+        s_cov_new = pd.DataFrame(columns=['track_num', 'cov'])
+        s_cov_new.at[0, 'track_num'] = track_num
+        s_cov_new.at[0, 'cov'] = np.zeros((9,9))
+        s_cov = s_cov.append(s_cov_new, ignore_index=True)
+        
+        g_matrix_new = CalcGLikelihood(z_state, z_cov, s_state, s_cov)
+        score_matrix_new = CalcScoreMatrix(g_matrix_new)
+        score_matrix_new = ScoreMatrixFilter(score_matrix_new)
 
-z_state[['cluster_num', 'track_num']]
+        track_state = InitTrackDataFrame()
+        track_state.at[0, 'track_num'] = track_num
+        track_state.at[0, 'frame_num'] = frame_num
+        track_state.at[0, 'cluster_num'] = n_count[i]
+        track_state.at[0, 'tentative'] = True
+        track_state.at[0, 'history'] = [frame_num]
+        track_state.at[0, 'frame_count'] = 0
+        track_state.at[0, 'multiplicity'] = CalcMultiplicity(score_matrix_new.shape[1]-1, score_matrix_new)
+        track_state.at[0, 'quality'] = score_matrix_new[i, -1]
+        
+        track_states = track_states.append(track_state, ignore_index=True)
+
+track_states
 
 
-# In[307]:
+# In[1153]:
 
 
-for i in list(z_state.index):
-    observation_states.at[i, 'track_num'] = z_state.track_num[i]
+# Redundant track coalescence (TODO)
+track_states_update_flag = True
+while track_states_update_flag:
+    track_states_update_flag = False
+    track_states_update = track_states.copy()
 
-estimate_states = KF_Update(frame_num, observation_states, estimate_states)
+    for t1 in range(len(track_states)):
+        for t2 in range(t1+1, len(track_states)):
+            ### TODO: only emerge tracks with tentative=False (evaluate last 10 frames)
+            if track_states.iloc[t1]['tentative'] == False and track_states.iloc[t2]['tentative']:
+                ### TODO
+                pass
+            
+            ### Obsolete
+            z1 = observation_states[(observation_states.frame_num==track_states.frame_num[t1])&(observation_states.cluster_num==track_states.cluster_num[t1])][['x','y','z']].to_numpy()[0]
+            z2 = observation_states[(observation_states.frame_num==track_states.frame_num[t2])&(observation_states.cluster_num==track_states.cluster_num[t2])][['x','y','z']].to_numpy()[0]
+            if np.linalg.norm(z1-z2) < DBSCAN_EPS:
+                track_states_update_flag = True
+                # Emerge track at index=t1 to track at index=t2
+                if track_states.iloc[t1]['frame_num'] < track_states.iloc[t2]['frame_num']:
+                    track_states_update.at[t2, 'track_num'] = np.min([track_states.iloc[t1]['track_num'], track_states.iloc[t2]['track_num']])
+                    track_states_update.at[t2, 'history'] = track_states.iloc[t1]['history'] + track_states.iloc[t2]['history']
+                    track_states_update.at[t2, 'frame_count'] = track_states.iloc[t1]['frame_count'] + track_states.iloc[t2]['frame_count']
+                    track_states_update.at[t2, 'tentative'] = track_states.iloc[t1]['tentative'] or track_states.iloc[t2]['tentative']
+                    track_states_update = track_states_update.drop(t1, axis=0)
+
+                # Emerge track at index=t2 to track at index=t1
+                else:
+                    track_states_update.at[t1, 'track_num'] = np.min([track_states.iloc[t1]['track_num'], track_states.iloc[t2]['track_num']])
+                    track_states_update.at[t1, 'history'] = track_states.iloc[t1]['history'] + track_states.iloc[t2]['history']
+                    track_states_update.at[t1, 'frame_count'] = track_states.iloc[t1]['frame_count'] + track_states.iloc[t2]['frame_count']
+                    track_states_update.at[t1, 'tentative'] = track_states.iloc[t1]['tentative'] or track_states.iloc[t2]['tentative']
+                    track_states_update = track_states_update.drop(t2, axis=0)
+
+    track_states = track_states_update.copy()
+    track_states = track_states.reset_index(drop=True)
+
+track_states
+
+
+# In[1154]:
+
+
+# Update frame_count; Remove undetected tracks based on "m/n" rule
+for i in track_states.index:
+    track_states.at[i, 'frame_count'] += 1
+
+for i in track_states.index:
+    if track_states.loc[i, 'tentative'] == True and track_states.loc[i, 'frame_count'] >= DA_TRACK_COUNT:
+        if len(track_states.loc[i, 'history']) < DA_TRACK_APPEARANCE:
+            track_states = track_states.drop(i, axis=0)
+        else:
+            track_states.at[i, 'tentative'] = False
+
+track_states
+
+
+# In[1155]:
+
+
+## Remove low-multiplicity, low-quality tracks (low-pass filter) (TODO)
+
+track_states = track_states.drop(track_states[track_states.quality==0].index, axis=0)
+track_states = track_states.reset_index(drop=True)
+track_states
+
+
+# In[1156]:
+
+
+# Update track_states to observation_states
+for i in track_states[track_states.frame_num==frame_num].index:
+    track_num = track_states.loc[i].track_num
+    observation_idx = observation_states[(observation_states.frame_num==frame_num)&(observation_states.cluster_num==track_states.loc[i].cluster_num)].index[0]
+    observation_states.at[observation_idx, 'track_num'] = track_num
+
+cluster_noises = set(observation_states[observation_states.frame_num==frame_num].cluster_num)-set(track_states[track_states.frame_num==frame_num].cluster_num)-{-1}
+for cluster_num in cluster_noises:
+    observation_idx = observation_states[(observation_states.frame_num==frame_num)&(observation_states.cluster_num==cluster_num)].index[0]
+    observation_states.at[observation_idx, 'track_num'] = -1
+    
+observation_states[observation_states.frame_num==frame_num]
+
+
+# In[1157]:
+
+
+# Update observation_states & track_states to estimate_states
+estimate_states = KF_Update(frame_num, observation_states, estimate_states, track_states)
+
+estimate_states[estimate_states.frame_num==frame_num]
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
